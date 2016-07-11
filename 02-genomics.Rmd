@@ -1,0 +1,43 @@
+# Intro to Genomics {#lesson2}
+
+## Learning Objectives
+
+* Define a genome.
+* Explain how genomics relates to genetics and biochemistry.
+* Explain the four phases of genomics.
+* Along with a large size, explain other challenges in dealing with large genomes.
+* Explain the metaphor for “dark matter of the genome”.
+
+## Assignment
+
+**1. How is genomics similar to and different from genetics and biochemistry? What attributes are distinctive to genomics?**
+
+Whereas genetics is mainly focused on genes and heritable phenotypes (traits) genomics looks at the entirety of the genome — both the genic and non-genic aspects of it. Biochemistry, on the other hand, is the study of the chemistry of living organisms and/or cells and can be thought of more as a foundation of genetics and genomics. For example, high throughput sequencing relies heavily on advances in the understanding and automation of biochemical reactions to measure DNA molecules. One could also argue that biochemistry, genetics, and genomics are just three different perspectives for studying living systems and the molecular forces driving their behavior. Each focuses on questions of a different scale and each one relies on the insights and advances of the other.
+
+As an example, my lab studies the malaria parasite, *Plasmodium falciparum*. Three different questions associated with studying the emergence of artimisinin resistant parasites in South East Asia might be:
+
+1. **Genomics:** What is different between wild type and resistant populations when looking at their genomes, transcriptomes, proteomes, and metabolomes?
+2. **Genetics:** Can we determine the functional role of the genes involves in the pathways identified via genomic methods by genetically manipulating the parasite?
+3. **Biochemistry:** Can we determine the mechanism behind the parasite's ability to persevere through drug treatment through targets molecular assays?
+
+Each question is looking to understand aspects of the emergence of drug resistance in the parasite, but with varying levels of specificity. Genomics tends to be the most comprehensive and biochemistry the most detail oriented as you get closer to the physical interactions between individual molecules.
+
+**2. Compared to the compact genomes of microbes, what are challenges and complications that arise when working with large genomes such as those of humans?**
+
+The annotation of microbial genomes is largely a gene-finding exercise as ~90% of their genomes are genes. In vertebrates however, the majority of the DNA does not code for proteins leaving many to initially claim that the majority of the human genome was made up of so called "junk DNA." We know now that this isn't the case as we're finding many regions of the human genome that do not code for proteins that have alternative functions that are also subject to evolutionary forces and can ultimately have strong effects on phenotype. 
+
+Looking at the differences between prokaryotes and eukaryotes big differences include:
+
+1. Circular and uncompacted DNA in prokaryotes versus DNA compacted into linear chromosomes as chromatin in eukaryotes
+2. Polycistronic and intron-less transcripts in prokaryotes versus monocistronic and intron rich transcripts in eukaryotes
+3. Genomic reactions occurring in the cytosol in prokaryotes whereas in eukaryotes the genome sits behind the nuclear membrane inside the nucleus
+
+**3. Eric Lander discusses many accomplishments and insights in his article “Initial impact of the sequencing of the human genome.” Choose one and discuss why it is important and interesting to you.**
+
+In regards to insights described by Lander, the one that stands out most to me is the proportion of the genome that is actively transcribed.
+
+Some studies suggest that up to ~80% of the human genome is actively transcribed. In *Plasmodium falciparum* that number is closer to 90%. Contrast this with the initial claim that the majority of the human genome was made up of so-called "junk DNA" and it makes for a very unexpected discovery. Furthermore, every discovery of a newly transcribed region of the genome leads to the characterization of a new type of RNA molecule as well. The world of RNA biology has become far more important as many types of novel short and long non-coding RNAs have been proven functional. Five years later, it's still yet to be determined how to separate signal from noise in deep transcriptome sequencing data.
+
+In regards to the new frontiers listed at the end of the paper, what excites me most is the ability to learn to program cells. 
+
+Synthetic biology is an emerging discipline that looks to create a different breed of biological engineers that look to create predictable cellular phenotypes using nucleotides rather than computer code. I'm a firm believer in Richard Feynman's quote, "What I cannot build, I do not understand" and I believe a true understanding of cells and their complex molecular machinery will not be achieved until we understand how to manipulate them in a predictable manner. The genomics era is looking to generate the data we need to gain key insights into doing so.

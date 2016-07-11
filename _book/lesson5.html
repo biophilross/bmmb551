@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Genomics (BMMB 551)</title>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+  <meta name="description" content="Homework assignments for the class BMMB 551 as taught by Dr. Ross Hardison at Pennsylvania State University in the Spring of 2016.">
+  <meta name="generator" content="bookdown 0.0.72 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Genomics (BMMB 551)" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Homework assignments for the class BMMB 551 as taught by Dr. Ross Hardison at Pennsylvania State University in the Spring of 2016." />
+  <meta name="github-repo" content="thephilross/bmmb551" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Genomics (BMMB 551)" />
+  
+  <meta name="twitter:description" content="Homework assignments for the class BMMB 551 as taught by Dr. Ross Hardison at Pennsylvania State University in the Spring of 2016." />
+  
+
+<meta name="author" content="Philipp Ross">
+
+<meta name="date" content="2016-07-04">
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="lesson4.html">
+<link rel="next" href="lesson6.html">
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Genomics (BMMB 551)</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>What is this?</a></li>
+<li class="chapter" data-level="1" data-path="module1.html"><a href="module1.html"><i class="fa fa-check"></i><b>1</b> Molecular genetics</a><ul>
+<li class="chapter" data-level="1.1" data-path="module1.html"><a href="module1.html#learning-objectives"><i class="fa fa-check"></i><b>1.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="1.2" data-path="module1.html"><a href="module1.html#assignment"><i class="fa fa-check"></i><b>1.2</b> Assignment</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="lesson2.html"><a href="lesson2.html"><i class="fa fa-check"></i><b>2</b> Intro to Genomics</a><ul>
+<li class="chapter" data-level="2.1" data-path="lesson2.html"><a href="lesson2.html#learning-objectives-1"><i class="fa fa-check"></i><b>2.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="2.2" data-path="lesson2.html"><a href="lesson2.html#assignment-1"><i class="fa fa-check"></i><b>2.2</b> Assignment</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="lesson3.html"><a href="lesson3.html"><i class="fa fa-check"></i><b>3</b> DNA sequencing</a><ul>
+<li class="chapter" data-level="3.1" data-path="lesson3.html"><a href="lesson3.html#learning-objectives-2"><i class="fa fa-check"></i><b>3.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="3.2" data-path="lesson3.html"><a href="lesson3.html#assignment-2"><i class="fa fa-check"></i><b>3.2</b> Assignment</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="lesson4.html"><a href="lesson4.html"><i class="fa fa-check"></i><b>4</b> Aligning biological sequences</a><ul>
+<li class="chapter" data-level="4.1" data-path="lesson4.html"><a href="lesson4.html#learning-objectives-3"><i class="fa fa-check"></i><b>4.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="4.2" data-path="lesson4.html"><a href="lesson4.html#assignment-3"><i class="fa fa-check"></i><b>4.2</b> Assignment</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="lesson4.html"><a href="lesson4.html#c-what-does-this-tell-you-about-the-conservation-in-different-domains-of-the-proteins"><i class="fa fa-check"></i><b>4.2.1</b> 1.3C What does this tell you about the conservation in different domains of the proteins?</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="lesson4.html"><a href="lesson4.html#additional-resources"><i class="fa fa-check"></i><b>4.3</b> Additional Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="lesson5.html"><a href="lesson5.html"><i class="fa fa-check"></i><b>5</b> Genome Databases and Browsers</a><ul>
+<li class="chapter" data-level="5.1" data-path="lesson5.html"><a href="lesson5.html#learning-objectives-4"><i class="fa fa-check"></i><b>5.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="5.2" data-path="lesson5.html"><a href="lesson5.html#assignment-4"><i class="fa fa-check"></i><b>5.2</b> Assignment</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="lesson6.html"><a href="lesson6.html"><i class="fa fa-check"></i><b>6</b> Genomics Platforms</a><ul>
+<li class="chapter" data-level="6.1" data-path="lesson6.html"><a href="lesson6.html#learning-objectives-5"><i class="fa fa-check"></i><b>6.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="6.2" data-path="lesson6.html"><a href="lesson6.html#assignment-5"><i class="fa fa-check"></i><b>6.2</b> Assignment</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="lesson7.html"><a href="lesson7.html"><i class="fa fa-check"></i><b>7</b> Protein Coding Genes</a><ul>
+<li class="chapter" data-level="7.1" data-path="lesson7.html"><a href="lesson7.html#learning-objectives-6"><i class="fa fa-check"></i><b>7.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="7.2" data-path="lesson7.html"><a href="lesson7.html#assignment-6"><i class="fa fa-check"></i><b>7.2</b> Assignment</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Genomics (BMMB 551)</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="lesson5" class="section level1">
+<h1><span class="header-section-number">Lesson 5</span> Genome Databases and Browsers</h1>
+<div id="learning-objectives-4" class="section level2">
+<h2><span class="header-section-number">5.1</span> Learning Objectives</h2>
+<ul>
+<li>Identify genomics web resources</li>
+<li>Evaluate what browser to use for the genome of interest</li>
+<li>Use the browswer to navigate the genome of interest</li>
+</ul>
+</div>
+<div id="assignment-4" class="section level2">
+<h2><span class="header-section-number">5.2</span> Assignment</h2>
+<p>For this assignment I will go over the features of the <a href="http://plasmodb.org/">PlasmoDB</a> genome browser, which can be used to explore the genomes of multiple species of <em>Plasmodium</em> parasites.</p>
+<p><strong>Technology</strong></p>
+<p>The genome browser found on PlasmoDB is built on top of the <a href="http://gmod.org/wiki/GBrowse">GBrowse</a> open source framework. In other words, it’s a web-based genome browser unlike <a href="https://www.broadinstitute.org/igv/">IGV</a>, for example. On the backend there is a database server that can be used to access datasets similar to the way that you would access datasets using the UCSC genome browser.</p>
+<p><img src="img/lesson5/first.png" style="display: block; margin: auto;" /></p>
+<p><strong>Data accessibility</strong></p>
+<p>The data on PlasmoDB is not raw data, although the sources of the raw data are usually provided. In most cases PlasmoDB will process the data in some way in order to standardize it. Typically, updated annotations and sequence assemblies are taken from the latest updates on <a href="http://www.genedb.org/Homepage">GeneDB</a>, which is where the <em>Plasmodium</em> genomes are currently curated. This update occurs every several months, whereas the most up-to-date data sets can typically be found on GeneDB. The latest version of PlasmoDB is version 27, which was released on February 19th, 2016.</p>
+<p><strong>Genome Assemblies</strong></p>
+<p>Currently the only available genome assembly is the well curated draft genome of the 3D7 strain of <em>Plasmodium falciparum</em>. The first draft assembly was published in 2002 <a href="http://www.ncbi.nlm.nih.gov/pubmed/12368864">[Gardner et al.]</a> and contains no ambiguous base pairs at this point. While there are many other assemblies available for download in FASTA format on both PlasmoDB and GeneDB, they are not currently as complete as the 3D7 reference strain and thus aren’t available using the PlasmoDB genome browser. One would have to download them separately and view them in IGV.</p>
+<p><strong>Data tracks</strong></p>
+<p>Similar to UCSC genome browser, one can select different tracks to be viewed at the same time, stacked on top of one another in order to compare a variety of data at once. Available tracks from recent publications include, but aren’t limited to, various strand-specific RNA-seq data, nucleosome occupancy data, and SNP data. These tracks are presented as annotation tracks or coverage tracks.</p>
+<p><img src="img/lesson5/data_tracks.png" style="display: block; margin: auto;" /></p>
+<p><strong>Additional features</strong></p>
+<p>Additional features include the ability to take snapshots to be exported and used in figures. You can directly email them or download them. Unfortunately you are limited to exporting saved snapshots in PNG format, which isn’t ideal or creating figures if that is your end goal.</p>
+<p><img src="img/lesson5/snapshot_interface.png" style="display: block; margin: auto;" /></p>
+<p>Last but not least, one can also add custom tracks by text, URL, or a local file. These can be in various formats including BAM, BigWig, GFF, and BED. The custom tracks get added just like any other track would and can be saved onto your account so you can load it any time you login.</p>
+<p><img src="img/lesson5/snapshot_example.png" style="display: block; margin: auto;" /></p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="lesson4.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="lesson6.html" class="navigation navigation-next " aria-label="Next page""><i class="fa fa-angle-right"></i></a>
+
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"facebook": true,
+"twitter": true,
+"google": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/05-genome-browsers.Rmd",
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

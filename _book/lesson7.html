@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Genomics (BMMB 551)</title>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+  <meta name="description" content="Homework assignments for the class BMMB 551 as taught by Dr. Ross Hardison at Pennsylvania State University in the Spring of 2016.">
+  <meta name="generator" content="bookdown 0.0.72 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Genomics (BMMB 551)" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Homework assignments for the class BMMB 551 as taught by Dr. Ross Hardison at Pennsylvania State University in the Spring of 2016." />
+  <meta name="github-repo" content="thephilross/bmmb551" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Genomics (BMMB 551)" />
+  
+  <meta name="twitter:description" content="Homework assignments for the class BMMB 551 as taught by Dr. Ross Hardison at Pennsylvania State University in the Spring of 2016." />
+  
+
+<meta name="author" content="Philipp Ross">
+
+<meta name="date" content="2016-07-04">
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="lesson6.html">
+<link rel="next" href="references.html">
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Genomics (BMMB 551)</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>What is this?</a></li>
+<li class="chapter" data-level="1" data-path="module1.html"><a href="module1.html"><i class="fa fa-check"></i><b>1</b> Molecular genetics</a><ul>
+<li class="chapter" data-level="1.1" data-path="module1.html"><a href="module1.html#learning-objectives"><i class="fa fa-check"></i><b>1.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="1.2" data-path="module1.html"><a href="module1.html#assignment"><i class="fa fa-check"></i><b>1.2</b> Assignment</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="lesson2.html"><a href="lesson2.html"><i class="fa fa-check"></i><b>2</b> Intro to Genomics</a><ul>
+<li class="chapter" data-level="2.1" data-path="lesson2.html"><a href="lesson2.html#learning-objectives-1"><i class="fa fa-check"></i><b>2.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="2.2" data-path="lesson2.html"><a href="lesson2.html#assignment-1"><i class="fa fa-check"></i><b>2.2</b> Assignment</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="lesson3.html"><a href="lesson3.html"><i class="fa fa-check"></i><b>3</b> DNA sequencing</a><ul>
+<li class="chapter" data-level="3.1" data-path="lesson3.html"><a href="lesson3.html#learning-objectives-2"><i class="fa fa-check"></i><b>3.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="3.2" data-path="lesson3.html"><a href="lesson3.html#assignment-2"><i class="fa fa-check"></i><b>3.2</b> Assignment</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="lesson4.html"><a href="lesson4.html"><i class="fa fa-check"></i><b>4</b> Aligning biological sequences</a><ul>
+<li class="chapter" data-level="4.1" data-path="lesson4.html"><a href="lesson4.html#learning-objectives-3"><i class="fa fa-check"></i><b>4.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="4.2" data-path="lesson4.html"><a href="lesson4.html#assignment-3"><i class="fa fa-check"></i><b>4.2</b> Assignment</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="lesson4.html"><a href="lesson4.html#c-what-does-this-tell-you-about-the-conservation-in-different-domains-of-the-proteins"><i class="fa fa-check"></i><b>4.2.1</b> 1.3C What does this tell you about the conservation in different domains of the proteins?</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="lesson4.html"><a href="lesson4.html#additional-resources"><i class="fa fa-check"></i><b>4.3</b> Additional Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="lesson5.html"><a href="lesson5.html"><i class="fa fa-check"></i><b>5</b> Genome Databases and Browsers</a><ul>
+<li class="chapter" data-level="5.1" data-path="lesson5.html"><a href="lesson5.html#learning-objectives-4"><i class="fa fa-check"></i><b>5.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="5.2" data-path="lesson5.html"><a href="lesson5.html#assignment-4"><i class="fa fa-check"></i><b>5.2</b> Assignment</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="lesson6.html"><a href="lesson6.html"><i class="fa fa-check"></i><b>6</b> Genomics Platforms</a><ul>
+<li class="chapter" data-level="6.1" data-path="lesson6.html"><a href="lesson6.html#learning-objectives-5"><i class="fa fa-check"></i><b>6.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="6.2" data-path="lesson6.html"><a href="lesson6.html#assignment-5"><i class="fa fa-check"></i><b>6.2</b> Assignment</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="lesson7.html"><a href="lesson7.html"><i class="fa fa-check"></i><b>7</b> Protein Coding Genes</a><ul>
+<li class="chapter" data-level="7.1" data-path="lesson7.html"><a href="lesson7.html#learning-objectives-6"><i class="fa fa-check"></i><b>7.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="7.2" data-path="lesson7.html"><a href="lesson7.html#assignment-6"><i class="fa fa-check"></i><b>7.2</b> Assignment</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Genomics (BMMB 551)</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="lesson7" class="section level1">
+<h1><span class="header-section-number">Lesson 7</span> Protein Coding Genes</h1>
+<div id="learning-objectives-6" class="section level2">
+<h2><span class="header-section-number">7.1</span> Learning Objectives</h2>
+<ul>
+<li>Identify the number of protein-coding gene</li>
+<li>Explain how protein-coding genes are distributed along chromosomes.</li>
+<li>Show how to determine the function of protein-coding genes.</li>
+<li>Annotate genomes using both ab initio and evidence-based approaches</li>
+<li>Apply ab initio and evidence-based approaches to annotate genomes.</li>
+</ul>
+</div>
+<div id="assignment-6" class="section level2">
+<h2><span class="header-section-number">7.2</span> Assignment</h2>
+<p>For this assignment and following assignments I will be looking at the genome of <em>[Chromera velia]</em>(<a href="https://en.wikipedia.org/wiki/Chromera_velia" class="uri">https://en.wikipedia.org/wiki/Chromera_velia</a>), a recently described unicellular eukaryote closely related phylogenetically to the Apicomplexa phylum of protozoan parasites. In a paper by <a href="http://elifesciences.org/content/4/e06974v1">Woo et al. 2015</a>, they sequence and assemble the nuclear genomes of two, so-called, Chromerids, <em>Chromera velia</em> and <em>Vitrella brassicaformis</em>. Key questions revolve around the evolutionary emergence of the Apicomplexa considering the Chromerids represent the closest non-Apicomplexan relative. Here will only focus on <em>Chromera</em>.</p>
+<p>I will breifly describe its genome based on the paper mentioned above and attempt to use <a href="http://nar.oxfordjournals.org/content/34/suppl_2/W435">Augustus</a> to predict gene sequences.</p>
+<p><strong>A brief look at the Chromerid genome</strong></p>
+<p>It’s important to note that the assembly I will be working is a draft assembly. It is made of 5953 scaffolds and totals 193.6 million base-pairs (Mb). The predicted number of protein-coding genes is 26,112 and the genome is estimated to be composed of ~30 Mb in transposable elements (TEs). This is an interesting finding considering that Plasmodium, for example, is known to have an exceptional dearth in transpoable elements. Thus, either the transposable elements that were present in the proto-Apicomplexan ancestor have been lost or repurposed. If we look at Supplementary table 2 in Woo et al., they note that 22.82% of the TEs fall under “Unclassified repeats”. This suggests the potential for novel TEs awaiting discovery within protist and potentially Apicomplexan genomes.</p>
+<p>Interestingly, in <em>Vitrella</em>, while the proporition of putative TEs is similar as in <em>Chromera</em> (27.24%), the genome is much smaller at 72.7 Mb. In addition, the <em>Vitrella</em> genome was assembled into much fewer scaffolds at 1064. Lastly, the number of protein-coding genes was not drastically different at 22,817 suggesting that there is far less intergenic space in <em>Vitrella</em>, similar to that in parasitic genomes of Apiceomplxan parasites.</p>
+<p><strong>Choosing a gene of interest</strong></p>
+<p>The genomic loci of interest in this study is going to be ~30kb on scaffold 27 of the <em>Chromera</em> assembly. This regions represents 10kb flanks surroundg the gene identified as Cvel_872. This gene was assigned the function of a striated fiber assemblin (SFA) protein, typically associated with basal body rootlets of the flagella. While all known components of the flagella were present in proto-apicomplexan ancestors (based on phyolgenetic analysis), most of the components have been lost as apicomplexan lineages began to differentiate. Thus, it’s been hypothesized that some flagellar-proteins have been repurposed for new functions in apicomplexans (<a href="http://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1001444">Francia et al. 2012</a>).</p>
+<p>In addition, Woo et al. preformed RNA-seq and compared the expression profiles of all genes in <em>Chromera</em> to all genes in <em>Plasmodium falciparum</em>. A statistically significant overlap in highly co-expressed orthogroups (orthologous gene clusters identified through sequence comparison) between <em>falciparum</em> invasion genes and the <em>Chromera</em> gene encoding SFA. Thus, it suggests an interesting hypothesis that elements of the flagellar apparatus have been repurposed as a module of the apical complex, an important organelle for invading host cells found only in Apicomplexan parasites.</p>
+<p>Here, I chose to use Augustus to predict the genes within 10kb nucleotide flanking regions up and downstream of the gene sequence encoding SFA itself, including the sequence of the gene encoding SFA, itself.</p>
+<p><strong>Evaluating Augustus</strong></p>
+<p>In Woo et al., they combined several approaches to predict genes in <em>Chromera</em>. They specifically used Augustus, a gene prediction software tool based on a Generalized Hidden Markov Model. In order to train the HMM they used Cufflinks derived transcript assemblies obtained from the RNA-seq experiments. If you don’t have transcript models to train the HMM, Augustus comes with dozens fo pretrained HMMs based on gene models in other organisms.</p>
+<p>Here I use <em>Toxoplasm gondii</em> as my gene model prediction organism. The snapshot in IGV represents my results.</p>
+<div class="figure" style="text-align: center"><span id="fig:results"></span>
+<img src="img/lesson7/results.png" alt="Augustus Gene Model Predictions. Gene models predicted in Woo et al. are in black; Augustus predictions without hints are in blue; Augustus preidctions with hints are in green."  />
+<p class="caption">
+Figure 7.1: Augustus Gene Model Predictions. Gene models predicted in Woo et al. are in black; Augustus predictions without hints are in blue; Augustus preidctions with hints are in green.
+</p>
+</div>
+<p>The red box represents the gene encoding SFA. What can see here is that Augustus is very good at predicting gene models <em>ab initio</em>. There is virtually no difference between the output when you compare the output with hints and without. There is, however, one general trend that plagues the accuracy of prediction, and that is premature stop codons, shown in Figure 2 below.</p>
+<div class="figure" style="text-align: center"><span id="fig:errors"></span>
+<img src="img/lesson7/errors_in_prediction.png" alt="Example of using the wrong reading frame to predict a stop codon."  />
+<p class="caption">
+Figure 7.2: Example of using the wrong reading frame to predict a stop codon.
+</p>
+</div>
+<p>In Figure 2 we can see that Augustus chose to predict a CDS that doesn’t exist (the start of the thick bar) and terminate the CDS (start of the thin bar) prematurely due to an incorrect reading frame prediction. With alternatively spliced transcripts like these this is likely a common problem. However, overall it does a great job! Looking at Figure 1, we can confidentally say that have a generally idea of where genes are, how many exons they contain, and roughly where splice site junctions are located.</p>
+<p>We can use a program called <a href="https://ccb.jhu.edu/software/stringtie/gff.shtml#gffcompare">gffcompare</a> to quantify the similarity in our predictions. Accordingly, these predictions are about 70.5% accurate. The reason this number is lower than expected when looking at the figures is due to the partial predictions of genes at the edges. I did not choose the flanking regions with the knowledge of where genes were upsteam and downstream of SFA. Thus, the predictions can only go so far as to predict partial genes at the edges, which it does relatively well.</p>
+<p><strong>Conclusions</strong></p>
+<p>Augustus is a very accurate and useful tool to predict protein-coding genes in eukaryotic genomes, given the correct HMM training model.</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="lesson6.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="references.html" class="navigation navigation-next " aria-label="Next page""><i class="fa fa-angle-right"></i></a>
+
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"facebook": true,
+"twitter": true,
+"google": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/07-protein-coding-genes.Rmd",
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

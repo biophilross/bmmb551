@@ -1,0 +1,18 @@
+--- 
+title: "Genomics (BMMB 551)"
+author: "Philipp Ross"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_sited
+output: bookdown::gitbook
+documentclass: book
+bibliography: [book.bib, packages.bib, references.bib]
+biblio-style: nature
+link-citations: yes
+github-repo: thephilross/bmmb551
+description: "Homework assignments for the class BMMB 551 as taught by Dr. Ross Hardison at Pennsylvania State University in the Spring of 2016."
+knit: "bookdown::render_book"
+---
+
+# What is this? {-}
+
+This is an online book of all homework assignments for the class BMMB 551 as taught by Dr. Ross Hardison at Pennsylvania State University in the Spring of 2016. Instead of submitting static documents (.pdf, .docx, etc.) I decided to submit my homework assignments as webpages. This way content can be updated and I can even include interactive content using [shiny](http://shiny.rstudio.com/).

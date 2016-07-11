@@ -1,0 +1,65 @@
+# Molecular genetics {#module1}
+
+## Learning Objectives
+
+* Identify the fundamental characteristics of genes.
+* Explain what aspects of DNA structure are essential to making a genes.
+* Identify the reverse complement of a protein coding sequence.
+* Discuss the biological and bioinformatic implications of genes being in pieces (i.e., exons separated by introns).
+* Describe the relationship between genes and chromosomes
+* Define epigenetic features.
+
+## Assignment
+
+**1. What does the word “gene” mean in casual conversation, and what does it mean biologically?**
+
+While the casual definition of a gene has remained unchanged for many years, the biological definition continues to evolve.
+
+In casual conversation, most people refer to genes as the fundamental building blocks that make up who they are. They're often thought of as the only heritable aspects of their molecular makeup and typically cited in a static and isolated context. 
+
+Biologically, genes are discrete intervals distributed linearly along an organisms genetic material. These intervals are made of specific sequences of nucleotides that encode information to be recognized by specific proteins of a cell to read, transcribe, and translate into different mediums such as a different species of nucleic acid or polypeptides. 
+
+Some intervals encode information whose ultimate product is a protein while others are fated to be transcribed from DNA to RNA, but no further. While not all transcribed intervals found within an organisms genome are considered genes, it typicaly depends on the functional aspects of the RNA molecule produced: was it created intentionally to serve a purpose or was the RNA a byproduct of promiscuous transcription?
+
+As the field of genomics matures, it's likely that the term "gene" will lose its prestige as the only heritable unit of the genome to consider in casual conversation. In time, we will begin to consider other functional and heritable aspects of genomes that influence phenotype.
+
+**2. Given this string of deoxyribonucleotides (“bases” in a single strand of DNA), what is the sequence of the complementary strand, i.e. the reverse complement? Please specify the orientation in your answer (i.e. label the 5’ end).**
+
+Original strand: 5’ CTGACCATTGACATCAGGTC 3'
+
+Its reverse compliment: 5' GACCTGATGTCAATGGTCAG 3'
+
+**3.  Consider this sequence from a very small portion of a chromosome. Both strands are given along with a coordinate system, beginning with 1. The genome annotation tells you that a short peptide is encoded on the bottom strand (often referred to as the minus strand), from positions 11 to 73.**
+
+<pre>
+   1        10        20        30        40        50        60        70      78
+   ....|....|....|....|....|....|....|....|....|....|....|....|....|....|....|..|
+5’ TCCGGTAGTGTCATGCCTCTGAGCCCAAGAAGCCAGTCAGCAAGAAGGGGCCAGCACTGTTGTTATACCACATAGTAG
+   AGGCCATCACAGTACGGAGACTCGGGTTCTTCGGTCAGTCGTTCTTCCCCGGTCGTGACAACAATATGGTGTATCATC 5’
+</pre>
+
+Since this polypeptide is encoded on the minus strand, the plus strand is the template strand. Often times we represent nucleic acids linearly as it is here. When we refer to positions along the chromosome, they are always meant to go from left to right (or 5' to 3' if you focus on the plus strand). Thus, while the positions may be from 11 to 73 along the plus strand, the first six nucleotides are at positions 73, 72, 71, 70, 69, and 68 while the last six nucleotides are at positions 16, 15, 14, 13, 12, and 11 of the minus strand.
+
+> What are the first six nucleotides?
+
+5' ATGTGG 3'
+
+> What are the last six nucleotides?
+
+5' GCATGA 3'
+
+**4. Describe an epigenetic feature, and explain why it is considered epigenetic as opposed to genetic.**
+
+Epigenetic features often refer to functional modifications to genetic material that don't include nucleotide changes or mutations. These can be amino acid modifications along histones, the proteins that are part of the nucleosome units that make up chromatin in eukaryotes, or they can be modifications to the nucleotide itself, such as the addition or removal of methyl groups.
+
+These are considered epigenetic because these modifications are "on top" of the genetic information that's encoded within the sequence of nucleotides. These chemical modifications effect how the information encoded within sequences are recognized. For example, it's been shown in numerous experiments that methylation marks are typically signs of transcriptional repression. That is, if there is a region of the genome with an enriched methylation signature, the functional units in that region, be they non-coding RNA or open reading frames, are transcribed at a lower abundance relative to regions of average or lower levels of methylation, including the aforementioned region itself.
+
+Whether or not we should restrict epigenetic features to those that can be inherited from parent to daughter cells is undetermined. Personally, I feel that we should try to remain abstract when it comes to defining molecular features since is still much to learn. For example, genetic material is typically thought of as the molecular material that encodes information that can be passed on to the following generation of cells and/or organisms. The information tells the cell how and when to function and emerges as an observable phenotype.
+
+People typically think of this as nucleic acid sequences that are inherited by the next generation. Epigenetic features add another layer of information on top of nucleic acid sequences that can have a measurable effect on phenotype so the real question becomes, is this layer of information heritable? This is difficult to answer. Ideally, one would have a system in which the genetic material that's passed on between generations remains unchanged to study whether the epigenetic modifications are passed on and confer the same phenotype as in the parental generation(s) but this is difficult to control for.
+
+Another interesting question one might ask is, how do we define inheritance? In [Lambert and Kussel 2014](10.1371/journal.pgen.1004556), they show that *E coli* can pass on proteins to its daughter cells as a form of "non-genetic memory" and that this confers a kind of "phenotypic memory" for the following generations. The protein in this case is a *lac* protein encoded in the *lac operon* needed to metabolize lactose. Here, they were able to show that by passing on the *lac* proteins, an *E. coli* population is able to metabolize lactose prior to the induction of the *lac operon*, which is repressed by default (as long as the population of cells has access to glucose).
+
+Does this so-called phenotypic memory count as inheritance? Lambert and Kussel were able to show that the proteins that were passed on had a measurable effect on the phenotypes of the following generations. However, there are no genetic differences between the different generations of bacteria. In other words, the memory of this phenotype as an adaptive trait is lost as soon as its environment changes (e.g. glucose is reintroduced). 
+
+Clearly, we have yet to fully understand the links between genotypes and phenotypes and before we do, it's best to remain flexible yet clear and concise in regards to terminology.

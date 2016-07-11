@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Genomics (BMMB 551)</title>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+  <meta name="description" content="Homework assignments for the class BMMB 551 as taught by Dr. Ross Hardison at Pennsylvania State University in the Spring of 2016.">
+  <meta name="generator" content="bookdown 0.0.72 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Genomics (BMMB 551)" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Homework assignments for the class BMMB 551 as taught by Dr. Ross Hardison at Pennsylvania State University in the Spring of 2016." />
+  <meta name="github-repo" content="thephilross/bmmb551" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Genomics (BMMB 551)" />
+  
+  <meta name="twitter:description" content="Homework assignments for the class BMMB 551 as taught by Dr. Ross Hardison at Pennsylvania State University in the Spring of 2016." />
+  
+
+<meta name="author" content="Philipp Ross">
+
+<meta name="date" content="2016-07-04">
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="lesson3.html">
+<link rel="next" href="lesson5.html">
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Genomics (BMMB 551)</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>What is this?</a></li>
+<li class="chapter" data-level="1" data-path="module1.html"><a href="module1.html"><i class="fa fa-check"></i><b>1</b> Molecular genetics</a><ul>
+<li class="chapter" data-level="1.1" data-path="module1.html"><a href="module1.html#learning-objectives"><i class="fa fa-check"></i><b>1.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="1.2" data-path="module1.html"><a href="module1.html#assignment"><i class="fa fa-check"></i><b>1.2</b> Assignment</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="lesson2.html"><a href="lesson2.html"><i class="fa fa-check"></i><b>2</b> Intro to Genomics</a><ul>
+<li class="chapter" data-level="2.1" data-path="lesson2.html"><a href="lesson2.html#learning-objectives-1"><i class="fa fa-check"></i><b>2.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="2.2" data-path="lesson2.html"><a href="lesson2.html#assignment-1"><i class="fa fa-check"></i><b>2.2</b> Assignment</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="lesson3.html"><a href="lesson3.html"><i class="fa fa-check"></i><b>3</b> DNA sequencing</a><ul>
+<li class="chapter" data-level="3.1" data-path="lesson3.html"><a href="lesson3.html#learning-objectives-2"><i class="fa fa-check"></i><b>3.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="3.2" data-path="lesson3.html"><a href="lesson3.html#assignment-2"><i class="fa fa-check"></i><b>3.2</b> Assignment</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="lesson4.html"><a href="lesson4.html"><i class="fa fa-check"></i><b>4</b> Aligning biological sequences</a><ul>
+<li class="chapter" data-level="4.1" data-path="lesson4.html"><a href="lesson4.html#learning-objectives-3"><i class="fa fa-check"></i><b>4.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="4.2" data-path="lesson4.html"><a href="lesson4.html#assignment-3"><i class="fa fa-check"></i><b>4.2</b> Assignment</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="lesson4.html"><a href="lesson4.html#c-what-does-this-tell-you-about-the-conservation-in-different-domains-of-the-proteins"><i class="fa fa-check"></i><b>4.2.1</b> 1.3C What does this tell you about the conservation in different domains of the proteins?</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="lesson4.html"><a href="lesson4.html#additional-resources"><i class="fa fa-check"></i><b>4.3</b> Additional Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="lesson5.html"><a href="lesson5.html"><i class="fa fa-check"></i><b>5</b> Genome Databases and Browsers</a><ul>
+<li class="chapter" data-level="5.1" data-path="lesson5.html"><a href="lesson5.html#learning-objectives-4"><i class="fa fa-check"></i><b>5.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="5.2" data-path="lesson5.html"><a href="lesson5.html#assignment-4"><i class="fa fa-check"></i><b>5.2</b> Assignment</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="lesson6.html"><a href="lesson6.html"><i class="fa fa-check"></i><b>6</b> Genomics Platforms</a><ul>
+<li class="chapter" data-level="6.1" data-path="lesson6.html"><a href="lesson6.html#learning-objectives-5"><i class="fa fa-check"></i><b>6.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="6.2" data-path="lesson6.html"><a href="lesson6.html#assignment-5"><i class="fa fa-check"></i><b>6.2</b> Assignment</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="lesson7.html"><a href="lesson7.html"><i class="fa fa-check"></i><b>7</b> Protein Coding Genes</a><ul>
+<li class="chapter" data-level="7.1" data-path="lesson7.html"><a href="lesson7.html#learning-objectives-6"><i class="fa fa-check"></i><b>7.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="7.2" data-path="lesson7.html"><a href="lesson7.html#assignment-6"><i class="fa fa-check"></i><b>7.2</b> Assignment</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Genomics (BMMB 551)</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="lesson4" class="section level1">
+<h1><span class="header-section-number">Lesson 4</span> Aligning biological sequences</h1>
+<div id="learning-objectives-3" class="section level2">
+<h2><span class="header-section-number">4.1</span> Learning Objectives</h2>
+<ul>
+<li>Explain basic approaches to aligning nucleic acid sequences</li>
+<li>Distinguish between local and global alignments</li>
+<li>Apply local and global alignments to different applications</li>
+<li>Develop facility with popular online alignment tools</li>
+</ul>
+</div>
+<div id="assignment-3" class="section level2">
+<h2><span class="header-section-number">4.2</span> Assignment</h2>
+<p>Although the assignment asks you to perform the tasks using tools found in Galaxy, the same algorithms are implimented in the R programming language. I will be using strictly R and packages curated by the <a href="http://bioconductor.org/">Bioconductor</a> community. Considering that Galaxy acts as a wrapper for tools commonly used in R and the command line, I do not expect the results to be different.</p>
+<p>First let’s import the data into R.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">seqs &lt;-<span class="st"> </span><span class="kw">readAAStringSet</span>(<span class="dt">filepath =</span> <span class="st">&quot;data/lesson4/all.fasta&quot;</span>)</code></pre></div>
+<p><strong>1.1 What are the lengths of the four protein sequences?</strong></p>
+<p>To manipulate sequences in R, we can use the <a href="https://bioconductor.org/packages/release/bioc/html/Biostrings.html" title="Biostrings">Biostrings</a> package. To find out the lengths we can use the <strong>width()</strong> function.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">for (i in <span class="dv">1</span>:<span class="kw">length</span>(seqs)) {<span class="kw">cat</span>(<span class="st">&quot;Length: &quot;</span>,<span class="kw">width</span>(seqs[i]),<span class="st">&quot; Name: &quot;</span>, <span class="kw">names</span>(seqs[i]),<span class="st">&quot;</span><span class="ch">\n</span><span class="st">&quot;</span>)}</code></pre></div>
+<pre><code>## Length:  358  Name:  sp|P46099|KLF1_MOUSE 
+## Length:  283  Name:  sp|O08584|KLF6_MOUSE 
+## Length:  283  Name:  gi|37655157|KLF6_HUMAN 
+## Length:  362  Name:  sp|Q13351|KLF1_HUMAN</code></pre>
+<p><strong>1.2 What is the definition of local alignment and global alignment? How are they different?</strong></p>
+<p>A sequence alignment represents an alignment between two or more sequences of DNA, RNA, or amino acids. There are several ways to align sequences. Two methods for doing so are known as global alignment and local alignment.</p>
+<p><strong>Global Alignment</strong> attempts to align all sequences from end to end of the sequences being compared. This is useful when we are looking to compare highly similar sequences.</p>
+<p><strong>Local Alignment</strong> attempts to align subsequences within longer sequences that have retained functionally conserved regions or domains whereas less conserved portions of the sequence have lost a majority of their similarity. This is useful when comparing more distantly related sequences that can likely no longer be compared from end to end, but rather only in their most conserved regions.</p>
+<p>Local alignment is very similar to global alignment except that we remove the restriction that we need to align the two sequences end to end. There is no pentaly for unaligned sequences surrounding the aligned subsequence. In reference to the traceback path, for a global alignment we follow a path from sink back to the source node that maximizes our score. For a local alignment, we instead set the sink to the highest scoring node and trace back from there to find the source.</p>
+<p><strong>1.3A How do the results of global and local alignment look for orthologous comparisons?</strong></p>
+<p>We can figure this out by comparing two orthologous proteins in our set of sequences. Specifically, we’ll look to align Human KLF1 and Mouse KLF1. We can use the <strong>pairwiseAlignment()</strong> function from the Biostrings package.</p>
+<p>First we will compare the global alignments. We will use the BLOSUM62 substitution matrix since that is what’s used in the EMBOSS suite by default [<a href="http://www.pnas.org/content/89/22/10915.long" title="Henikoff and Henikoff">Henikoff &amp; Henikoff</a>]. We will also set the gap opening and gap extension penalties to that of EMBOSS to make sure our results match.</p>
+<p><strong>Global Alignment</strong></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">human_klf1 &lt;-<span class="st"> </span>seqs[<span class="dv">4</span>]
+mouse_klf1 &lt;-<span class="st"> </span>seqs[<span class="dv">1</span>]
+
+<span class="kw">data</span>(BLOSUM62)
+mat &lt;-<span class="st"> &quot;BLOSUM62&quot;</span>
+
+galn &lt;-<span class="st"> </span><span class="kw">pairwiseAlignment</span>(human_klf1, mouse_klf1, 
+                          <span class="dt">type =</span> <span class="st">&quot;global&quot;</span>, 
+                          <span class="dt">substitutionMatrix =</span> mat,
+                          <span class="dt">gapOpening =</span> <span class="dv">10</span>,
+                          <span class="dt">gapExtension =</span> <span class="fl">0.5</span>)
+<span class="kw">writePairwiseAlignments</span>(galn, <span class="dt">Matrix =</span> mat, <span class="dt">block.width =</span> <span class="dv">40</span>)</code></pre></div>
+<pre><code>## ########################################
+## # Program: Biostrings (version 2.40.2), a Bioconductor package
+## # Rundate: Mon Jul  4 04:23:48 2016
+## ########################################
+## #=======================================
+## #
+## # Aligned_sequences: 2
+## # 1: sp|Q13351|KLF1_HUMAN
+## # 2: sp|P46099|KLF1_MOUSE
+## # Matrix: BLOSUM62
+## # Gap_penalty: 10.5
+## # Extend_penalty: 0.5
+## #
+## # Length: 366
+## # Identity:     259/366 (70.8%)
+## # Similarity:    NA/366 (NA%)
+## # Gaps:          12/366 (3.3%)
+## # Score: 1354
+## #
+## #
+## #=======================================
+## 
+## sp|Q13351|KLF1_HUMAN   1 MATAETALPSISTLTALGPFPDTQDDFLKWWRSEEAQDMG     40
+##                          || ||| |||||||| || | ||| |||||||||| || |
+## sp|P46099|KLF1_MOUSE   1 MASAETVLPSISTLTTLGQFLDTQEDFLKWWRSEETQDLG     40
+## 
+## sp|Q13351|KLF1_HUMAN  41 PGPPDPTEPPLHV--KSEDQPGEEEDDERGADATWDLDLL     78
+##                          |||| || | |||  ||||  ||  ||||     || || 
+## sp|P46099|KLF1_MOUSE  41 PGPPNPTGPSLHVSLKSEDPSGE--DDERDVTCAWDPDLF     78
+## 
+## sp|Q13351|KLF1_HUMAN  79 LTNFSGPEPGGAPQTCALAPSEASGAQYPPPPETLGAYAG    118
+##                          |||| | |  |   |||||||    ||  || | ||||||
+## sp|P46099|KLF1_MOUSE  79 LTNFPGSESPGTSRTCALAPSVGPVAQFEPP-ESLGAYAG    117
+## 
+## sp|Q13351|KLF1_HUMAN 119 GPGLVAGLLGSEDHSGWVRPALRARAPDAFVGPALAPAPA    158
+##                          ||||| | |||| |  |  |  |  ||  || |||||  |
+## sp|P46099|KLF1_MOUSE 118 GPGLVTGPLGSEEHTSWAHPTPRPPAPEPFVAPALAPGLA    157
+## 
+## sp|Q13351|KLF1_HUMAN 159 PEPKALALQPVYPGPGAGSSGGYFPRTGLSVPAASGAPYG    198
+##                          |       || |    ||| || ||| || |||| |||||
+## sp|P46099|KLF1_MOUSE 158 PKA-----QPSYSDSRAGSVGGFFPRAGLAVPAAPGAPYG    192
+## 
+## sp|Q13351|KLF1_HUMAN 199 LLSGYPAMYPAPQYQGHFQLFRGLQGPAPGPATSPSFLSC    238
+##                          ||||||| ||||||||||||||||  |  |    |||| |
+## sp|P46099|KLF1_MOUSE 193 LLSGYPALYPAPQYQGHFQLFRGLAAPSAGGTAPPSFLNC    232
+## 
+## sp|Q13351|KLF1_HUMAN 239 LGPGTVGTGLGGTA--EDPGVIAETAPSKRGRRSWARKRQ    276
+##                          |||||| | || ||   | |    ||| || ||  | |||
+## sp|P46099|KLF1_MOUSE 233 LGPGTVATELGATAIAGDAGLSPGTAPPKRSRRTLAPKRQ    272
+## 
+## sp|Q13351|KLF1_HUMAN 277 AAHTCAHPGCGKSYTKSSHLKAHLRTHTGEKPYACTWEGC    316
+##                          ||||| | |||||| |||||||||||||||||||| | ||
+## sp|P46099|KLF1_MOUSE 273 AAHTCGHEGCGKSYSKSSHLKAHLRTHTGEKPYACSWDGC    312
+## 
+## sp|Q13351|KLF1_HUMAN 317 GWRFARSDELTRHYRKHTGQRPFRCQLCPRAFSRSDHLAL    356
+##                           |||||||||||||||||| ||| | ||||||||||||||
+## sp|P46099|KLF1_MOUSE 313 DWRFARSDELTRHYRKHTGHRPFCCGLCPRAFSRSDHLAL    352
+## 
+## sp|Q13351|KLF1_HUMAN 357 HMKRHL    362
+##                          ||||||
+## sp|P46099|KLF1_MOUSE 353 HMKRHL    358
+## 
+## 
+## #---------------------------------------
+## #---------------------------------------</code></pre>
+<p>We can easily see that there is a strong relationship between these two sequences based on the very high alignment score and percent identity. Visually we can assess this by noting the vertical black bars that run between matching amino acids.</p>
+<p>What does it look like if we do a local alignment?</p>
+<p><strong>Local Alignment</strong></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">laln &lt;-<span class="st"> </span><span class="kw">pairwiseAlignment</span>(human_klf1, mouse_klf1, 
+                          <span class="dt">type =</span> <span class="st">&quot;local&quot;</span>,
+                          <span class="dt">substitutionMatrix =</span> mat,
+                          <span class="dt">gapOpening =</span> <span class="dv">10</span>,
+                          <span class="dt">gapExtension =</span> <span class="fl">0.5</span>)
+<span class="kw">writePairwiseAlignments</span>(laln, <span class="dt">Matrix =</span> mat, <span class="dt">block.width =</span> <span class="dv">40</span>)</code></pre></div>
+<pre><code>## ########################################
+## # Program: Biostrings (version 2.40.2), a Bioconductor package
+## # Rundate: Mon Jul  4 04:23:49 2016
+## ########################################
+## #=======================================
+## #
+## # Aligned_sequences: 2
+## # 1: sp|Q13351|KLF1_HUMAN
+## # 2: sp|P46099|KLF1_MOUSE
+## # Matrix: BLOSUM62
+## # Gap_penalty: 10.5
+## # Extend_penalty: 0.5
+## #
+## # Length: 366
+## # Identity:     259/366 (70.8%)
+## # Similarity:    NA/366 (NA%)
+## # Gaps:          12/366 (3.3%)
+## # Score: 1354
+## #
+## #
+## #=======================================
+## 
+## sp|Q13351|KLF1_HUMAN   1 MATAETALPSISTLTALGPFPDTQDDFLKWWRSEEAQDMG     40
+##                          || ||| |||||||| || | ||| |||||||||| || |
+## sp|P46099|KLF1_MOUSE   1 MASAETVLPSISTLTTLGQFLDTQEDFLKWWRSEETQDLG     40
+## 
+## sp|Q13351|KLF1_HUMAN  41 PGPPDPTEPPLHV--KSEDQPGEEEDDERGADATWDLDLL     78
+##                          |||| || | |||  ||||  ||  ||||     || || 
+## sp|P46099|KLF1_MOUSE  41 PGPPNPTGPSLHVSLKSEDPSGE--DDERDVTCAWDPDLF     78
+## 
+## sp|Q13351|KLF1_HUMAN  79 LTNFSGPEPGGAPQTCALAPSEASGAQYPPPPETLGAYAG    118
+##                          |||| | |  |   |||||||    ||  || | ||||||
+## sp|P46099|KLF1_MOUSE  79 LTNFPGSESPGTSRTCALAPSVGPVAQFEPP-ESLGAYAG    117
+## 
+## sp|Q13351|KLF1_HUMAN 119 GPGLVAGLLGSEDHSGWVRPALRARAPDAFVGPALAPAPA    158
+##                          ||||| | |||| |  |  |  |  ||  || |||||  |
+## sp|P46099|KLF1_MOUSE 118 GPGLVTGPLGSEEHTSWAHPTPRPPAPEPFVAPALAPGLA    157
+## 
+## sp|Q13351|KLF1_HUMAN 159 PEPKALALQPVYPGPGAGSSGGYFPRTGLSVPAASGAPYG    198
+##                          |       || |    ||| || ||| || |||| |||||
+## sp|P46099|KLF1_MOUSE 158 PKA-----QPSYSDSRAGSVGGFFPRAGLAVPAAPGAPYG    192
+## 
+## sp|Q13351|KLF1_HUMAN 199 LLSGYPAMYPAPQYQGHFQLFRGLQGPAPGPATSPSFLSC    238
+##                          ||||||| ||||||||||||||||  |  |    |||| |
+## sp|P46099|KLF1_MOUSE 193 LLSGYPALYPAPQYQGHFQLFRGLAAPSAGGTAPPSFLNC    232
+## 
+## sp|Q13351|KLF1_HUMAN 239 LGPGTVGTGLGGTA--EDPGVIAETAPSKRGRRSWARKRQ    276
+##                          |||||| | || ||   | |    ||| || ||  | |||
+## sp|P46099|KLF1_MOUSE 233 LGPGTVATELGATAIAGDAGLSPGTAPPKRSRRTLAPKRQ    272
+## 
+## sp|Q13351|KLF1_HUMAN 277 AAHTCAHPGCGKSYTKSSHLKAHLRTHTGEKPYACTWEGC    316
+##                          ||||| | |||||| |||||||||||||||||||| | ||
+## sp|P46099|KLF1_MOUSE 273 AAHTCGHEGCGKSYSKSSHLKAHLRTHTGEKPYACSWDGC    312
+## 
+## sp|Q13351|KLF1_HUMAN 317 GWRFARSDELTRHYRKHTGQRPFRCQLCPRAFSRSDHLAL    356
+##                           |||||||||||||||||| ||| | ||||||||||||||
+## sp|P46099|KLF1_MOUSE 313 DWRFARSDELTRHYRKHTGHRPFCCGLCPRAFSRSDHLAL    352
+## 
+## sp|Q13351|KLF1_HUMAN 357 HMKRHL    362
+##                          ||||||
+## sp|P46099|KLF1_MOUSE 353 HMKRHL    358
+## 
+## 
+## #---------------------------------------
+## #---------------------------------------</code></pre>
+<p>What we can see from the results above is that the alignments are almost exactly the same regardless of using global or local alignments for closely related orthologous sequences.</p>
+<p><strong>Using EMBOSS</strong></p>
+<p>Below are the results from using <a href="http://www.ebi.ac.uk/Tools/psa/emboss_needle/" title="EMBOSS Needle">EMBOSS Needle</a>.</p>
+<pre>
+#=======================================
+#
+# Aligned_sequences: 2
+# 1: KLF1_MOUSE
+# 2: KLF1_HUMAN
+# Matrix: EBLOSUM62
+# Gap_penalty: 10.0
+# Extend_penalty: 0.5
+#
+# Length: 366
+# Identity:     259/366 (70.8%)
+# Similarity:   280/366 (76.5%)
+# Gaps:          12/366 ( 3.3%)
+# Score: 1356.5
+# 
+#
+#=======================================
+
+KLF1_MOUSE         1 MASAETVLPSISTLTTLGQFLDTQEDFLKWWRSEETQDLGPGPPNPTGPS     50
+                     ||:|||.||||||||.||.|.|||:||||||||||.||:|||||:||.|.
+KLF1_HUMAN         1 MATAETALPSISTLTALGPFPDTQDDFLKWWRSEEAQDMGPGPPDPTEPP     50
+
+KLF1_MOUSE        51 LHVSLKSEDPSG--EDDERDVTCAWDPDLFLTNFPGSESPGTSRTCALAP     98
+                     |||  ||||..|  |||||.....||.||.||||.|.|..|..:||||||
+KLF1_HUMAN        51 LHV--KSEDQPGEEEDDERGADATWDLDLLLTNFSGPEPGGAPQTCALAP     98
+
+KLF1_MOUSE        99 SVGPVAQF-EPPESLGAYAGGPGLVTGPLGSEEHTSWAHPTPRPPAPEPF    147
+                     |....||: .|||:|||||||||||.|.||||:|:.|..|..|..||:.|
+KLF1_HUMAN        99 SEASGAQYPPPPETLGAYAGGPGLVAGLLGSEDHSGWVRPALRARAPDAF    148
+
+KLF1_MOUSE       148 VAPALAPGLAPK-----AQPSYSDSRAGSVGGFFPRAGLAVPAAPGAPYG    192
+                     |.|||||..||:     .||.|....|||.||:|||.||:||||.|||||
+KLF1_HUMAN       149 VGPALAPAPAPEPKALALQPVYPGPGAGSSGGYFPRTGLSVPAASGAPYG    198
+
+KLF1_MOUSE       193 LLSGYPALYPAPQYQGHFQLFRGLAAPSAGGTAPPSFLNCLGPGTVATEL    242
+                     |||||||:||||||||||||||||..|:.|....||||:|||||||.|.|
+KLF1_HUMAN       199 LLSGYPAMYPAPQYQGHFQLFRGLQGPAPGPATSPSFLSCLGPGTVGTGL    248
+
+KLF1_MOUSE       243 GATAIAGDAGLSPGTAPPKRSRRTLAPKRQAAHTCGHEGCGKSYSKSSHL    292
+                     |.|  |.|.|:...|||.||.||:.|.||||||||.|.||||||:|||||
+KLF1_HUMAN       249 GGT--AEDPGVIAETAPSKRGRRSWARKRQAAHTCAHPGCGKSYTKSSHL    296
+
+KLF1_MOUSE       293 KAHLRTHTGEKPYACSWDGCDWRFARSDELTRHYRKHTGHRPFCCGLCPR    342
+                     |||||||||||||||:|:||.||||||||||||||||||.|||.|.||||
+KLF1_HUMAN       297 KAHLRTHTGEKPYACTWEGCGWRFARSDELTRHYRKHTGQRPFRCQLCPR    346
+
+KLF1_MOUSE       343 AFSRSDHLALHMKRHL    358
+                     ||||||||||||||||
+KLF1_HUMAN       347 AFSRSDHLALHMKRHL    362
+
+
+#---------------------------------------
+#---------------------------------------
+</pre>
+<p>Below are the results of <a href="http://www.ebi.ac.uk/Tools/psa/emboss_water/" title="EMBOSS Water">EMBOSS Water</a>.</p>
+<pre>
+#=======================================
+#
+# Aligned_sequences: 2
+# 1: KLF1_MOUSE
+# 2: KLF1_HUMAN
+# Matrix: EBLOSUM62
+# Gap_penalty: 10.0
+# Extend_penalty: 0.5
+#
+# Length: 366
+# Identity:     259/366 (70.8%)
+# Similarity:   280/366 (76.5%)
+# Gaps:          12/366 ( 3.3%)
+# Score: 1356.5
+# 
+#
+#=======================================
+
+KLF1_MOUSE         1 MASAETVLPSISTLTTLGQFLDTQEDFLKWWRSEETQDLGPGPPNPTGPS     50
+                     ||:|||.||||||||.||.|.|||:||||||||||.||:|||||:||.|.
+KLF1_HUMAN         1 MATAETALPSISTLTALGPFPDTQDDFLKWWRSEEAQDMGPGPPDPTEPP     50
+
+KLF1_MOUSE        51 LHVSLKSEDPSG--EDDERDVTCAWDPDLFLTNFPGSESPGTSRTCALAP     98
+                     |||  ||||..|  |||||.....||.||.||||.|.|..|..:||||||
+KLF1_HUMAN        51 LHV--KSEDQPGEEEDDERGADATWDLDLLLTNFSGPEPGGAPQTCALAP     98
+
+KLF1_MOUSE        99 SVGPVAQF-EPPESLGAYAGGPGLVTGPLGSEEHTSWAHPTPRPPAPEPF    147
+                     |....||: .|||:|||||||||||.|.||||:|:.|..|..|..||:.|
+KLF1_HUMAN        99 SEASGAQYPPPPETLGAYAGGPGLVAGLLGSEDHSGWVRPALRARAPDAF    148
+
+KLF1_MOUSE       148 VAPALAPGLAPK-----AQPSYSDSRAGSVGGFFPRAGLAVPAAPGAPYG    192
+                     |.|||||..||:     .||.|....|||.||:|||.||:||||.|||||
+KLF1_HUMAN       149 VGPALAPAPAPEPKALALQPVYPGPGAGSSGGYFPRTGLSVPAASGAPYG    198
+
+KLF1_MOUSE       193 LLSGYPALYPAPQYQGHFQLFRGLAAPSAGGTAPPSFLNCLGPGTVATEL    242
+                     |||||||:||||||||||||||||..|:.|....||||:|||||||.|.|
+KLF1_HUMAN       199 LLSGYPAMYPAPQYQGHFQLFRGLQGPAPGPATSPSFLSCLGPGTVGTGL    248
+
+KLF1_MOUSE       243 GATAIAGDAGLSPGTAPPKRSRRTLAPKRQAAHTCGHEGCGKSYSKSSHL    292
+                     |.|  |.|.|:...|||.||.||:.|.||||||||.|.||||||:|||||
+KLF1_HUMAN       249 GGT--AEDPGVIAETAPSKRGRRSWARKRQAAHTCAHPGCGKSYTKSSHL    296
+
+KLF1_MOUSE       293 KAHLRTHTGEKPYACSWDGCDWRFARSDELTRHYRKHTGHRPFCCGLCPR    342
+                     |||||||||||||||:|:||.||||||||||||||||||.|||.|.||||
+KLF1_HUMAN       297 KAHLRTHTGEKPYACTWEGCGWRFARSDELTRHYRKHTGQRPFRCQLCPR    346
+
+KLF1_MOUSE       343 AFSRSDHLALHMKRHL    358
+                     ||||||||||||||||
+KLF1_HUMAN       347 AFSRSDHLALHMKRHL    362
+
+
+#---------------------------------------
+#---------------------------------------
+</pre>
+<p>It’s nice to see that our results match exactly with the implementation of the algorithms in Biostrings. However, there are two (related) differences in the outputs. Numerically, it’s the calculation of percent similarity. Visually, this is represented by the periods and colons in the EMBOSS output. These periods and colons represent <strong>conservative</strong> and <strong>semi-conservative</strong> mutations. That is, based on the alignment, these amino acids are assumed to be substitutions. When amino acids of relative chemical similarity align, they can be considered conservative or semi-conservative matches.</p>
+<p>I could not find where in the EMBOSS Needle or Water programs these relationships were defined, but I could find it by looking into the <a href="http://www.ebi.ac.uk/Tools/msa/clustalo/help/faq.html#23">Clustal Omega documentation</a>. Here it tells us that these relationships are defined (for ClustalO) by scores between amino acids in the Gonnet PAM 250 matrix. That is:</p>
+<blockquote>
+<p>A : (colon) indicates conservation between groups of strongly similar properties - scoring &gt; 0.5 in the Gonnet PAM 250 matrix. A . (period) indicates conservation between groups of weakly similar properties - scoring =&lt; 0.5 in the Gonnet PAM 250 matrix.</p>
+</blockquote>
+<p>Percent similarity is calculated using includes conservative and semi-conservative hits while percent identity only uses exact matches in its calculation. This is why we don’t see this output above using Biostrings. However, I plan on writing a function myself to provide R with this functionality as well since it shouldn’t be too difficult as long as we define what we mean by “similar.”</p>
+<p><strong>Conclusions</strong></p>
+<p>When comparing sequences it’s important to consider which type of alignment (global or local), the scoring mechanism (gap open and gap exstension penalties), and the substitution matrices. Above I decided to use the EMBOSS default, BLOSUM62, but there are many other options that depend mostly on the relationship between the two sequences. The PAM substitution matrices were created by <a href="http://compbio.berkeley.edu/class/c246/Reading/dayhoff-1978-apss.pdf" title="Dayhoff et al.">Dayhoff et al.</a> and were based on closely related sequences. To compare more distantly related proteins they simply extrapolated outward by multiplying the matrix by itself. Thus, the PAM 250 matrix is a result of multiplying PAM 1 by itself 250 times. In practice however, it was noted that this assumption did not always hold for distantly related proteins and thus the BLOSUM substitution matrix was developed.</p>
+<p>For more information comparing the two approaches, there is a helpful <a href="https://en.wikipedia.org/wiki/Substitution_matrix">Wikipedia article</a>.</p>
+<p><strong>1.3B How do the results of global and local alignment look for paralogous comparisons?</strong></p>
+<p>Now that we are interested in paralogous sequences let’s look at KLF1 and KLF6 in humans.</p>
+<p><strong>Global Alignment</strong></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">human_klf1 &lt;-<span class="st"> </span>seqs[<span class="dv">4</span>]
+human_klf6 &lt;-<span class="st"> </span>seqs[<span class="dv">3</span>]
+
+<span class="kw">data</span>(BLOSUM62)
+mat &lt;-<span class="st"> &quot;BLOSUM62&quot;</span>
+
+galn &lt;-<span class="st"> </span><span class="kw">pairwiseAlignment</span>(human_klf1, human_klf6, 
+                          <span class="dt">type =</span> <span class="st">&quot;global&quot;</span>, 
+                          <span class="dt">substitutionMatrix =</span> mat,
+                          <span class="dt">gapOpening =</span> <span class="dv">10</span>,
+                          <span class="dt">gapExtension =</span> <span class="fl">0.5</span>)
+<span class="kw">writePairwiseAlignments</span>(galn, <span class="dt">Matrix =</span> mat, <span class="dt">block.width =</span> <span class="dv">40</span>)</code></pre></div>
+<pre><code>## ########################################
+## # Program: Biostrings (version 2.40.2), a Bioconductor package
+## # Rundate: Mon Jul  4 04:23:49 2016
+## ########################################
+## #=======================================
+## #
+## # Aligned_sequences: 2
+## # 1: sp|Q13351|KLF1_HUMAN
+## # 2: gi|37655157|KLF6_HUMAN
+## # Matrix: BLOSUM62
+## # Gap_penalty: 10.5
+## # Extend_penalty: 0.5
+## #
+## # Length: 387
+## # Identity:     117/387 (30.2%)
+## # Similarity:    NA/387 (NA%)
+## # Gaps:         129/387 (33.3%)
+## # Score: 376.5
+## #
+## #
+## #=======================================
+## 
+## sp|Q13351|KLF1_HUMAN     1 MATAE-----------------TALPSISTLTALGPFPDT     23
+##                            |                      ||||            |
+## gi|37655157|KLF6_HUMAN   1 MDVLPMCSIFQELQIVHETGYFSALPSLEEY-----WQQT     35
+## 
+## sp|Q13351|KLF1_HUMAN    24 QDDFLKWWRSEEAQDMGPGPPDPTEPPLHVKSEDQPGEEE     63
+##                                     ||               |  |          
+## gi|37655157|KLF6_HUMAN  36 CLELERYLQSE---------------PCYVSASEIKFDSQ     60
+## 
+## sp|Q13351|KLF1_HUMAN    64 DDERGADATWDLDLLLTNFSGPEPGGAPQTCALAPSEASG    103
+##                             |       |    |                |    | | 
+## gi|37655157|KLF6_HUMAN  61 ED------LWTKIIL----------------AREKKEESE     78
+## 
+## sp|Q13351|KLF1_HUMAN   104 AQYP--PPPETLGAYAGGPGLVAGLLGSE------DHSGW    135
+##                                  ||  ||        |    | |       | |  
+## gi|37655157|KLF6_HUMAN  79 LKISSSPPEDTLISPSFCYNLETNSLNSDVSSESSDSSEE    118
+## 
+## sp|Q13351|KLF1_HUMAN   136 VRPALRARAPDAFVGPALAPAPAPEPKALALQPVYPGPGA    175
+##                              |           |  |                      
+## gi|37655157|KLF6_HUMAN 119 LSPTAKFTSDP--IGEVLV---------------------    135
+## 
+## sp|Q13351|KLF1_HUMAN   176 GSSGGYFPRTGLSVPAASGAPYGLLSGYPAMYPAPQYQGH    215
+##                              | |       | |  |      ||  |           
+## gi|37655157|KLF6_HUMAN 136 --SSGKLSSSVTSTPPSSPE----LSREPSQ---------    160
+## 
+## sp|Q13351|KLF1_HUMAN   216 FQLFRGLQGPAPGPATSPSFLSCLGPGTVGTGLGGTAEDP    255
+##                                  | |  ||   ||        | |  |  |   | 
+## gi|37655157|KLF6_HUMAN 161 ------LWGCVPGELPSP--------GKVRSGTSGKPGDK    186
+## 
+## sp|Q13351|KLF1_HUMAN   256 GVIAETAPSKRGRRSWARKRQAAHTCAHPGCGKSYTKSSH    295
+##                            |      |  | |          | |   || | ||||||
+## gi|37655157|KLF6_HUMAN 187 GN-GDASPDGRRR---------VHRCHFNGCRKVYTKSSH    216
+## 
+## sp|Q13351|KLF1_HUMAN   296 LKAHLRTHTGEKPYACTWEGCGWRFARSDELTRHYRKHTG    335
+##                            |||| ||||||||| | |||| |||||||||||| |||||
+## gi|37655157|KLF6_HUMAN 217 LKAHQRTHTGEKPYRCSWEGCEWRFARSDELTRHFRKHTG    256
+## 
+## sp|Q13351|KLF1_HUMAN   336 QRPFRCQLCPRAFSRSDHLALHMKRHL    362
+##                              || |  | | |||||||||||||||
+## gi|37655157|KLF6_HUMAN 257 AKPFKCSHCDRCFSRSDHLALHMKRHL    283
+## 
+## 
+## #---------------------------------------
+## #---------------------------------------</code></pre>
+<p>We can immediately see that the percent identity is much lower and there are far more gaps when trying to perform a global alignment. If we look closely we can see a highly conserved region towards the end of both proteins. If we had looked for simply the percent identity or similarity using a global alignment, it’s unlikely that this comparison would have stood out as significant, highlighting the principle weakness of using global alignment.</p>
+<p><strong>Local Alignment</strong></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">laln &lt;-<span class="st"> </span><span class="kw">pairwiseAlignment</span>(human_klf1, human_klf6, 
+                          <span class="dt">type =</span> <span class="st">&quot;local&quot;</span>, 
+                          <span class="dt">substitutionMatrix =</span> mat,
+                          <span class="dt">gapOpening =</span> <span class="dv">10</span>,
+                          <span class="dt">gapExtension =</span> <span class="fl">0.5</span>)
+<span class="kw">writePairwiseAlignments</span>(laln, <span class="dt">Matrix =</span> mat, <span class="dt">block.width =</span> <span class="dv">40</span>)</code></pre></div>
+<pre><code>## ########################################
+## # Program: Biostrings (version 2.40.2), a Bioconductor package
+## # Rundate: Mon Jul  4 04:23:49 2016
+## ########################################
+## #=======================================
+## #
+## # Aligned_sequences: 2
+## # 1: sp|Q13351|KLF1_HUMAN
+## # 2: gi|37655157|KLF6_HUMAN
+## # Matrix: BLOSUM62
+## # Gap_penalty: 10.5
+## # Extend_penalty: 0.5
+## #
+## # Length: 141
+## # Identity:      81/141 (57.4%)
+## # Similarity:    NA/141 (NA%)
+## # Gaps:          18/141 (12.8%)
+## # Score: 411
+## #
+## #
+## #=======================================
+## 
+## sp|Q13351|KLF1_HUMAN   222 LQGPAPGPATSPSFLSCLGPGTVGTGLGGTAEDPGVIAET    261
+##                            | |  ||   ||        | |  |  |   | |     
+## gi|37655157|KLF6_HUMAN 161 LWGCVPGELPSP--------GKVRSGTSGKPGDKGN-GDA    191
+## 
+## sp|Q13351|KLF1_HUMAN   262 APSKRGRRSWARKRQAAHTCAHPGCGKSYTKSSHLKAHLR    301
+##                             |  | |          | |   || | |||||||||| |
+## gi|37655157|KLF6_HUMAN 192 SPDGRRR---------VHRCHFNGCRKVYTKSSHLKAHQR    222
+## 
+## sp|Q13351|KLF1_HUMAN   302 THTGEKPYACTWEGCGWRFARSDELTRHYRKHTGQRPFRC    341
+##                            |||||||| | |||| |||||||||||| |||||  || |
+## gi|37655157|KLF6_HUMAN 223 THTGEKPYRCSWEGCEWRFARSDELTRHFRKHTGAKPFKC    262
+## 
+## sp|Q13351|KLF1_HUMAN   342 QLCPRAFSRSDHLALHMKRHL    362
+##                              | | |||||||||||||||
+## gi|37655157|KLF6_HUMAN 263 SHCDRCFSRSDHLALHMKRHL    283
+## 
+## 
+## #---------------------------------------
+## #---------------------------------------</code></pre>
+<p>Here we can see that the local alignment gives us a more significant alignment. It highlights the C-terminal end of both proteins, which are known to contain the zinc finger domains common to all KLF proteins [<a href="http://www.sciencedirect.com/science/article/pii/S088875430500011X" title="Suske et al.">Suske et al.</a>]. We can also see, based on the alignment above, that the highly similar alignment region is about the right length as well.</p>
+<p>After playing with the parameters a bit, we get an even better alignment using the code below. Now we can really zoom in on the domains common to both proteins and maximize the percent similarity since we can see that there are relatively few gaps in the alignment above within this region.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">laln &lt;-<span class="st"> </span><span class="kw">pairwiseAlignment</span>(human_klf1, human_klf6, 
+                          <span class="dt">type =</span> <span class="st">&quot;local&quot;</span>, 
+                          <span class="dt">substitutionMatrix =</span> <span class="st">&quot;BLOSUM80&quot;</span>,
+                          <span class="dt">gapOpening =</span> <span class="dv">10</span>,
+                          <span class="dt">gapExtension =</span> <span class="dv">5</span>)
+<span class="kw">writePairwiseAlignments</span>(laln, <span class="dt">Matrix =</span> mat, <span class="dt">block.width =</span> <span class="dv">40</span>)</code></pre></div>
+<pre><code>## ########################################
+## # Program: Biostrings (version 2.40.2), a Bioconductor package
+## # Rundate: Mon Jul  4 04:23:49 2016
+## ########################################
+## #=======================================
+## #
+## # Aligned_sequences: 2
+## # 1: sp|Q13351|KLF1_HUMAN
+## # 2: gi|37655157|KLF6_HUMAN
+## # Matrix: BLOSUM62
+## # Gap_penalty: 15.0
+## # Extend_penalty: 5.0
+## #
+## # Length: 88
+## # Identity:      67/88 (76.1%)
+## # Similarity:    NA/88 (NA%)
+## # Gaps:           0/88 (0.0%)
+## # Score: 404
+## #
+## #
+## #=======================================
+## 
+## sp|Q13351|KLF1_HUMAN   275 RQAAHTCAHPGCGKSYTKSSHLKAHLRTHTGEKPYACTWE    314
+##                            |   | |   || | |||||||||| ||||||||| | ||
+## gi|37655157|KLF6_HUMAN 196 RRRVHRCHFNGCRKVYTKSSHLKAHQRTHTGEKPYRCSWE    235
+## 
+## sp|Q13351|KLF1_HUMAN   315 GCGWRFARSDELTRHYRKHTGQRPFRCQLCPRAFSRSDHL    354
+##                            || |||||||||||| |||||  || |  | | |||||||
+## gi|37655157|KLF6_HUMAN 236 GCEWRFARSDELTRHFRKHTGAKPFKCSHCDRCFSRSDHL    275
+## 
+## sp|Q13351|KLF1_HUMAN   355 ALHMKRHL    362
+##                            ||||||||
+## gi|37655157|KLF6_HUMAN 276 ALHMKRHL    283
+## 
+## 
+## #---------------------------------------
+## #---------------------------------------</code></pre>
+<div id="c-what-does-this-tell-you-about-the-conservation-in-different-domains-of-the-proteins" class="section level3">
+<h3><span class="header-section-number">4.2.1</span> 1.3C What does this tell you about the conservation in different domains of the proteins?</h3>
+<p>This tells me that potentially the only region of the protein family that’s essential for it to function as a zinc-finger protein are these three domains located near the C-terminal end. You can see that one copy of KFL is longer than another in humans, but the highly conserved domains extend towards the end of the C-terminal end of the protein meaning that the shorter protein lost part of its sequence more towards the N-terminal end where there are potentially non-essential sequences or domains.</p>
+<p>It’s evident that all three zing-finger domains are conserved between paralogous proteins as is also highlighted in the figure below.</p>
+<div class="figure" style="text-align: center"><span id="fig:klf-domains"></span>
+<img src="img/lesson4/klf_domains.jpg" alt="KLF Zinc Finger Multiple Alignment adapted from Oats et al [@klf-zebrafish]"  />
+<p class="caption">
+Figure 4.1: KLF Zinc Finger Multiple Alignment adapted from Oats et al <span class="citation">(Andrew C. Oates <a href="#ref-klf-zebrafish">2001</a>)</span>
+</p>
+</div>
+<p><br></p>
+<hr />
+<p><br></p>
+<p>For this exercise I downloaded the sequence for MJ0577 from <a href="http://www.uniprot.org/uniprot/Q57997">Uniprot</a>.</p>
+<p><strong>2.1A How long is the query, and how large is the database?</strong></p>
+<p>The query is 162 amino acids. The database has 29,838,499,437 letters (amino acids) and 81,622,391 sequences.</p>
+<p><strong>2.1B What Matrix was used? Briefly describe.</strong></p>
+<p>By default, the BLOSUM62 matrix was used, which expects these sequences to be 62% identical based on the time since their evolutionary divergence.</p>
+<p><strong>2.2A What are hits to database? What is a high-scoring segment pair (HSP)? What is the relationship between a “hit” and an HSP?</strong></p>
+<p>BLAST is a heuristic that finds similar sequences within a database when compared to a query sequence. The key tradeoff that BLAST optimizes is the relationship between sensitivity and speed due to the fact that running a sensitive local alignment, for example, on every sequence within the NCBI non-redundant protein sequences database would take too long to run. In order to do so it first creates a list of “hits” to the database and then extends those hits into “high scoring segment pairs.”</p>
+<p>To create a list of hits it will split your query sequence into “words”, W, of a length one can input as a parameter. It will then create another list of “words”, W<sup>+</sup>, that match closely enough to the words within your query sequence based on some scoring threshold. It will then scan the database using the words in W<sup>+</sup> for hits.</p>
+<p>Not all hits are eventually reported by BLAST because the final step is to extend those hits into what are called high-scoring segment pairs (HSP) based on another scoring threshold, S. These high-scoring segment pairs are what are then reported based on different cutoffs one can set such as an E-score.</p>
+<p><strong>2.2B What conditions must be met before a gapped extension is performed by BLAST2?</strong></p>
+<p>A gapped extension is performed when there are two hits on the same diagonal of your dot plot within a certain distance from one another (in nucleotides) and extending the gap maintains a sufficiently high score.</p>
+<p><strong>2.3 Based on the results from the blast search, what might be the function of this “hypothetical protein MJ0577”? Please report this in your own words. If instead you choose to cut-and-paste from a description on a website, you must put it in quotes, and provide a reference(s) to the web site and any appropriate literature.</strong></p>
+<p>Following the Uniprot link above to find the FASTA protein sequence tells me that the protein is a universal stress protein. I can also easily infer that this might be the case based on many of the HSPs returned by BLAST. NCBI BLAST also has a feature that looks into conserved protein domains found within your query sequence and performs a multiple alignemnt to confirm this hypothesis using closely related species. Below is an image of the multiple alignment.</p>
+<div class="figure" style="text-align: center"><span id="fig:maln-blast"></span>
+<img src="img/lesson4/maln-blast.png" alt="Multiple Alignment of MJ0577"  />
+<p class="caption">
+Figure 4.2: Multiple Alignment of MJ0577
+</p>
+</div>
+<p>To learn more about what a universal stress protein (USP) is we can follow this <a href="http://www.ncbi.nlm.nih.gov/Structure/cdd/cddsrv.cgi?ascbin=8&amp;maxaln=10&amp;seltype=2&amp;uid=cd00293">link</a>. Here we learn that USPs are small, cytoplasmic, bacterial proteins that have “enhanced expression” during prolonged exposure to stress.</p>
+<p><strong>2.4 Run a few iterations of PSI-BLAST and describe what happens in terms of discovery of new matches and E values.</strong></p>
+<p>I ran BLAST using the protein sequence for an ApiAP2 protein found in Plasmodium falciparum with the gene ID, PF3D7_1007700. Not much is known regarding this protein except that it has several DNA binding domains and has been implicated in the regulation of invasion-related genes. More information can be found <a href="http://plasmodb.org/plasmo/showRecord.do?name=GeneRecordClasses.GeneRecordClass&amp;source_id=PF3D7_1007700&amp;project_id=PlasmoDB">here on PlasmoDB</a>.</p>
+<p>My first attempt resulted in an error telling me that I had used too many compute resources. What this means, I’m not entirely sure but I think it speaks to the difficulty of having assigned putative functions to this family of transcription factors at all! I decided to use blastp instead of PSI-BLAST, used a BLOSUM45 scoring matrix in order to relax the assumption that the matches I was interested in were highly similar, and filtered low complexity regions due to alignments to those regions not being very meaningful and likely skewing our results.</p>
+<p>I received 500 hits (likely the maximum number of hits returned as set by an input parameter), many of which were to other Plasmodium ApiAP2 proteins. Some were found in other sequenced strains of falciparum, some in other species of Plasmodium, and some in other families of Apicomplexan parasites such as Toxoplasma, Bebesia, Eimeria, and Crytosporidium. Much of this is to be expected since we know of may orthologs.</p>
+<p>One interesting observation is that if I look at the predicted putative conserved domains on the protein in NCBI BLAST it shows that there are 2 AP2 binding domains. However, if I look on PlasmoDB, as can be found in the literature, there are 3 predicted AP2 DNA binding domains found on this protein. It’s been shown by PBM that each of these predicted binding domains due in fact bind double stranded DNA in vitro, but it hasn’t yet been shown where in the genome this protein is binding and when. Whether all three domains bind to the genome in vivo and in what combination has yet to be determined.</p>
+<p>The publication that first described their existence in Apicomplexans is <a href="https://nar.oxfordjournals.org/content/33/13/3994">Aravind et al.</a>.</p>
+</div>
+</div>
+<div id="additional-resources" class="section level2">
+<h2><span class="header-section-number">4.3</span> Additional Resources</h2>
+<ul>
+<li><a href="http://a-little-book-of-r-for-bioinformatics.readthedocs.org/en/latest/src/chapter4.html">Little Book of R for Bioinformatics - Pairwise Sequence Alignment</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Conservative_mutation">Conservative Mutation</a></li>
+<li><a href="https://www.bioconductor.org/packages/3.3/bioc/vignettes/Biostrings/inst/doc/PairwiseAlignments.pdf">Biostrings - Pairwise Alignments</a></li>
+<li><a href="http://bip.weizmann.ac.il/education/course/introbioinfo/lect5/scoringmatrices07.pdf">Substitution Matrices</a></li>
+</ul>
+
+</div>
+</div>
+<h3>References</h3>
+<div id="refs" class="references">
+<div id="ref-klf-zebrafish">
+<p>Andrew C. Oates, Brenda Vail, Stephen J. Pratt. 2001. “The Zebrafish Klf Gene Family.” <em>Blood</em>, no. 98: 1792–1801. <a href="http://dx.doi.org/10.1182/blood.V98.6.1792" class="uri">http://dx.doi.org/10.1182/blood.V98.6.1792</a>.</p>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="lesson3.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="lesson5.html" class="navigation navigation-next " aria-label="Next page""><i class="fa fa-angle-right"></i></a>
+
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"facebook": true,
+"twitter": true,
+"google": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/04-aligning-biological-sequences.Rmd",
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

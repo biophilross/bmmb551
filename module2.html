@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Genomics (BMMB 551)</title>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+  <meta name="description" content="Homework assignments for the class BMMB 551 as taught by Dr. Ross Hardison at Pennsylvania State University in the Spring of 2016.">
+  <meta name="generator" content="bookdown 0.0.72 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Genomics (BMMB 551)" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Homework assignments for the class BMMB 551 as taught by Dr. Ross Hardison at Pennsylvania State University in the Spring of 2016." />
+  <meta name="github-repo" content="thephilross/bmmb551" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Genomics (BMMB 551)" />
+  
+  <meta name="twitter:description" content="Homework assignments for the class BMMB 551 as taught by Dr. Ross Hardison at Pennsylvania State University in the Spring of 2016." />
+  
+
+<meta name="author" content="Philipp Ross">
+
+<meta name="date" content="2016-07-03">
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="module1.html">
+
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Genomics (BMMB 551)</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>What is this?</a></li>
+<li class="chapter" data-level="1" data-path="module1.html"><a href="module1.html"><i class="fa fa-check"></i><b>1</b> Molecular genetics</a><ul>
+<li class="chapter" data-level="1.1" data-path="module1.html"><a href="module1.html#learning-objectives"><i class="fa fa-check"></i><b>1.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="1.2" data-path="module1.html"><a href="module1.html#assignment"><i class="fa fa-check"></i><b>1.2</b> Assignment</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="module2.html"><a href="module2.html"><i class="fa fa-check"></i><b>2</b> Intro to Genomics</a><ul>
+<li class="chapter" data-level="2.1" data-path="module2.html"><a href="module2.html#learning-objectives-1"><i class="fa fa-check"></i><b>2.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="2.2" data-path="module2.html"><a href="module2.html#assignment-1"><i class="fa fa-check"></i><b>2.2</b> Assignment</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Genomics (BMMB 551)</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="module2" class="section level1">
+<h1><span class="header-section-number">Module 2</span> Intro to Genomics</h1>
+<div id="learning-objectives-1" class="section level2">
+<h2><span class="header-section-number">2.1</span> Learning Objectives</h2>
+<ul>
+<li>Explain the basic approaches to sequencing DNA.</li>
+<li>Use common sequence file formats such as fasta and fastq</li>
+<li>Understand quality scores for base calls</li>
+<li>Discuss major advances and limitations of second generation sequencing</li>
+</ul>
+</div>
+<div id="assignment-1" class="section level2">
+<h2><span class="header-section-number">2.2</span> Assignment</h2>
+<p><strong>1. Read a sequence from the electrophoretic separation of the products of Sanger sequencing. In this image from Fig. 3 of the Sanger et al. (1977) paper, read the sequence yourself for at least 80 nucleotides. Note that there are two different chain termination reactions specific for C. Then look at the sequence in the figure and evaluate how well you read it. What is the most frequent source of errors?</strong></p>
+<div class="figure" style="text-align: center"><span id="fig:sanger"></span>
+<img src="img/module2/sanger.png" alt="Adapted from Sanger et al. 1977"  />
+<p class="caption">
+Figure 2.1: Adapted from Sanger et al. 1977
+</p>
+</div>
+<p>Reading through the sequence myself is very difficult. The most frequent sources of error are an incorrect base call or incorrect number of nucleotides that make up a polynucleotide track. It’s difficult with the gel resolution to interpret how many nucleotides occur in a row before the first change. It’s also sometimes difficult to tell whether one band has a greater intensity than another if we look by eye <span class="citation">(F. Sanger and Coulson <a href="#ref-sanger-sequencing">1977</a>)</span>.</p>
+<p><strong>2. What are the major differences between first generation sequencing (e.g. Sanger sequencing either manually or automated) and second (“next”) generation sequencing. You should discuss both conceptual differences (fundamental differences in approach) and practical consequences.</strong></p>
+<p>The major differences between first and second generation sequencing involve how DNA fragments are isolated, the amplification of genomic material, the sequencing approach, and the method of detection.</p>
+<p>In regards to making copies of the genomic material, for first generation sequencing DNA fragments are cloned using plasmids transformed into bacterial colonies and using their machinery to make copies of the engineered vector. For second generation sequencing, DNA fragments are “cloned” <em>in vitro</em> using variants of the polymerase chain reaction. As a result, there is no need for plasmid vectors in second generation sequencing nor the need to grow bacterial colonies.</p>
+<p>In regards to the sequencing approach, if we look at automated Sanger sequencing and Illumina/Solexa sequencing approaches, they are very similar in that they both utilize the sequencing-by-synthesis approach using fluorescently labeled dNTPs. The major difference in the chemistry involves whether dideoxynucleotides are used. In first generation sequencing, synthesis is terminated once a fluorescently labeled nucleotide is incorporated. However, in second generation sequencing, this is not the case as a fluorescent marker is cleaved when the dNTP is incorporated into the nascent dsDNA fragment.</p>
+<p>This in turn leads us into the difference in detection methodology. In first generation sequencing, electrophoresis is needed to separate the fragments by size and detect the florescent labels found in each fragment following base incorporation. In second generation sequencing, bases are detected “in real time” as they are incorporated at the ends of each fragment for each cycle. The fluorescent signal that comes off as each dNTP is flowed through a flow cell is what the sequencer designates as the incorporated nucleotide.</p>
+<p>As a consequence of these difference we see two major differences in the output between the two generations. Although we are able to massively increase the actual amount of DNA molecules that we can “read” in one round of sequencing, the read lengths are much shorter, due to the chemistry of the reactions taking place. While it’s common to see read lengths of several hundred and even greater than one thousand nucleotides using first generation sequencing, read lengths are typically on the order of one to three hundred nucleotides using variants of Illumina’s platforms.</p>
+<p>Pacific Biosciences (PacBio) is a company that utilizes slighty different methodologies and hopes to alleviate this trade off by continuing to offer massively parallel sequencing of many DNA molecules at once without sacrificing read length. The result thus far has been a decrease in the overall output quantified by number of reads, but also a much higher read length, even than first generation methods. However, the new methodology comes with its own trade offs that include a lack of accuracy in individual base calls. This has resulted in most researchers utilizing PacBio in parallel with Illumina to generate high quality draft assemblies and correct for errors in previous sequencing runs. This has been most useful for assembling and annotated genomes.</p>
+
+<div id="refs" class="references">
+<div>
+<p>F. Sanger, S. Nicklen, and A. R. Coulson. 1977. “DNA Sequencing with Chain-Terminating Inhibitors.” <em>PNAS</em> 74 (12): 5463–7.</p>
+</div>
+</div>
+</div>
+</div>
+<h3>References</h3>
+<div id="refs" class="references">
+<div id="ref-sanger-sequencing">
+<p>F. Sanger, S. Nicklen, and A. R. Coulson. 1977. “DNA Sequencing with Chain-Terminating Inhibitors.” <em>PNAS</em> 74 (12): 5463–7.</p>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="module1.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"facebook": true,
+"twitter": true,
+"google": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/02-genomics.Rmd",
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

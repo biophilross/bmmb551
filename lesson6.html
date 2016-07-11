@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Genomics (BMMB 551)</title>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+  <meta name="description" content="Homework assignments for the class BMMB 551 as taught by Dr. Ross Hardison at Pennsylvania State University in the Spring of 2016.">
+  <meta name="generator" content="bookdown 0.0.72 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Genomics (BMMB 551)" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Homework assignments for the class BMMB 551 as taught by Dr. Ross Hardison at Pennsylvania State University in the Spring of 2016." />
+  <meta name="github-repo" content="thephilross/bmmb551" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Genomics (BMMB 551)" />
+  
+  <meta name="twitter:description" content="Homework assignments for the class BMMB 551 as taught by Dr. Ross Hardison at Pennsylvania State University in the Spring of 2016." />
+  
+
+<meta name="author" content="Philipp Ross">
+
+<meta name="date" content="2016-07-04">
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="lesson5.html">
+<link rel="next" href="lesson7.html">
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Genomics (BMMB 551)</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>What is this?</a></li>
+<li class="chapter" data-level="1" data-path="module1.html"><a href="module1.html"><i class="fa fa-check"></i><b>1</b> Molecular genetics</a><ul>
+<li class="chapter" data-level="1.1" data-path="module1.html"><a href="module1.html#learning-objectives"><i class="fa fa-check"></i><b>1.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="1.2" data-path="module1.html"><a href="module1.html#assignment"><i class="fa fa-check"></i><b>1.2</b> Assignment</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="lesson2.html"><a href="lesson2.html"><i class="fa fa-check"></i><b>2</b> Intro to Genomics</a><ul>
+<li class="chapter" data-level="2.1" data-path="lesson2.html"><a href="lesson2.html#learning-objectives-1"><i class="fa fa-check"></i><b>2.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="2.2" data-path="lesson2.html"><a href="lesson2.html#assignment-1"><i class="fa fa-check"></i><b>2.2</b> Assignment</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="lesson3.html"><a href="lesson3.html"><i class="fa fa-check"></i><b>3</b> DNA sequencing</a><ul>
+<li class="chapter" data-level="3.1" data-path="lesson3.html"><a href="lesson3.html#learning-objectives-2"><i class="fa fa-check"></i><b>3.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="3.2" data-path="lesson3.html"><a href="lesson3.html#assignment-2"><i class="fa fa-check"></i><b>3.2</b> Assignment</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="lesson4.html"><a href="lesson4.html"><i class="fa fa-check"></i><b>4</b> Aligning biological sequences</a><ul>
+<li class="chapter" data-level="4.1" data-path="lesson4.html"><a href="lesson4.html#learning-objectives-3"><i class="fa fa-check"></i><b>4.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="4.2" data-path="lesson4.html"><a href="lesson4.html#assignment-3"><i class="fa fa-check"></i><b>4.2</b> Assignment</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="lesson4.html"><a href="lesson4.html#c-what-does-this-tell-you-about-the-conservation-in-different-domains-of-the-proteins"><i class="fa fa-check"></i><b>4.2.1</b> 1.3C What does this tell you about the conservation in different domains of the proteins?</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="lesson4.html"><a href="lesson4.html#additional-resources"><i class="fa fa-check"></i><b>4.3</b> Additional Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="lesson5.html"><a href="lesson5.html"><i class="fa fa-check"></i><b>5</b> Genome Databases and Browsers</a><ul>
+<li class="chapter" data-level="5.1" data-path="lesson5.html"><a href="lesson5.html#learning-objectives-4"><i class="fa fa-check"></i><b>5.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="5.2" data-path="lesson5.html"><a href="lesson5.html#assignment-4"><i class="fa fa-check"></i><b>5.2</b> Assignment</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="lesson6.html"><a href="lesson6.html"><i class="fa fa-check"></i><b>6</b> Genomics Platforms</a><ul>
+<li class="chapter" data-level="6.1" data-path="lesson6.html"><a href="lesson6.html#learning-objectives-5"><i class="fa fa-check"></i><b>6.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="6.2" data-path="lesson6.html"><a href="lesson6.html#assignment-5"><i class="fa fa-check"></i><b>6.2</b> Assignment</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="lesson7.html"><a href="lesson7.html"><i class="fa fa-check"></i><b>7</b> Protein Coding Genes</a><ul>
+<li class="chapter" data-level="7.1" data-path="lesson7.html"><a href="lesson7.html#learning-objectives-6"><i class="fa fa-check"></i><b>7.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="7.2" data-path="lesson7.html"><a href="lesson7.html#assignment-6"><i class="fa fa-check"></i><b>7.2</b> Assignment</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Genomics (BMMB 551)</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="lesson6" class="section level1">
+<h1><span class="header-section-number">Lesson 6</span> Genomics Platforms</h1>
+<div id="learning-objectives-5" class="section level2">
+<h2><span class="header-section-number">6.1</span> Learning Objectives</h2>
+<ul>
+<li>Become familiar with more tools and capabilities of Galaxy</li>
+<li>Analyze genomic data using different tools</li>
+</ul>
+</div>
+<div id="assignment-5" class="section level2">
+<h2><span class="header-section-number">6.2</span> Assignment</h2>
+<p>To analyze data using Galaxy I used a Pennsylvania State University specific instance known as <a href="https://tadpole.bx.psu.edu/">Tadpole</a>. One needs an account to access it, but <strong>it does not use any tools that cannot be installed from the main <a href="https://toolshed.g2.bx.psu.edu/">Galaxy Toolshed</a>.</strong> Thus, any tools that I explain I used can also be found in the <a href="https://usegalaxy.org/">main Galaxy instance</a>.</p>
+<p>Now let’s get started.</p>
+<p><strong>Analysis of Chromosome 14 of P. falciparum</strong></p>
+<p>To demonstrate the utility of Galaxy I will show off a few tools that one can use to analyze Illumina whole genome sequencing data. This data was generated sepcifically on a HiSeq 2500 and is composed of 150 base-pair single-end reads. In order to keep it simple, we’ll just map the reads to chromosome 14 of the <em>Plasmodium falciparum</em> 3D7 reference genome.</p>
+<p><strong>Downloading the data</strong></p>
+<p>We can download the multi-FASTA file that contains the sequences for the reference genome from <strong><a href="http://plasmodb.org/plasmo/">PlasmoDB</a></strong>. We’ll use the genome found under <a href="http://plasmodb.org/common/downloads/release-27/Pfalciparum3D7/fasta/data/PlasmoDB-27_Pfalciparum3D7_Genome.fasta">version 27</a>. We need to download our FASTA file beforehand because Tadpole does not have locally cached genome files. Not a problem, since these genomes are relatively small and building an index on the fly does not take much time.</p>
+<p><strong>Uploading the data</strong></p>
+<p>Next we will look under “Get Data” and use the “Upload File” tool to load our genome file into our history.</p>
+<div class="figure" style="text-align: center"><span id="fig:upload-file"></span>
+<img src="img/lesson6/upload_file.png" alt="Upload File Tool"  />
+<p class="caption">
+Figure 6.1: Upload File Tool
+</p>
+</div>
+<p>We will also upload our FASTQ files which are stored as a <strong><a href="https://wiki.galaxyproject.org/Admin/DataLibraries/Libraries">Data Library</a></strong> on the Tadpole instance. A Data Library provide containers for data sets in Galaxy. An administrator needs to make it available to specific users prior to this being an option for the average user, but once that’s done, you have the option of loading those data sets directly into your history. Because the data set is already loaded into Galaxy this process is very fast and efficient. This especially useful if you want to automate the process of data retrieval and accessibility or if you want to share this data with other members of the same lab or collaborators.</p>
+<p><strong>Quality control</strong></p>
+<p>The next step in any NGS analysis is to somehow quantify different quality control measures for our raw reads. Questions we might be interested in include the quality of our base calls at each position (since these are Illumina reads each read is of the same length), the nucleotide content distribution, or whether there is possible contamination. A very useful and efficient tool for looking into these and many more potential issues is <strong><a href="http://www.bioinformatics.babraham.ac.uk/projects/fastqc/">FastQC</a></strong>. In Figure 2 we can see that most of our quality metrics look alright we can move ahead to mapping these reads to our reference without performing any additional process such as trimming.</p>
+<div class="figure" style="text-align: center"><span id="fig:fastqc"></span>
+<img src="img/lesson6/fastqc.png" alt="FastQC Plot"  />
+<p class="caption">
+Figure 6.2: FastQC Plot
+</p>
+</div>
+<p><strong>Mapping reads to a reference using BWA-MEM</strong></p>
+<p>Next we need to decide which short read mapper we want to use to map our reads to the genome. Galaxy provides us with several options, two of which are very common: <strong><a href="http://bowtie-bio.sourceforge.net/bowtie2/index.shtml">Bowtie2</a></strong> and <strong><a href="http://bio-bwa.sourceforge.net/bwa.shtml">BWA-MEM</a></strong>. We’ll use BWA-MEM here because it’s slightly faster using the default parameters. Depending on the size of your data set this can take several hours to several weeks! Luckily, the Plasmodium genome is relatively small and we’re only interested in one chromosome so this will likely only take a few hours.</p>
+<p><strong>Checking our mapping results using samtools</strong></p>
+<p>We can initially check how many of our reads mapped successfully to the genome using samtools. Many other tools can be used as well, but samtools is very efficient and information-lite. It’s a perfect first pass of our data. The results are below:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="dv">13363234</span> +<span class="st"> </span><span class="dv">0</span> in <span class="kw">total</span> (QC-passed reads +<span class="st"> </span>QC-failed reads)
+<span class="dv">0</span> +<span class="st"> </span><span class="dv">0</span> duplicates
+<span class="dv">4613751</span> +<span class="st"> </span><span class="dv">0</span> <span class="kw">mapped</span> (<span class="fl">34.53</span>%:-nan%)
+<span class="dv">0</span> +<span class="st"> </span><span class="dv">0</span> paired in sequencing
+<span class="dv">0</span> +<span class="st"> </span><span class="dv">0</span> read1
+<span class="dv">0</span> +<span class="st"> </span><span class="dv">0</span> read2
+<span class="dv">0</span> +<span class="st"> </span><span class="dv">0</span> properly <span class="kw">paired</span> (-nan%:-nan%)
+<span class="dv">0</span> +<span class="st"> </span><span class="dv">0</span> with itself and mate mapped
+<span class="dv">0</span> +<span class="st"> </span><span class="dv">0</span> <span class="kw">singletons</span> (-nan%:-nan%)
+<span class="dv">0</span> +<span class="st"> </span><span class="dv">0</span> with mate mapped to a different chr
+<span class="dv">0</span> +<span class="st"> </span><span class="dv">0</span> with mate mapped to a different <span class="kw">chr</span> (mapQ&gt;=<span class="dv">5</span>)</code></pre></div>
+<p>The mapping percentages here look bad, but they’re actually quite high considering that the actual sample is taken from the entire genome! The whole genome is made of 16 total contigs (including one mitochondrial and one apicoplast genome). Of the 14 nuclear chromosomes, chromosome 14 is indeed the largest and thus should get the largest number of reads. The real question is how many reads should it get? The reference genome has 23332831 base pairs. Chromosome 14 has 3291936 base pairs. This leads to chromosome 14 containing 14.1% of the total number of base pairs in the genome. And yet we see here that 34.53% of the reads map to chromosome 14!</p>
+<p>It’s too soon to speak for whether this is to be expected or not. Additional things to look into are the average mapping quality of the reads and how many of them are multi-mapped reads. It’s possible also that any read that is mapping to a paralog present on another chromosome is now mapping to chromosome 14 since it is the closest thing to the fragment from which the read was derived.</p>
+<p><strong>Coverage distribution</strong></p>
+<p>Another good way of performing quality control on your alignment file is to plot a histogram of the coverage distribution. A great tool for that is <strong><a href="http://deeptools.readthedocs.org/en/latest/">deepTools</a> plotCoverage</strong>. This will provide us not only with a plot of the genome coverage distribution, but also can tell us the mean coverage of our alignment file.</p>
+<div class="figure" style="text-align: center"><span id="fig:coverage"></span>
+<img src="img/lesson6/coverage_distribution.png" alt="Coverage Distribution"  />
+<p class="caption">
+Figure 6.3: Coverage Distribution
+</p>
+</div>
+<p><strong>All done!</strong></p>
+<p>There’s a quick tutorial on mapping single-end short reads to a reference genome using Galaxy.</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="lesson5.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="lesson7.html" class="navigation navigation-next " aria-label="Next page""><i class="fa fa-angle-right"></i></a>
+
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"facebook": true,
+"twitter": true,
+"google": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/06-genomics-platforms.Rmd",
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

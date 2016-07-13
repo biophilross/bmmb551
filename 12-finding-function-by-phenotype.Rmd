@@ -1,0 +1,10 @@
+# Finding function by phenotype {#lesson12}
+
+## Learning Objectives
+
+* Genetic association studies are currently identifying, with high precision and statistical support, loci that contribute to complex traits, such as disease susceptibility. How can you find these results easily?
+* How can you use the data and insights from the earlier topics to develop testable hypotheses about how variation among humans at these loci lead to increased susceptibility to disease?
+* How do you use genome editing to test hypotheses about function?
+* The advent of genome-wide genotyping and sequencing of many humans has opened an exciting but challenging prospect of personalized medicine, and this prospect serves as a motivating example for this section of the course.
+
+## Assignment

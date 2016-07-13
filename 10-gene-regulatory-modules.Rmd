@@ -1,0 +1,10 @@
+# Gene regulatory modules {#lesson10}
+
+## Learning Objectives
+
+* Describe how to use genomic-wide epigenetic data to find DNA sequences involved in gene regulation.
+* Identify features associated with gene regulation (altered chromatin, histone modification, occupancy by RNA polymerase and transcription factors)
+* Compare various sequence census methods.
+* Interpret information from high-throughput methods that measure features with gene regulation comprehensively with high resolution across genomes.
+
+## Assignment

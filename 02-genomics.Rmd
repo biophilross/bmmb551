@@ -1,4 +1,4 @@
-# Intro to Genomics {#lesson2}
+# Genomics {#lesson2}
 
 ## Learning Objectives
 

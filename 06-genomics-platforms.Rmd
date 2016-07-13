@@ -1,4 +1,4 @@
-# Genomics Platforms {#lesson6}
+# Genomics platforms {#lesson6}
 
 ## Learning Objectives
 

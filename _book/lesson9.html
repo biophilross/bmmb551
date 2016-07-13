@@ -33,8 +33,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="lesson6.html">
-<link rel="next" href="lesson8.html">
+<link rel="prev" href="lesson8.html">
+<link rel="next" href="lesson10.html">
 
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -182,49 +182,25 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="lesson7" class="section level1">
-<h1><span class="header-section-number">Lesson 7</span> Protein-coding genes</h1>
-<div id="learning-objectives-6" class="section level2">
-<h2><span class="header-section-number">7.1</span> Learning Objectives</h2>
+<div id="lesson9" class="section level1">
+<h1><span class="header-section-number">Lesson 9</span> Comparative genomices</h1>
+<div id="learning-objectives-8" class="section level2">
+<h2><span class="header-section-number">9.1</span> Learning Objectives</h2>
 <ul>
-<li>Identify the number of protein-coding gene</li>
-<li>Explain how protein-coding genes are distributed along chromosomes.</li>
-<li>Show how to determine the function of protein-coding genes.</li>
-<li>Annotate genomes using both ab initio and evidence-based approaches</li>
-<li>Apply ab initio and evidence-based approaches to annotate genomes.</li>
+<li>Distinguish neutral evolution, negative selection, and positive selection</li>
+<li>Interpret alignments of genomic DNA sequences as showing evidence of evolutionary constraint or adaptation, distinguishing both from evidence consistent with neutral evolution.</li>
+<li>Show how you can use genome comparisons between species to estimate the amount of functional sequence – and to identify it</li>
+<li>Understand the basics of several tests for selection or scores that estimate likelihood of being under selection
+<ul>
+<li>Ka/Ks test</li>
+<li>phastCons</li>
+<li>Extended haplotype homozygosity</li>
+</ul></li>
+<li>Understand the connection between gene duplication and adaptive evolution</li>
 </ul>
 </div>
-<div id="assignment-6" class="section level2">
-<h2><span class="header-section-number">7.2</span> Assignment</h2>
-<p>For this assignment and following assignments I will be looking at the genome of <em><a href="https://en.wikipedia.org/wiki/Chromera_velia">Chromera velia</a></em>, a recently described unicellular eukaryote closely related phylogenetically to the Apicomplexa phylum of protozoan parasites. In a paper by <a href="http://elifesciences.org/content/4/e06974v1">Woo et al. 2015</a>, they sequence and assemble the nuclear genomes of two, so-called, Chromerids, <em>Chromera velia</em> and <em>Vitrella brassicaformis</em>. Key questions revolve around the evolutionary emergence of the Apicomplexa considering the Chromerids represent the closest non-Apicomplexan relative. Here will only focus on <em>Chromera</em>.</p>
-<p>I will breifly describe its genome based on the paper mentioned above and attempt to use <a href="http://nar.oxfordjournals.org/content/34/suppl_2/W435">Augustus</a> to predict gene sequences.</p>
-<p><strong>A brief look at the Chromerid genome</strong></p>
-<p>It’s important to note that the assembly I will be working is a draft assembly. It is made of 5953 scaffolds and totals 193.6 million base-pairs (Mb). The predicted number of protein-coding genes is 26,112 and the genome is estimated to be composed of ~30 Mb in transposable elements (TEs). This is an interesting finding considering that Plasmodium, for example, is known to have an exceptional dearth in transpoable elements. Thus, either the transposable elements that were present in the proto-Apicomplexan ancestor have been lost or repurposed. If we look at Supplementary table 2 in Woo et al., they note that 22.82% of the TEs fall under “Unclassified repeats”. This suggests the potential for novel TEs awaiting discovery within protist and potentially Apicomplexan genomes.</p>
-<p>Interestingly, in <em>Vitrella</em>, while the proporition of putative TEs is similar as in <em>Chromera</em> (27.24%), the genome is much smaller at 72.7 Mb. In addition, the <em>Vitrella</em> genome was assembled into much fewer scaffolds at 1064. Lastly, the number of protein-coding genes was not drastically different at 22,817 suggesting that there is far less intergenic space in <em>Vitrella</em>, similar to that in parasitic genomes of Apiceomplxan parasites.</p>
-<p><strong>Choosing a gene of interest</strong></p>
-<p>The genomic loci of interest in this study is going to be ~30kb on scaffold 27 of the <em>Chromera</em> assembly. This regions represents 10kb flanks surroundg the gene identified as Cvel_872. This gene was assigned the function of a striated fiber assemblin (SFA) protein, typically associated with basal body rootlets of the flagella. While all known components of the flagella were present in proto-apicomplexan ancestors (based on phyolgenetic analysis), most of the components have been lost as apicomplexan lineages began to differentiate. Thus, it’s been hypothesized that some flagellar-proteins have been repurposed for new functions in apicomplexans (<a href="http://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1001444">Francia et al. 2012</a>).</p>
-<p>In addition, Woo et al. preformed RNA-seq and compared the expression profiles of all genes in <em>Chromera</em> to all genes in <em>Plasmodium falciparum</em>. A statistically significant overlap in highly co-expressed orthogroups (orthologous gene clusters identified through sequence comparison) between <em>falciparum</em> invasion genes and the <em>Chromera</em> gene encoding SFA. Thus, it suggests an interesting hypothesis that elements of the flagellar apparatus have been repurposed as a module of the apical complex, an important organelle for invading host cells found only in Apicomplexan parasites.</p>
-<p>Here, I chose to use Augustus to predict the genes within 10kb nucleotide flanking regions up and downstream of the gene sequence encoding SFA itself, including the sequence of the gene encoding SFA, itself.</p>
-<p><strong>Evaluating Augustus</strong></p>
-<p>In Woo et al., they combined several approaches to predict genes in <em>Chromera</em>. They specifically used Augustus, a gene prediction software tool based on a Generalized Hidden Markov Model. In order to train the HMM they used Cufflinks derived transcript assemblies obtained from the RNA-seq experiments. If you don’t have transcript models to train the HMM, Augustus comes with dozens fo pretrained HMMs based on gene models in other organisms.</p>
-<p>Here I use <em>Toxoplasm gondii</em> as my gene model prediction organism. The snapshot in IGV represents my results.</p>
-<div class="figure" style="text-align: center"><span id="fig:results"></span>
-<img src="img/lesson7/results.png" alt="Augustus Gene Model Predictions. Gene models predicted in Woo et al. are in black; Augustus predictions without hints are in blue; Augustus preidctions with hints are in green."  />
-<p class="caption">
-Figure 7.1: Augustus Gene Model Predictions. Gene models predicted in Woo et al. are in black; Augustus predictions without hints are in blue; Augustus preidctions with hints are in green.
-</p>
-</div>
-<p>The red box represents the gene encoding SFA. What can see here is that Augustus is very good at predicting gene models <em>ab initio</em>. There is virtually no difference between the output when you compare the output with hints and without. There is, however, one general trend that plagues the accuracy of prediction, and that is premature stop codons, shown in Figure 2 below.</p>
-<div class="figure" style="text-align: center"><span id="fig:errors"></span>
-<img src="img/lesson7/errors_in_prediction.png" alt="Example of using the wrong reading frame to predict a stop codon."  />
-<p class="caption">
-Figure 7.2: Example of using the wrong reading frame to predict a stop codon.
-</p>
-</div>
-<p>In Figure 2 we can see that Augustus chose to predict a CDS that doesn’t exist (the start of the thick bar) and terminate the CDS (start of the thin bar) prematurely due to an incorrect reading frame prediction. With alternatively spliced transcripts like these this is likely a common problem. However, overall it does a great job! Looking at Figure 1, we can confidentally say that have a generally idea of where genes are, how many exons they contain, and roughly where splice site junctions are located.</p>
-<p>We can use a program called <a href="https://ccb.jhu.edu/software/stringtie/gff.shtml#gffcompare">gffcompare</a> to quantify the similarity in our predictions. Accordingly, these predictions are about 70.5% accurate. The reason this number is lower than expected when looking at the figures is due to the partial predictions of genes at the edges. I did not choose the flanking regions with the knowledge of where genes were upsteam and downstream of SFA. Thus, the predictions can only go so far as to predict partial genes at the edges, which it does relatively well.</p>
-<p><strong>Conclusions</strong></p>
-<p>Augustus is a very accurate and useful tool to predict protein-coding genes in eukaryotic genomes, given the correct HMM training model.</p>
+<div id="assignment-8" class="section level2">
+<h2><span class="header-section-number">9.2</span> Assignment</h2>
 
 </div>
 </div>
@@ -233,8 +209,8 @@ Figure 7.2: Example of using the wrong reading frame to predict a stop codon.
           </div>
         </div>
       </div>
-<a href="lesson6.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="lesson8.html" class="navigation navigation-next " aria-label="Next page""><i class="fa fa-angle-right"></i></a>
+<a href="lesson8.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="lesson10.html" class="navigation navigation-next " aria-label="Next page""><i class="fa fa-angle-right"></i></a>
 
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/lunr.js"></script>
@@ -261,7 +237,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/07-protein-coding-genes.Rmd",
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/09-comparative-genomics.Rmd",
 "text": null
 },
 "download": null,

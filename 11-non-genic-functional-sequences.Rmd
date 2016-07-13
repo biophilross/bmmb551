@@ -1,0 +1,11 @@
+# Non-genic functional sequences {#lesson11}
+
+## Learning Objectives
+
+* Learn the major modular principles for how long noncoding RNAs (lncRNAs) could function
+* Learn how lncRNAs are discovered, and methods for filtering to find the ones more likely to be functional
+* Engage in the ongoing debate about how many of the lncRNAs are functional
+* Critically consider the assessment that a large majority of the human genome is "functional" in the sense that the DNA sequences are subjected to a biochemical activity
+
+
+## Assignment

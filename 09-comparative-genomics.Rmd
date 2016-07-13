@@ -1,0 +1,14 @@
+# Comparative genomices {#lesson9}
+
+## Learning Objectives
+
+* Distinguish neutral evolution, negative selection, and positive selection
+* Interpret alignments of genomic DNA sequences as showing evidence of evolutionary constraint or adaptation, distinguishing both from evidence consistent with neutral evolution.
+* Show how you can use genome comparisons between species to estimate the amount of functional sequence – and to identify it
+* Understand the basics of several tests for selection or scores that estimate likelihood of being under selection
+    * Ka/Ks test
+    * phastCons
+    * Extended haplotype homozygosity
+* Understand the connection between gene duplication and adaptive evolution
+
+## Assignment

@@ -33,8 +33,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="lesson6.html">
-<link rel="next" href="lesson8.html">
+<link rel="prev" href="index.html">
+<link rel="next" href="lesson2.html">
 
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -182,49 +182,54 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="lesson7" class="section level1">
-<h1><span class="header-section-number">Lesson 7</span> Protein-coding genes</h1>
-<div id="learning-objectives-6" class="section level2">
-<h2><span class="header-section-number">7.1</span> Learning Objectives</h2>
+<div id="lesson1" class="section level1">
+<h1><span class="header-section-number">Lesson 1</span> Molecular genetics</h1>
+<div id="learning-objectives" class="section level2">
+<h2><span class="header-section-number">1.1</span> Learning Objectives</h2>
 <ul>
-<li>Identify the number of protein-coding gene</li>
-<li>Explain how protein-coding genes are distributed along chromosomes.</li>
-<li>Show how to determine the function of protein-coding genes.</li>
-<li>Annotate genomes using both ab initio and evidence-based approaches</li>
-<li>Apply ab initio and evidence-based approaches to annotate genomes.</li>
+<li>Identify the fundamental characteristics of genes.</li>
+<li>Explain what aspects of DNA structure are essential to making a genes.</li>
+<li>Identify the reverse complement of a protein coding sequence.</li>
+<li>Discuss the biological and bioinformatic implications of genes being in pieces (i.e., exons separated by introns).</li>
+<li>Describe the relationship between genes and chromosomes</li>
+<li>Define epigenetic features.</li>
 </ul>
 </div>
-<div id="assignment-6" class="section level2">
-<h2><span class="header-section-number">7.2</span> Assignment</h2>
-<p>For this assignment and following assignments I will be looking at the genome of <em><a href="https://en.wikipedia.org/wiki/Chromera_velia">Chromera velia</a></em>, a recently described unicellular eukaryote closely related phylogenetically to the Apicomplexa phylum of protozoan parasites. In a paper by <a href="http://elifesciences.org/content/4/e06974v1">Woo et al. 2015</a>, they sequence and assemble the nuclear genomes of two, so-called, Chromerids, <em>Chromera velia</em> and <em>Vitrella brassicaformis</em>. Key questions revolve around the evolutionary emergence of the Apicomplexa considering the Chromerids represent the closest non-Apicomplexan relative. Here will only focus on <em>Chromera</em>.</p>
-<p>I will breifly describe its genome based on the paper mentioned above and attempt to use <a href="http://nar.oxfordjournals.org/content/34/suppl_2/W435">Augustus</a> to predict gene sequences.</p>
-<p><strong>A brief look at the Chromerid genome</strong></p>
-<p>It’s important to note that the assembly I will be working is a draft assembly. It is made of 5953 scaffolds and totals 193.6 million base-pairs (Mb). The predicted number of protein-coding genes is 26,112 and the genome is estimated to be composed of ~30 Mb in transposable elements (TEs). This is an interesting finding considering that Plasmodium, for example, is known to have an exceptional dearth in transpoable elements. Thus, either the transposable elements that were present in the proto-Apicomplexan ancestor have been lost or repurposed. If we look at Supplementary table 2 in Woo et al., they note that 22.82% of the TEs fall under “Unclassified repeats”. This suggests the potential for novel TEs awaiting discovery within protist and potentially Apicomplexan genomes.</p>
-<p>Interestingly, in <em>Vitrella</em>, while the proporition of putative TEs is similar as in <em>Chromera</em> (27.24%), the genome is much smaller at 72.7 Mb. In addition, the <em>Vitrella</em> genome was assembled into much fewer scaffolds at 1064. Lastly, the number of protein-coding genes was not drastically different at 22,817 suggesting that there is far less intergenic space in <em>Vitrella</em>, similar to that in parasitic genomes of Apiceomplxan parasites.</p>
-<p><strong>Choosing a gene of interest</strong></p>
-<p>The genomic loci of interest in this study is going to be ~30kb on scaffold 27 of the <em>Chromera</em> assembly. This regions represents 10kb flanks surroundg the gene identified as Cvel_872. This gene was assigned the function of a striated fiber assemblin (SFA) protein, typically associated with basal body rootlets of the flagella. While all known components of the flagella were present in proto-apicomplexan ancestors (based on phyolgenetic analysis), most of the components have been lost as apicomplexan lineages began to differentiate. Thus, it’s been hypothesized that some flagellar-proteins have been repurposed for new functions in apicomplexans (<a href="http://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1001444">Francia et al. 2012</a>).</p>
-<p>In addition, Woo et al. preformed RNA-seq and compared the expression profiles of all genes in <em>Chromera</em> to all genes in <em>Plasmodium falciparum</em>. A statistically significant overlap in highly co-expressed orthogroups (orthologous gene clusters identified through sequence comparison) between <em>falciparum</em> invasion genes and the <em>Chromera</em> gene encoding SFA. Thus, it suggests an interesting hypothesis that elements of the flagellar apparatus have been repurposed as a module of the apical complex, an important organelle for invading host cells found only in Apicomplexan parasites.</p>
-<p>Here, I chose to use Augustus to predict the genes within 10kb nucleotide flanking regions up and downstream of the gene sequence encoding SFA itself, including the sequence of the gene encoding SFA, itself.</p>
-<p><strong>Evaluating Augustus</strong></p>
-<p>In Woo et al., they combined several approaches to predict genes in <em>Chromera</em>. They specifically used Augustus, a gene prediction software tool based on a Generalized Hidden Markov Model. In order to train the HMM they used Cufflinks derived transcript assemblies obtained from the RNA-seq experiments. If you don’t have transcript models to train the HMM, Augustus comes with dozens fo pretrained HMMs based on gene models in other organisms.</p>
-<p>Here I use <em>Toxoplasm gondii</em> as my gene model prediction organism. The snapshot in IGV represents my results.</p>
-<div class="figure" style="text-align: center"><span id="fig:results"></span>
-<img src="img/lesson7/results.png" alt="Augustus Gene Model Predictions. Gene models predicted in Woo et al. are in black; Augustus predictions without hints are in blue; Augustus preidctions with hints are in green."  />
-<p class="caption">
-Figure 7.1: Augustus Gene Model Predictions. Gene models predicted in Woo et al. are in black; Augustus predictions without hints are in blue; Augustus preidctions with hints are in green.
-</p>
-</div>
-<p>The red box represents the gene encoding SFA. What can see here is that Augustus is very good at predicting gene models <em>ab initio</em>. There is virtually no difference between the output when you compare the output with hints and without. There is, however, one general trend that plagues the accuracy of prediction, and that is premature stop codons, shown in Figure 2 below.</p>
-<div class="figure" style="text-align: center"><span id="fig:errors"></span>
-<img src="img/lesson7/errors_in_prediction.png" alt="Example of using the wrong reading frame to predict a stop codon."  />
-<p class="caption">
-Figure 7.2: Example of using the wrong reading frame to predict a stop codon.
-</p>
-</div>
-<p>In Figure 2 we can see that Augustus chose to predict a CDS that doesn’t exist (the start of the thick bar) and terminate the CDS (start of the thin bar) prematurely due to an incorrect reading frame prediction. With alternatively spliced transcripts like these this is likely a common problem. However, overall it does a great job! Looking at Figure 1, we can confidentally say that have a generally idea of where genes are, how many exons they contain, and roughly where splice site junctions are located.</p>
-<p>We can use a program called <a href="https://ccb.jhu.edu/software/stringtie/gff.shtml#gffcompare">gffcompare</a> to quantify the similarity in our predictions. Accordingly, these predictions are about 70.5% accurate. The reason this number is lower than expected when looking at the figures is due to the partial predictions of genes at the edges. I did not choose the flanking regions with the knowledge of where genes were upsteam and downstream of SFA. Thus, the predictions can only go so far as to predict partial genes at the edges, which it does relatively well.</p>
-<p><strong>Conclusions</strong></p>
-<p>Augustus is a very accurate and useful tool to predict protein-coding genes in eukaryotic genomes, given the correct HMM training model.</p>
+<div id="assignment" class="section level2">
+<h2><span class="header-section-number">1.2</span> Assignment</h2>
+<p><strong>1. What does the word “gene” mean in casual conversation, and what does it mean biologically?</strong></p>
+<p>While the casual definition of a gene has remained unchanged for many years, the biological definition continues to evolve.</p>
+<p>In casual conversation, most people refer to genes as the fundamental building blocks that make up who they are. They’re often thought of as the only heritable aspects of their molecular makeup and typically cited in a static and isolated context.</p>
+<p>Biologically, genes are discrete intervals distributed linearly along an organisms genetic material. These intervals are made of specific sequences of nucleotides that encode information to be recognized by specific proteins of a cell to read, transcribe, and translate into different mediums such as a different species of nucleic acid or polypeptides.</p>
+<p>Some intervals encode information whose ultimate product is a protein while others are fated to be transcribed from DNA to RNA, but no further. While not all transcribed intervals found within an organisms genome are considered genes, it typicaly depends on the functional aspects of the RNA molecule produced: was it created intentionally to serve a purpose or was the RNA a byproduct of promiscuous transcription?</p>
+<p>As the field of genomics matures, it’s likely that the term “gene” will lose its prestige as the only heritable unit of the genome to consider in casual conversation. In time, we will begin to consider other functional and heritable aspects of genomes that influence phenotype.</p>
+<p><strong>2. Given this string of deoxyribonucleotides (“bases” in a single strand of DNA), what is the sequence of the complementary strand, i.e. the reverse complement? Please specify the orientation in your answer (i.e. label the 5’ end).</strong></p>
+<p>Original strand: 5’ CTGACCATTGACATCAGGTC 3’</p>
+<p>Its reverse compliment: 5’ GACCTGATGTCAATGGTCAG 3’</p>
+<p><strong>3. Consider this sequence from a very small portion of a chromosome. Both strands are given along with a coordinate system, beginning with 1. The genome annotation tells you that a short peptide is encoded on the bottom strand (often referred to as the minus strand), from positions 11 to 73.</strong></p>
+<pre>
+   1        10        20        30        40        50        60        70      78
+   ....|....|....|....|....|....|....|....|....|....|....|....|....|....|....|..|
+5’ TCCGGTAGTGTCATGCCTCTGAGCCCAAGAAGCCAGTCAGCAAGAAGGGGCCAGCACTGTTGTTATACCACATAGTAG
+   AGGCCATCACAGTACGGAGACTCGGGTTCTTCGGTCAGTCGTTCTTCCCCGGTCGTGACAACAATATGGTGTATCATC 5’
+</pre>
+<p>Since this polypeptide is encoded on the minus strand, the plus strand is the template strand. Often times we represent nucleic acids linearly as it is here. When we refer to positions along the chromosome, they are always meant to go from left to right (or 5’ to 3’ if you focus on the plus strand). Thus, while the positions may be from 11 to 73 along the plus strand, the first six nucleotides are at positions 73, 72, 71, 70, 69, and 68 while the last six nucleotides are at positions 16, 15, 14, 13, 12, and 11 of the minus strand.</p>
+<blockquote>
+<p>What are the first six nucleotides?</p>
+</blockquote>
+<p>5’ ATGTGG 3’</p>
+<blockquote>
+<p>What are the last six nucleotides?</p>
+</blockquote>
+<p>5’ GCATGA 3’</p>
+<p><strong>4. Describe an epigenetic feature, and explain why it is considered epigenetic as opposed to genetic.</strong></p>
+<p>Epigenetic features often refer to functional modifications to genetic material that don’t include nucleotide changes or mutations. These can be amino acid modifications along histones, the proteins that are part of the nucleosome units that make up chromatin in eukaryotes, or they can be modifications to the nucleotide itself, such as the addition or removal of methyl groups.</p>
+<p>These are considered epigenetic because these modifications are “on top” of the genetic information that’s encoded within the sequence of nucleotides. These chemical modifications effect how the information encoded within sequences are recognized. For example, it’s been shown in numerous experiments that methylation marks are typically signs of transcriptional repression. That is, if there is a region of the genome with an enriched methylation signature, the functional units in that region, be they non-coding RNA or open reading frames, are transcribed at a lower abundance relative to regions of average or lower levels of methylation, including the aforementioned region itself.</p>
+<p>Whether or not we should restrict epigenetic features to those that can be inherited from parent to daughter cells is undetermined. Personally, I feel that we should try to remain abstract when it comes to defining molecular features since is still much to learn. For example, genetic material is typically thought of as the molecular material that encodes information that can be passed on to the following generation of cells and/or organisms. The information tells the cell how and when to function and emerges as an observable phenotype.</p>
+<p>People typically think of this as nucleic acid sequences that are inherited by the next generation. Epigenetic features add another layer of information on top of nucleic acid sequences that can have a measurable effect on phenotype so the real question becomes, is this layer of information heritable? This is difficult to answer. Ideally, one would have a system in which the genetic material that’s passed on between generations remains unchanged to study whether the epigenetic modifications are passed on and confer the same phenotype as in the parental generation(s) but this is difficult to control for.</p>
+<p>Another interesting question one might ask is, how do we define inheritance? In <a href="10.1371/journal.pgen.1004556">Lambert and Kussel 2014</a>, they show that <em>E coli</em> can pass on proteins to its daughter cells as a form of “non-genetic memory” and that this confers a kind of “phenotypic memory” for the following generations. The protein in this case is a <em>lac</em> protein encoded in the <em>lac operon</em> needed to metabolize lactose. Here, they were able to show that by passing on the <em>lac</em> proteins, an <em>E. coli</em> population is able to metabolize lactose prior to the induction of the <em>lac operon</em>, which is repressed by default (as long as the population of cells has access to glucose).</p>
+<p>Does this so-called phenotypic memory count as inheritance? Lambert and Kussel were able to show that the proteins that were passed on had a measurable effect on the phenotypes of the following generations. However, there are no genetic differences between the different generations of bacteria. In other words, the memory of this phenotype as an adaptive trait is lost as soon as its environment changes (e.g. glucose is reintroduced).</p>
+<p>Clearly, we have yet to fully understand the links between genotypes and phenotypes and before we do, it’s best to remain flexible yet clear and concise in regards to terminology.</p>
 
 </div>
 </div>
@@ -233,8 +238,8 @@ Figure 7.2: Example of using the wrong reading frame to predict a stop codon.
           </div>
         </div>
       </div>
-<a href="lesson6.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="lesson8.html" class="navigation navigation-next " aria-label="Next page""><i class="fa fa-angle-right"></i></a>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="lesson2.html" class="navigation navigation-next " aria-label="Next page""><i class="fa fa-angle-right"></i></a>
 
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/lunr.js"></script>
@@ -261,7 +266,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/07-protein-coding-genes.Rmd",
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/01-molecular-genetics.Rmd",
 "text": null
 },
 "download": null,

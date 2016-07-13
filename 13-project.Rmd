@@ -1,0 +1,5 @@
+# Project {-}
+
+**Genomic landscape during the transition from a free-living lifestyle to obligate intracellular parasitism**
+
+In Woo et al. they "speculate that a group of functionally related proteins associated with the flagellar apparatus was repurposed as a module of the apical complex and became a foundation for the invasion machinery." I want to explore the evolution of striated fiber assemblin in alveolates and specifically during the transition to apicomplexan parasites because it was noted as the only flagellar component found in all apicomplexans tested in the paper (Plasmodium, Toxoplasma, Cryptosporidium, Bebesia, Theileria). In addition we can extend that analysis to look at proteins found to be co-expressed with SFA in Chromerids (as shown in figure 4). This module includes several types of genes implicated in host cell invasion processed of apicomplexans such as genes encoding rhoptry protein ROP9, apical sushi protein ASP, and gliding motility components GAP40 and GAPM2.

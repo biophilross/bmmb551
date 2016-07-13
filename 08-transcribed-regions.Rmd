@@ -1,0 +1,91 @@
+# Transcribed regions in genomes {#lesson8}
+
+## Learning Objectives
+
+* Identify how much of the genome is transcribed.
+* Explain why certain transcribed regions do not code for proteins.
+* Understand large-scale determination of gene expression patterns using hybridization to high-density gene arrays and new techniques such as RNA-seq.
+* Discuss the rationale and features of applying the approaches of clustering analysis to these large data sets.
+
+## Assignment
+
+### Design
+
+As mentioned during my assignment on [protein coding genes][#lesson7], I will be working with *Chromera velia*, a recently characterized and sequenced, photosynthetic, unicellular eukaryote. In [Woo et al. 2015](https://elifesciences.org/content/4/e06974), they generate a plethora of RNA-seq data; multiple replicates for 36 different conditions. Their reasoning for this was to correlate changes in transcript abundance under different enviornmental conditions with the developmentally regulated transcript abundance seen in *Plasmodium falciparum* to identify genes that are perhaps conserved in their gene regulation mechanisms. 
+
+My goal is to use a subset of these RNA-seq data sets to detect whether we can see transcriptional activity at any of the identified transposable elements within *Chromera velia*. I will then compare the amount of transcription between two different conditions, using two biological replicates to identify transposable elements that are not only active, but may be regulated somehow.
+
+My workflow contains the following steps:
+
+1. Download raw reads from the SRA
+2. Align reads to the *Chromera velia* draft assembly
+3. Estimate transcript abundance for all predicted transposable elements
+4. Calculate differential abundance between conditions
+
+### Downloading the data
+
+First we have to download the data and store it as FASTQ format. For this we need to use the [SRA toolkit](http://www.ncbi.nlm.nih.gov/books/NBK158900/). The following command can fetch the FASTQ files for accessions ERR572505, ERR572506, ERR572496, and ERR572507.
+
+```{r download-fastq, engine='bash',eval=F}
+# from the command line...
+for acc in $(cut -f1 data/lesson8/design.tsv); do fastq-dump --split-files --gzip --outdir data/lesson8/ "$acc"; done
+```
+
+Here I'm looping through each accession ID, splitting the files into forward and reverse reads, and compressing them since I don't need to view them in their raw form.
+
+The draft assembly for *Chromera velia* can be downloaded from [CryptoDB](http://cryptodb.org/), version 28.
+
+```{r download-reference,eval=F}
+# download reference
+download.file(url = "http://cryptodb.org/common/downloads/release-28/CveliaCCMP2878/fasta/data/CryptoDB-28_CveliaCCMP2878_Genome.fasta",
+              dest = "CryptoDB-28_CveliaCCMP2878_Genome.fasta")
+
+# download gene models
+download.file(url = "http://cryptodb.org/common/downloads/release-28/CveliaCCMP2878/gff/data/CryptoDB-28_CveliaCCMP2878.gff",
+              dest = "CryptoDB-27_CveliaCCMP2878.gff")
+```
+
+**HOWEVER** this contained the locations of only 94 transposable elements!
+
+### Aligning the reads
+
+Now that we've downloaded the necessary data we can align the reads to the genome. To do this, I used the NGS mapper, [HISAT2](https://ccb.jhu.edu/software/hisat2/index.shtml), which can be used for DNA-seq or RNA-seq! 
+
+First we need to index the genome:
+
+```{r index-genome,eval=F,engine='bash'}
+
+```
+
+Next we can align our reads to the genome:
+
+```{r align-reads,eval=F,engine='bash'}
+
+```
+
+The alignment statistics for all alignments look like this:
+
+```
+39399728 reads; of these:
+  39399728 (100.00%) were unpaired; of these:
+    935101 (2.37%) aligned 0 times
+    35870431 (91.04%) aligned exactly 1 time
+    2594196 (6.58%) aligned >1 times
+97.63% overall alignment rate
+```
+
+For about 40 million reads, 91% of them aligned uniquely to the genome! These are great numbers relative to reads aligning to the falciparum genome, where low complexity sequence and highly recombinant and antigenic gene families can make even a simple task such as this, into a big pain.
+
+### Estimating abundance
+
+In order to estimate transript abundance I will use [StringTie](https://ccb.jhu.edu/software/stringtie/), which can also be used to assemble transcripts after reads have been mapped to a reference genome. In this context, we'll be telling StringTie to only calculate the transcript abundance for the transposable elements we're interested in and to ignore reads that map elsewhere.
+
+```{r estimate-abundance,eval=F,engine='bash'}
+
+```
+
+### Calculating differentiall expressed elements
+
+```{r calculate-diff-exp}
+
+```

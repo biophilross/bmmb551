@@ -1,4 +1,4 @@
-# Protein Coding Genes {#lesson7}
+# Protein-coding genes {#lesson7}
 
 ## Learning Objectives
 
@@ -10,7 +10,7 @@
 
 ## Assignment
 
-For this assignment and following assignments I will be looking at the genome of *[Chromera velia]*(https://en.wikipedia.org/wiki/Chromera_velia), a recently described unicellular eukaryote closely related phylogenetically to the Apicomplexa phylum of protozoan parasites. In a paper by [Woo et al. 2015](http://elifesciences.org/content/4/e06974v1), they sequence and assemble the nuclear genomes of two, so-called, Chromerids, *Chromera velia* and *Vitrella brassicaformis*. Key questions revolve around the evolutionary emergence of the Apicomplexa considering the Chromerids represent the closest non-Apicomplexan relative. Here will only focus on *Chromera*.
+For this assignment and following assignments I will be looking at the genome of *[Chromera velia](https://en.wikipedia.org/wiki/Chromera_velia)*, a recently described unicellular eukaryote closely related phylogenetically to the Apicomplexa phylum of protozoan parasites. In a paper by [Woo et al. 2015](http://elifesciences.org/content/4/e06974v1), they sequence and assemble the nuclear genomes of two, so-called, Chromerids, *Chromera velia* and *Vitrella brassicaformis*. Key questions revolve around the evolutionary emergence of the Apicomplexa considering the Chromerids represent the closest non-Apicomplexan relative. Here will only focus on *Chromera*.
 
 I will breifly describe its genome based on the paper mentioned above and attempt to use [Augustus](http://nar.oxfordjournals.org/content/34/suppl_2/W435) to predict gene sequences.
 

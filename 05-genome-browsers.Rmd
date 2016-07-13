@@ -1,4 +1,4 @@
-# Genome Databases and Browsers {#lesson5}
+# Genome databases and browsers {#lesson5}
 
 ## Learning Objectives
 

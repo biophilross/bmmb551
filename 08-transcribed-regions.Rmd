@@ -7,6 +7,8 @@
 * Understand large-scale determination of gene expression patterns using hybridization to high-density gene arrays and new techniques such as RNA-seq.
 * Discuss the rationale and features of applying the approaches of clustering analysis to these large data sets.
 
+## Notes
+
 ## Assignment
 
 ### Design
@@ -22,13 +24,22 @@ My workflow contains the following steps:
 3. Estimate transcript abundance for all predicted transposable elements
 4. Calculate differential abundance between conditions
 
+When I refer to accession numbers, they correspond to the following samples:
+
+```{r design-table}
+suppressPackageStartupMessages(library(dplyr))
+readr::read_tsv("data/lesson8/design.tsv") %>% knitr::kable()
+```
+
 ### Downloading the data
 
 First we have to download the data and store it as FASTQ format. For this we need to use the [SRA toolkit](http://www.ncbi.nlm.nih.gov/books/NBK158900/). The following command can fetch the FASTQ files for accessions ERR572505, ERR572506, ERR572496, and ERR572507.
 
 ```{r download-fastq, engine='bash',eval=F}
 # from the command line...
-for acc in $(cut -f1 data/lesson8/design.tsv); do fastq-dump --split-files --gzip --outdir data/lesson8/ "$acc"; done
+for acc in $(cut -f1 data/lesson8/design.tsv); do 
+  fastq-dump --split-files --gzip --outdir data/lesson8/ "$acc" 
+done
 ```
 
 Here I'm looping through each accession ID, splitting the files into forward and reverse reads, and compressing them since I don't need to view them in their raw form.
@@ -54,38 +65,183 @@ Now that we've downloaded the necessary data we can align the reads to the genom
 First we need to index the genome:
 
 ```{r index-genome,eval=F,engine='bash'}
-
+hisat2-build CryptoDB-27_CveliaCCMP2878_Genome.fasta CryptoDB-27_CveliaCCMP2878_Genom
 ```
 
 Next we can align our reads to the genome:
 
 ```{r align-reads,eval=F,engine='bash'}
-
+for file in $(ls fastq); do 
+  hisat2 -x CryptoDB-27_CveliaCCMP2878_Genome -p 2 -U "fastq/$file" | \
+  samtools view -hb - | \
+  samtools sort -O "bam" -T XXX - > "${file%%.*}.bam" && \
+  samtools index "${file%%.*}.bam"
+done
 ```
 
 The alignment statistics for all alignments look like this:
 
+**ERR572496**
+
 ```
-39399728 reads; of these:
-  39399728 (100.00%) were unpaired; of these:
-    935101 (2.37%) aligned 0 times
-    35870431 (91.04%) aligned exactly 1 time
-    2594196 (6.58%) aligned >1 times
+3853220 reads; of these:
+  3853220 (100.00%) were unpaired; of these:
+    142273 (3.69%) aligned 0 times
+    3388612 (87.94%) aligned exactly 1 time
+    322335 (8.37%) aligned >1 times
+96.31% overall alignment rate
+```
+
+**ERR572505**
+
+```
+15984026 reads; of these:
+  15984026 (100.00%) were unpaired; of these:
+    378986 (2.37%) aligned 0 times
+    14616391 (91.44%) aligned exactly 1 time
+    988649 (6.19%) aligned >1 times
 97.63% overall alignment rate
 ```
 
-For about 40 million reads, 91% of them aligned uniquely to the genome! These are great numbers relative to reads aligning to the falciparum genome, where low complexity sequence and highly recombinant and antigenic gene families can make even a simple task such as this, into a big pain.
+**ERR572506**
+
+```
+10400377 reads; of these:
+  10400377 (100.00%) were unpaired; of these:
+    224755 (2.16%) aligned 0 times
+    9517931 (91.52%) aligned exactly 1 time
+    657691 (6.32%) aligned >1 times
+97.84% overall alignment rate
+```
+
+**ERR572507**
+
+```
+9162105 reads; of these:
+  9162105 (100.00%) were unpaired; of these:
+    193498 (2.11%) aligned 0 times
+    8376362 (91.42%) aligned exactly 1 time
+    592245 (6.46%) aligned >1 times
+97.89% overall alignment rate
+```
+
+In summary, for about 40 million reads, !91% of them aligned uniquely to the genome! These are great numbers relative to reads aligning to the falciparum genome, where low complexity sequence and highly recombinant and antigenic gene families can make even a simple task such as this, into a big pain.
 
 ### Estimating abundance
 
-In order to estimate transript abundance I will use [StringTie](https://ccb.jhu.edu/software/stringtie/), which can also be used to assemble transcripts after reads have been mapped to a reference genome. In this context, we'll be telling StringTie to only calculate the transcript abundance for the transposable elements we're interested in and to ignore reads that map elsewhere.
+In order to estimate transript abundance I will use [StringTie](https://ccb.jhu.edu/software/stringtie/), which can also be used to assemble transcripts after reads have been mapped to a reference genome. In this context, we'll be telling StringTie to only calculate the transcript abundance for the gene models we're interested in and to ignore reads that map elsewhere.
 
 ```{r estimate-abundance,eval=F,engine='bash'}
-
+for file in $(ls *.bam); do 
+  stringtie retrotransposable_elements.gff -p 2 -b "${file%%.*}_tables" -A "${file%%.*}.abund" -e -x
+done
 ```
 
-### Calculating differentiall expressed elements
+This generates a file that looks like the following:
 
-```{r calculate-diff-exp}
-
+```{r abundance-tables}
+readr::read_tsv("data/lesson8/stringtie_estimates/ERR572496_1.abund",n_max=10) %>% 
+  select(`Gene ID`, Coverage, FPKM, TPM) %>%
+  DT::datatable()
 ```
+
+There is more information in each abundance file such as the gene name and the genomic coordinates of each gene. In addition, we generated one of these files for each sequencing library.
+
+We can briefly take a look at what the most highly expressed transcripts are across samples and how many transcripts are not detected at all (TPM of zero).
+
+First let's take a look at highly abundant transcripts across samples. We'll order it by TPMs from sample ERR572496.
+
+```{r highly-abundant, cache=TRUE}
+options(digits = 3)
+
+readr::read_tsv("data/lesson8/stringtie_estimates/ERR572496_1.abund") %>% select(`Gene ID`, TPM) %>% mutate(sample="ERR572496") -> ERR572496
+readr::read_tsv("data/lesson8/stringtie_estimates/ERR572505_1.abund") %>% select(`Gene ID`, TPM) %>% mutate(sample="ERR572505") -> ERR572505
+readr::read_tsv("data/lesson8/stringtie_estimates/ERR572506_1.abund") %>% select(`Gene ID`, TPM) %>% mutate(sample="ERR572506") -> ERR572506
+readr::read_tsv("data/lesson8/stringtie_estimates/ERR572507_1.abund") %>% select(`Gene ID`, TPM) %>% mutate(sample="ERR572507") -> ERR572507
+abund <- bind_rows(ERR572496,ERR572505,ERR572506,ERR572507) %>% tidyr::spread(sample, TPM)
+
+abund %>% arrange(desc(ERR572496)) %>% head(10) %>% DT::datatable()
+```
+
+Interestingly enough, we can already see that there are huge differences in transcript abundance for Cvel_17262. This difference in TPM doesn't represent the absolute transcript copy number, but rather the proportion of of this transcript relative to the total transcript pool. However, this indcates that values across biological replicates are not consistent! So let's look at scatter plots of the TPMs between biological replicates.
+
+```{r replicates, cache=TRUE, fig.aling="center", fig.cap="Scatter plot of biological replicates for both conditions"}
+suppressPackageStartupMessages(library(cowplot))
+
+# calculate correlation
+c1 <- cor(log10(abund$ERR572496+1), log10(abund$ERR572507+1))
+
+abund %>% 
+  select(ERR572496,ERR572507) %>% 
+  ggplot(aes(x=ERR572496,y=ERR572507)) + 
+  geom_point() + 
+  geom_abline(colour="red") +
+  scale_x_log10(
+    breaks = scales::trans_breaks("log10", function(x) 10^x),
+    labels = scales::trans_format("log10", scales::math_format(10^.x))) +
+  scale_y_log10(
+    breaks = scales::trans_breaks("log10", function(x) 10^x),
+    labels = scales::trans_format("log10", scales::math_format(10^.x))) +
+  annotate("text",x=0.01,y=10000,label=paste("Pearson: ",c1)) +
+  panel_border(size=1,colour="black") +
+  theme(axis.line.y = element_line(size=0.25))
+
+c2 <- cor(log10(abund$ERR572505+1), log10(abund$ERR572506+1))
+
+abund %>% 
+  select(ERR572505,ERR572506) %>%
+  ggplot(aes(x=ERR572505,y=ERR572506)) + 
+  geom_point() + 
+  geom_abline(colour="red") +
+    scale_x_log10(
+    breaks = scales::trans_breaks("log10", function(x) 10^x),
+    labels = scales::trans_format("log10", scales::math_format(10^.x))) +
+  scale_y_log10(
+    breaks = scales::trans_breaks("log10", function(x) 10^x),
+    labels = scales::trans_format("log10", scales::math_format(10^.x))) +
+  annotate("text",x=0.01,y=10000,label=paste("Pearson: ",c2)) +
+  panel_border(size=1,colour="black") +
+  theme(axis.line.y = element_line(size=0.25))
+```
+
+From these plots we can see that, while for the most part, replicates are well correlated with one another, there are several examples of transcripts with highly variable abundance estimations between replicates.
+
+### Calculating differentiall expressed transcripts
+
+Finally, we can use the [ballgown](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4792117/) package to identify differentially abundant transcripts between conditions. First we need to read the data into ballgown:
+
+```{r read-bg,eval=F}
+bg = ballgown(dataDir="data/lesson8/",samplePattern="tables",meas="all")
+save(bg, file="data/lesson8/ballgown/bg.rda")
+```
+
+Next we provide the design matrix:
+
+```{r design-matrix}
+suppressPackageStartupMessages(library(ballgown))
+load(file="data/lesson8/ballgown/bg.rda")
+pData(bg) <- data.frame(id=sampleNames(bg), group=c(0,1,1,0))
+knitr::kable(pData(bg))
+```
+
+Finally, we call differentially abundant transcripts:
+
+```{r call-diff-exp}
+# run statistical test
+results <- stattest(bg, feature="transcript", meas="FPKM", covariate="group")
+
+# add original gene IDs
+t2g <- indexes(bg)$t2g
+t2g$t_id <- as.character(t2g$t_id)
+results$id <- as.character(results$id)
+results <- inner_join(results, t2g, by = c("id" = "t_id"))
+
+# show top results
+results %>% select(g_id,pval,qval) %>% arrange(qval) %>% head(15) %>% knitr::kable()
+```
+
+Based on the calculated q-values, we can see here that not many transcripts are significantly different between our two samples if we use a q-value cutoff of 0.05.
+
+### Conclusions
+
+If we investigate which transcripts are barely differentially abundant, we can see an RNA-binding protein, a HCl exchange transporter 3, and a NACHT, LRR and PYD domains-containing protein are in the list. The rest are hypoehtical proteins. Even those listed are of putative function since they haven't been biochemically and biologically characterized.

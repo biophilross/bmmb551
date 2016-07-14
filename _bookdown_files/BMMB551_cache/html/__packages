@@ -1,0 +1,10 @@
+base
+BiocInstaller
+BiocGenerics
+S4Vectors
+IRanges
+XVector
+Biostrings
+dplyr
+ggplot2
+cowplot

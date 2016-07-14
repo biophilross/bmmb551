@@ -11,6 +11,9 @@ link-citations: yes
 github-repo: thephilross/bmmb551
 description: "Homework assignments for the class BMMB 551 as taught by Dr. Ross Hardison at Pennsylvania State University in the Spring of 2016."
 knit: "bookdown::render_book"
+html_document:
+    toc: true
+    depth: 2
 ---
 
 # What is this? {-}

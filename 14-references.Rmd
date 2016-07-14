@@ -3,3 +3,5 @@
 *REFERENCES TO ADD*
 
 HISAT2
+Stringtie
+Ballgown

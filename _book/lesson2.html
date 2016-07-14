@@ -25,7 +25,7 @@
 
 <meta name="author" content="Philipp Ross">
 
-<meta name="date" content="2016-07-13">
+<meta name="date" content="2016-07-14">
 
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -49,6 +49,11 @@
 
 
 
+<script src="libs/htmlwidgets-0.6/htmlwidgets.js"></script>
+<script src="libs/datatables-binding-0.1/datatables.js"></script>
+<script src="libs/datatables-1.10.7/jquery.dataTables.min.js"></script>
+<link href="libs/datatables-default-1.10.7/dataTables.extra.css" rel="stylesheet" />
+<link href="libs/datatables-default-1.10.7/jquery.dataTables.min.css" rel="stylesheet" />
 
 
 <style type="text/css">
@@ -138,15 +143,20 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 <li class="chapter" data-level="8" data-path="lesson8.html"><a href="lesson8.html"><i class="fa fa-check"></i><b>8</b> Transcribed regions in genomes</a><ul>
 <li class="chapter" data-level="8.1" data-path="lesson8.html"><a href="lesson8.html#learning-objectives-7"><i class="fa fa-check"></i><b>8.1</b> Learning Objectives</a></li>
-<li class="chapter" data-level="8.2" data-path="lesson8.html"><a href="lesson8.html#assignment-7"><i class="fa fa-check"></i><b>8.2</b> Assignment</a><ul>
-<li class="chapter" data-level="8.2.1" data-path="lesson8.html"><a href="lesson8.html#design"><i class="fa fa-check"></i><b>8.2.1</b> Design</a></li>
-<li class="chapter" data-level="8.2.2" data-path="lesson8.html"><a href="lesson8.html#downloading-the-data"><i class="fa fa-check"></i><b>8.2.2</b> Downloading the data</a></li>
-<li class="chapter" data-level="8.2.3" data-path="lesson8.html"><a href="lesson8.html#aligning-the-reads"><i class="fa fa-check"></i><b>8.2.3</b> Aligning the reads</a></li>
+<li class="chapter" data-level="8.2" data-path="lesson8.html"><a href="lesson8.html#notes"><i class="fa fa-check"></i><b>8.2</b> Notes</a></li>
+<li class="chapter" data-level="8.3" data-path="lesson8.html"><a href="lesson8.html#assignment-7"><i class="fa fa-check"></i><b>8.3</b> Assignment</a><ul>
+<li class="chapter" data-level="8.3.1" data-path="lesson8.html"><a href="lesson8.html#design"><i class="fa fa-check"></i><b>8.3.1</b> Design</a></li>
+<li class="chapter" data-level="8.3.2" data-path="lesson8.html"><a href="lesson8.html#downloading-the-data"><i class="fa fa-check"></i><b>8.3.2</b> Downloading the data</a></li>
+<li class="chapter" data-level="8.3.3" data-path="lesson8.html"><a href="lesson8.html#aligning-the-reads"><i class="fa fa-check"></i><b>8.3.3</b> Aligning the reads</a></li>
+<li class="chapter" data-level="8.3.4" data-path="lesson8.html"><a href="lesson8.html#estimating-abundance"><i class="fa fa-check"></i><b>8.3.4</b> Estimating abundance</a></li>
+<li class="chapter" data-level="8.3.5" data-path="lesson8.html"><a href="lesson8.html#calculating-differentiall-expressed-transcripts"><i class="fa fa-check"></i><b>8.3.5</b> Calculating differentiall expressed transcripts</a></li>
+<li class="chapter" data-level="8.3.6" data-path="lesson8.html"><a href="lesson8.html#conclusions"><i class="fa fa-check"></i><b>8.3.6</b> Conclusions</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="lesson9.html"><a href="lesson9.html"><i class="fa fa-check"></i><b>9</b> Comparative genomices</a><ul>
 <li class="chapter" data-level="9.1" data-path="lesson9.html"><a href="lesson9.html#learning-objectives-8"><i class="fa fa-check"></i><b>9.1</b> Learning Objectives</a></li>
-<li class="chapter" data-level="9.2" data-path="lesson9.html"><a href="lesson9.html#assignment-8"><i class="fa fa-check"></i><b>9.2</b> Assignment</a></li>
+<li class="chapter" data-level="9.2" data-path="lesson9.html"><a href="lesson9.html#notes-1"><i class="fa fa-check"></i><b>9.2</b> Notes</a></li>
+<li class="chapter" data-level="9.3" data-path="lesson9.html"><a href="lesson9.html#assignment-8"><i class="fa fa-check"></i><b>9.3</b> Assignment</a></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="lesson10.html"><a href="lesson10.html"><i class="fa fa-check"></i><b>10</b> Gene regulatory modules</a><ul>
 <li class="chapter" data-level="10.1" data-path="lesson10.html"><a href="lesson10.html#learning-objectives-9"><i class="fa fa-check"></i><b>10.1</b> Learning Objectives</a></li>
@@ -183,7 +193,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
             <section class="normal" id="section-">
 <div id="lesson2" class="section level1">
-<h1><span class="header-section-number">Lesson 2</span> Genomics</h1>
+<h1><span class="header-section-number">2</span> Genomics</h1>
 <div id="learning-objectives-1" class="section level2">
 <h2><span class="header-section-number">2.1</span> Learning Objectives</h2>
 <ul>

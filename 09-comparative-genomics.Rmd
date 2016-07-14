@@ -11,4 +11,9 @@
     * Extended haplotype homozygosity
 * Understand the connection between gene duplication and adaptive evolution
 
+## Notes
+
+> Functionally less important molecules or parts of a molecule evolve faster than more important ones.
+> — Kimura and Ohta (1974) PNAS USA 71: 2848-2852
+
 ## Assignment

@@ -33,8 +33,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="lesson4.html">
-<link rel="next" href="lesson6.html">
+<link rel="prev" href="lesson8.html">
+<link rel="next" href="lesson10.html">
 
 <script src="assets/jquery-2.2.3/jquery.min.js"></script>
 <link href="assets/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -195,34 +195,31 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="lesson5" class="section level1">
-<h1><span class="header-section-number">5</span> Genome databases and browsers</h1>
-<div id="learning-objectives-4" class="section level2">
-<h2><span class="header-section-number">5.1</span> Learning Objectives</h2>
+<div id="lesson9" class="section level1">
+<h1><span class="header-section-number">9</span> Comparative genomices</h1>
+<div id="learning-objectives-8" class="section level2">
+<h2><span class="header-section-number">9.1</span> Learning Objectives</h2>
 <ul>
-<li>Identify genomics web resources</li>
-<li>Evaluate what browser to use for the genome of interest</li>
-<li>Use the browswer to navigate the genome of interest</li>
+<li>Distinguish neutral evolution, negative selection, and positive selection</li>
+<li>Interpret alignments of genomic DNA sequences as showing evidence of evolutionary constraint or adaptation, distinguishing both from evidence consistent with neutral evolution.</li>
+<li>Show how you can use genome comparisons between species to estimate the amount of functional sequence – and to identify it</li>
+<li>Understand the basics of several tests for selection or scores that estimate likelihood of being under selection
+<ul>
+<li>Ka/Ks test</li>
+<li>phastCons</li>
+<li>Extended haplotype homozygosity</li>
+</ul></li>
+<li>Understand the connection between gene duplication and adaptive evolution</li>
 </ul>
 </div>
-<div id="assignment-4" class="section level2">
-<h2><span class="header-section-number">5.2</span> Assignment</h2>
-<p>For this assignment I will go over the features of the <a href="http://plasmodb.org/">PlasmoDB</a> genome browser, which can be used to explore the genomes of multiple species of <em>Plasmodium</em> parasites.</p>
-<p><strong>Technology</strong></p>
-<p>The genome browser found on PlasmoDB is built on top of the <a href="http://gmod.org/wiki/GBrowse">GBrowse</a> open source framework. In other words, it’s a web-based genome browser unlike <a href="https://www.broadinstitute.org/igv/">IGV</a>, for example. On the backend there is a database server that can be used to access datasets similar to the way that you would access datasets using the UCSC genome browser.</p>
-<p><img src="img/lesson5/first.png" style="display: block; margin: auto;" /></p>
-<p><strong>Data accessibility</strong></p>
-<p>The data on PlasmoDB is not raw data, although the sources of the raw data are usually provided. In most cases PlasmoDB will process the data in some way in order to standardize it. Typically, updated annotations and sequence assemblies are taken from the latest updates on <a href="http://www.genedb.org/Homepage">GeneDB</a>, which is where the <em>Plasmodium</em> genomes are currently curated. This update occurs every several months, whereas the most up-to-date data sets can typically be found on GeneDB. The latest version of PlasmoDB is version 27, which was released on February 19th, 2016.</p>
-<p><strong>Genome Assemblies</strong></p>
-<p>Currently the only available genome assembly is the well curated draft genome of the 3D7 strain of <em>Plasmodium falciparum</em>. The first draft assembly was published in 2002 <a href="http://www.ncbi.nlm.nih.gov/pubmed/12368864">[Gardner et al.]</a> and contains no ambiguous base pairs at this point. While there are many other assemblies available for download in FASTA format on both PlasmoDB and GeneDB, they are not currently as complete as the 3D7 reference strain and thus aren’t available using the PlasmoDB genome browser. One would have to download them separately and view them in IGV.</p>
-<p><strong>Data tracks</strong></p>
-<p>Similar to UCSC genome browser, one can select different tracks to be viewed at the same time, stacked on top of one another in order to compare a variety of data at once. Available tracks from recent publications include, but aren’t limited to, various strand-specific RNA-seq data, nucleosome occupancy data, and SNP data. These tracks are presented as annotation tracks or coverage tracks.</p>
-<p><img src="img/lesson5/data_tracks.png" style="display: block; margin: auto;" /></p>
-<p><strong>Additional features</strong></p>
-<p>Additional features include the ability to take snapshots to be exported and used in figures. You can directly email them or download them. Unfortunately you are limited to exporting saved snapshots in PNG format, which isn’t ideal or creating figures if that is your end goal.</p>
-<p><img src="img/lesson5/snapshot_interface.png" style="display: block; margin: auto;" /></p>
-<p>Last but not least, one can also add custom tracks by text, URL, or a local file. These can be in various formats including BAM, BigWig, GFF, and BED. The custom tracks get added just like any other track would and can be saved onto your account so you can load it any time you login.</p>
-<p><img src="img/lesson5/snapshot_example.png" style="display: block; margin: auto;" /></p>
+<div id="notes-1" class="section level2">
+<h2><span class="header-section-number">9.2</span> Notes</h2>
+<blockquote>
+<p>Functionally less important molecules or parts of a molecule evolve faster than more important ones. — Kimura and Ohta (1974) PNAS USA 71: 2848-2852</p>
+</blockquote>
+</div>
+<div id="assignment-8" class="section level2">
+<h2><span class="header-section-number">9.3</span> Assignment</h2>
 
 </div>
 </div>
@@ -231,8 +228,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           </div>
         </div>
       </div>
-<a href="lesson4.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="lesson6.html" class="navigation navigation-next " aria-label="Next page""><i class="fa fa-angle-right"></i></a>
+<a href="lesson8.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="lesson10.html" class="navigation navigation-next " aria-label="Next page""><i class="fa fa-angle-right"></i></a>
 
 <script src="assets/gitbook-2.6.7/js/app.min.js"></script>
 <script src="assets/gitbook-2.6.7/js/lunr.js"></script>
@@ -259,7 +256,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/thephilross/bmmb551/edit/master/05-genome-browsers.Rmd",
+"link": "https://github.com/thephilross/bmmb551/edit/master/09-comparative-genomics.Rmd",
 "text": "Edit"
 },
 "download": ["_main.pdf"],

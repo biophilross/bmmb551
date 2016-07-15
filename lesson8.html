@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Genomics (BMMB 551)</title>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+  <meta name="description" content="Assignments for an introduction to genomics course at Penn State University">
+  <meta name="generator" content="bookdown 0.0.72 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Genomics (BMMB 551)" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Assignments for an introduction to genomics course at Penn State University" />
+  <meta name="github-repo" content="thephilross/bmmb551" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Genomics (BMMB 551)" />
+  
+  <meta name="twitter:description" content="Assignments for an introduction to genomics course at Penn State University" />
+  
+
+<meta name="author" content="Philipp Ross">
+
+<meta name="date" content="2016-07-15">
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="lesson7.html">
+<link rel="next" href="lesson9.html">
+
+<script src="assets/jquery-2.2.3/jquery.min.js"></script>
+<link href="assets/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="assets/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="assets/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="assets/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="assets/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+<script src="assets/htmlwidgets-0.6/htmlwidgets.js"></script>
+<script src="assets/datatables-binding-0.1/datatables.js"></script>
+<script src="assets/datatables-1.10.7/jquery.dataTables.min.js"></script>
+<link href="assets/datatables-default-1.10.7/dataTables.extra.css" rel="stylesheet" />
+<link href="assets/datatables-default-1.10.7/jquery.dataTables.min.css" rel="stylesheet" />
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="mystyle.css" type="text/css" />
+</head>
+
+<body>
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Genomics (BMMB 551)</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome</a></li>
+<li class="part"><span><b>Module 1</b></span></li>
+<li class="chapter" data-level="1" data-path="lesson1.html"><a href="lesson1.html"><i class="fa fa-check"></i><b>1</b> Molecular genetics</a><ul>
+<li class="chapter" data-level="1.1" data-path="lesson1.html"><a href="lesson1.html#learning-objectives"><i class="fa fa-check"></i><b>1.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="1.2" data-path="lesson1.html"><a href="lesson1.html#assignment"><i class="fa fa-check"></i><b>1.2</b> Assignment</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="lesson2.html"><a href="lesson2.html"><i class="fa fa-check"></i><b>2</b> Genomics</a><ul>
+<li class="chapter" data-level="2.1" data-path="lesson2.html"><a href="lesson2.html#learning-objectives-1"><i class="fa fa-check"></i><b>2.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="2.2" data-path="lesson2.html"><a href="lesson2.html#assignment-1"><i class="fa fa-check"></i><b>2.2</b> Assignment</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="lesson3.html"><a href="lesson3.html"><i class="fa fa-check"></i><b>3</b> DNA sequencing</a><ul>
+<li class="chapter" data-level="3.1" data-path="lesson3.html"><a href="lesson3.html#learning-objectives-2"><i class="fa fa-check"></i><b>3.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="3.2" data-path="lesson3.html"><a href="lesson3.html#assignment-2"><i class="fa fa-check"></i><b>3.2</b> Assignment</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="lesson4.html"><a href="lesson4.html"><i class="fa fa-check"></i><b>4</b> Aligning biological sequences</a><ul>
+<li class="chapter" data-level="4.1" data-path="lesson4.html"><a href="lesson4.html#learning-objectives-3"><i class="fa fa-check"></i><b>4.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="4.2" data-path="lesson4.html"><a href="lesson4.html#assignment-3"><i class="fa fa-check"></i><b>4.2</b> Assignment</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="lesson4.html"><a href="lesson4.html#c-what-does-this-tell-you-about-the-conservation-in-different-domains-of-the-proteins"><i class="fa fa-check"></i><b>4.2.1</b> 1.3C What does this tell you about the conservation in different domains of the proteins?</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="lesson4.html"><a href="lesson4.html#additional-resources"><i class="fa fa-check"></i><b>4.3</b> Additional Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="lesson5.html"><a href="lesson5.html"><i class="fa fa-check"></i><b>5</b> Genome databases and browsers</a><ul>
+<li class="chapter" data-level="5.1" data-path="lesson5.html"><a href="lesson5.html#learning-objectives-4"><i class="fa fa-check"></i><b>5.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="5.2" data-path="lesson5.html"><a href="lesson5.html#assignment-4"><i class="fa fa-check"></i><b>5.2</b> Assignment</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="lesson6.html"><a href="lesson6.html"><i class="fa fa-check"></i><b>6</b> Genomics platforms</a><ul>
+<li class="chapter" data-level="6.1" data-path="lesson6.html"><a href="lesson6.html#learning-objectives-5"><i class="fa fa-check"></i><b>6.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="6.2" data-path="lesson6.html"><a href="lesson6.html#assignment-5"><i class="fa fa-check"></i><b>6.2</b> Assignment</a></li>
+</ul></li>
+<li class="part"><span><b>Module 2</b></span></li>
+<li class="chapter" data-level="7" data-path="lesson7.html"><a href="lesson7.html"><i class="fa fa-check"></i><b>7</b> Protein-coding genes</a><ul>
+<li class="chapter" data-level="7.1" data-path="lesson7.html"><a href="lesson7.html#learning-objectives-6"><i class="fa fa-check"></i><b>7.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="7.2" data-path="lesson7.html"><a href="lesson7.html#assignment-6"><i class="fa fa-check"></i><b>7.2</b> Assignment</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="lesson8.html"><a href="lesson8.html"><i class="fa fa-check"></i><b>8</b> Transcribed regions in genomes</a><ul>
+<li class="chapter" data-level="8.1" data-path="lesson8.html"><a href="lesson8.html#learning-objectives-7"><i class="fa fa-check"></i><b>8.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="8.2" data-path="lesson8.html"><a href="lesson8.html#notes"><i class="fa fa-check"></i><b>8.2</b> Notes</a></li>
+<li class="chapter" data-level="8.3" data-path="lesson8.html"><a href="lesson8.html#assignment-7"><i class="fa fa-check"></i><b>8.3</b> Assignment</a><ul>
+<li class="chapter" data-level="8.3.1" data-path="lesson8.html"><a href="lesson8.html#design"><i class="fa fa-check"></i><b>8.3.1</b> Design</a></li>
+<li class="chapter" data-level="8.3.2" data-path="lesson8.html"><a href="lesson8.html#downloading-the-data"><i class="fa fa-check"></i><b>8.3.2</b> Downloading the data</a></li>
+<li class="chapter" data-level="8.3.3" data-path="lesson8.html"><a href="lesson8.html#aligning-the-reads"><i class="fa fa-check"></i><b>8.3.3</b> Aligning the reads</a></li>
+<li class="chapter" data-level="8.3.4" data-path="lesson8.html"><a href="lesson8.html#estimating-abundance"><i class="fa fa-check"></i><b>8.3.4</b> Estimating abundance</a></li>
+<li class="chapter" data-level="8.3.5" data-path="lesson8.html"><a href="lesson8.html#calculating-differentiall-expressed-transcripts"><i class="fa fa-check"></i><b>8.3.5</b> Calculating differentiall expressed transcripts</a></li>
+<li class="chapter" data-level="8.3.6" data-path="lesson8.html"><a href="lesson8.html#conclusions"><i class="fa fa-check"></i><b>8.3.6</b> Conclusions</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="lesson9.html"><a href="lesson9.html"><i class="fa fa-check"></i><b>9</b> Comparative genomices</a><ul>
+<li class="chapter" data-level="9.1" data-path="lesson9.html"><a href="lesson9.html#learning-objectives-8"><i class="fa fa-check"></i><b>9.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="9.2" data-path="lesson9.html"><a href="lesson9.html#notes-1"><i class="fa fa-check"></i><b>9.2</b> Notes</a></li>
+<li class="chapter" data-level="9.3" data-path="lesson9.html"><a href="lesson9.html#assignment-8"><i class="fa fa-check"></i><b>9.3</b> Assignment</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="lesson10.html"><a href="lesson10.html"><i class="fa fa-check"></i><b>10</b> Gene regulatory modules</a><ul>
+<li class="chapter" data-level="10.1" data-path="lesson10.html"><a href="lesson10.html#learning-objectives-9"><i class="fa fa-check"></i><b>10.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="10.2" data-path="lesson10.html"><a href="lesson10.html#assignment-9"><i class="fa fa-check"></i><b>10.2</b> Assignment</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="lesson11.html"><a href="lesson11.html"><i class="fa fa-check"></i><b>11</b> Non-genic functional sequences</a><ul>
+<li class="chapter" data-level="11.1" data-path="lesson11.html"><a href="lesson11.html#learning-objectives-10"><i class="fa fa-check"></i><b>11.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="11.2" data-path="lesson11.html"><a href="lesson11.html#assignment-10"><i class="fa fa-check"></i><b>11.2</b> Assignment</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="lesson12.html"><a href="lesson12.html"><i class="fa fa-check"></i><b>12</b> Finding function by phenotype</a><ul>
+<li class="chapter" data-level="12.1" data-path="lesson12.html"><a href="lesson12.html#learning-objectives-11"><i class="fa fa-check"></i><b>12.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="12.2" data-path="lesson12.html"><a href="lesson12.html#assignment-11"><i class="fa fa-check"></i><b>12.2</b> Assignment</a></li>
+</ul></li>
+<li class="part"><span><b>Project</b></span></li>
+<li class="chapter" data-level="13" data-path="project.html"><a href="project.html"><i class="fa fa-check"></i><b>13</b> Evolution of Parasitism</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Genomics (BMMB 551)</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="lesson8" class="section level1">
+<h1><span class="header-section-number">8</span> Transcribed regions in genomes</h1>
+<div id="learning-objectives-7" class="section level2">
+<h2><span class="header-section-number">8.1</span> Learning Objectives</h2>
+<ul>
+<li>Identify how much of the genome is transcribed.</li>
+<li>Explain why certain transcribed regions do not code for proteins.</li>
+<li>Understand large-scale determination of gene expression patterns using hybridization to high-density gene arrays and new techniques such as RNA-seq.</li>
+<li>Discuss the rationale and features of applying the approaches of clustering analysis to these large data sets.</li>
+</ul>
+</div>
+<div id="notes" class="section level2">
+<h2><span class="header-section-number">8.2</span> Notes</h2>
+</div>
+<div id="assignment-7" class="section level2">
+<h2><span class="header-section-number">8.3</span> Assignment</h2>
+<div id="design" class="section level3">
+<h3><span class="header-section-number">8.3.1</span> Design</h3>
+<p>As mentioned during my assignment on <a href="lesson7.html#lesson7">protein coding genes</a>, I will be working with <em>Chromera velia</em>, a recently characterized and sequenced, photosynthetic, unicellular eukaryote. In <a href="https://elifesciences.org/content/4/e06974">Woo et al. 2015</a>, they generate a plethora of RNA-seq data; multiple replicates for 36 different conditions. Their reasoning for this was to correlate changes in transcript abundance under different enviornmental conditions with the developmentally regulated transcript abundance seen in <em>Plasmodium falciparum</em> to identify genes that are perhaps conserved in their gene regulation mechanisms.</p>
+<p>My goal is to use a subset of these RNA-seq data sets to detect whether we can see transcriptional activity at any of the identified transposable elements within <em>Chromera velia</em>. I will then compare the amount of transcription between two different conditions, using two biological replicates to identify transposable elements that are not only active, but may be regulated somehow.</p>
+<p>My workflow contains the following steps:</p>
+<ol style="list-style-type: decimal">
+<li>Download raw reads from the SRA</li>
+<li>Align reads to the <em>Chromera velia</em> draft assembly</li>
+<li>Estimate transcript abundance for all predicted transposable elements</li>
+<li>Calculate differential abundance between conditions</li>
+</ol>
+<p>When I refer to accession numbers, they correspond to the following samples:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">suppressPackageStartupMessages</span>(<span class="kw">library</span>(dplyr))
+readr::<span class="kw">read_tsv</span>(<span class="st">&quot;data/lesson8/design.tsv&quot;</span>) %&gt;%<span class="st"> </span>knitr::<span class="kw">kable</span>()</code></pre></div>
+<table>
+<thead>
+<tr class="header">
+<th align="left">ERR572505</th>
+<th align="left">SaltConcentration:Low;Iron:Minus;Temperature:cold;TimeOfTemperatureApplied:halfhr;BiologicalReplicate:1st;</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">ERR572506</td>
+<td align="left">SaltConcentration:Low;Iron:Minus;Temperature:cold;TimeOfTemperatureApplied:halfhr;BiologicalReplicate:2nd;</td>
+</tr>
+<tr class="even">
+<td align="left">ERR572496</td>
+<td align="left">SaltConcentration:Low;Iron:Minus;Temperature:cold;TimeOfTemperatureApplied:2hrs;BiologicalReplicate:1st;</td>
+</tr>
+<tr class="odd">
+<td align="left">ERR572507</td>
+<td align="left">SaltConcentration:Low;Iron:Minus;Temperature:cold;TimeOfTemperatureApplied:2hrs;BiologicalReplicate:2nd;</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="downloading-the-data" class="section level3">
+<h3><span class="header-section-number">8.3.2</span> Downloading the data</h3>
+<p>First we have to download the data and store it as FASTQ format. For this we need to use the <a href="http://www.ncbi.nlm.nih.gov/books/NBK158900/">SRA toolkit</a>. The following command can fetch the FASTQ files for accessions ERR572505, ERR572506, ERR572496, and ERR572507.</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="co"># from the command line...</span>
+<span class="kw">for</span> <span class="kw">acc</span> in <span class="ot">$(</span><span class="kw">cut</span> -f1 data/lesson8/design.tsv<span class="ot">)</span><span class="kw">;</span> <span class="kw">do</span> 
+  <span class="kw">fastq-dump</span> --split-files --gzip --outdir data/lesson8/ <span class="st">&quot;</span><span class="ot">$acc</span><span class="st">&quot;</span> 
+<span class="kw">done</span></code></pre></div>
+<p>Here I’m looping through each accession ID, splitting the files into forward and reverse reads, and compressing them since I don’t need to view them in their raw form.</p>
+<p>The draft assembly for <em>Chromera velia</em> can be downloaded from <a href="http://cryptodb.org/">CryptoDB</a>, version 28.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># download reference</span>
+<span class="kw">download.file</span>(<span class="dt">url =</span> <span class="st">&quot;http://cryptodb.org/common/downloads/release-28/CveliaCCMP2878/fasta/data/CryptoDB-28_CveliaCCMP2878_Genome.fasta&quot;</span>,
+              <span class="dt">dest =</span> <span class="st">&quot;CryptoDB-28_CveliaCCMP2878_Genome.fasta&quot;</span>)
+
+<span class="co"># download gene models</span>
+<span class="kw">download.file</span>(<span class="dt">url =</span> <span class="st">&quot;http://cryptodb.org/common/downloads/release-28/CveliaCCMP2878/gff/data/CryptoDB-28_CveliaCCMP2878.gff&quot;</span>,
+              <span class="dt">dest =</span> <span class="st">&quot;CryptoDB-27_CveliaCCMP2878.gff&quot;</span>)</code></pre></div>
+<p><strong>HOWEVER</strong> this contained the locations of only 94 transposable elements!</p>
+</div>
+<div id="aligning-the-reads" class="section level3">
+<h3><span class="header-section-number">8.3.3</span> Aligning the reads</h3>
+<p>Now that we’ve downloaded the necessary data we can align the reads to the genome. To do this, I used the NGS mapper, <a href="https://ccb.jhu.edu/software/hisat2/index.shtml">HISAT2</a>, which can be used for DNA-seq or RNA-seq!</p>
+<p>First we need to index the genome:</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">hisat2-build</span> CryptoDB-27_CveliaCCMP2878_Genome.fasta CryptoDB-27_CveliaCCMP2878_Genom</code></pre></div>
+<p>Next we can align our reads to the genome:</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">for</span> <span class="kw">file</span> in <span class="ot">$(</span><span class="kw">ls</span> fastq<span class="ot">)</span><span class="kw">;</span> <span class="kw">do</span> 
+  <span class="kw">hisat2</span> -x CryptoDB-27_CveliaCCMP2878_Genome -p 2 -U <span class="st">&quot;fastq/</span><span class="ot">$file</span><span class="st">&quot;</span> <span class="kw">|</span> <span class="kw">\</span>
+  <span class="kw">samtools</span> view -hb - <span class="kw">|</span> <span class="kw">\</span>
+  <span class="kw">samtools</span> sort -O <span class="st">&quot;bam&quot;</span> -T XXX - <span class="kw">&gt;</span> <span class="st">&quot;</span><span class="ot">${file%%</span>.*<span class="ot">}</span><span class="st">.bam&quot;</span> <span class="kw">&amp;&amp;</span> <span class="kw">\</span>
+  <span class="kw">samtools</span> index <span class="st">&quot;</span><span class="ot">${file%%</span>.*<span class="ot">}</span><span class="st">.bam&quot;</span>
+<span class="kw">done</span></code></pre></div>
+<p>The alignment statistics for all alignments look like this:</p>
+<p><strong>ERR572496</strong></p>
+<pre><code>3853220 reads; of these:
+  3853220 (100.00%) were unpaired; of these:
+    142273 (3.69%) aligned 0 times
+    3388612 (87.94%) aligned exactly 1 time
+    322335 (8.37%) aligned &gt;1 times
+96.31% overall alignment rate</code></pre>
+<p><strong>ERR572505</strong></p>
+<pre><code>15984026 reads; of these:
+  15984026 (100.00%) were unpaired; of these:
+    378986 (2.37%) aligned 0 times
+    14616391 (91.44%) aligned exactly 1 time
+    988649 (6.19%) aligned &gt;1 times
+97.63% overall alignment rate</code></pre>
+<p><strong>ERR572506</strong></p>
+<pre><code>10400377 reads; of these:
+  10400377 (100.00%) were unpaired; of these:
+    224755 (2.16%) aligned 0 times
+    9517931 (91.52%) aligned exactly 1 time
+    657691 (6.32%) aligned &gt;1 times
+97.84% overall alignment rate</code></pre>
+<p><strong>ERR572507</strong></p>
+<pre><code>9162105 reads; of these:
+  9162105 (100.00%) were unpaired; of these:
+    193498 (2.11%) aligned 0 times
+    8376362 (91.42%) aligned exactly 1 time
+    592245 (6.46%) aligned &gt;1 times
+97.89% overall alignment rate</code></pre>
+<p>In summary, for about 40 million reads, !91% of them aligned uniquely to the genome! These are great numbers relative to reads aligning to the falciparum genome, where low complexity sequence and highly recombinant and antigenic gene families can make even a simple task such as this, into a big pain.</p>
+</div>
+<div id="estimating-abundance" class="section level3">
+<h3><span class="header-section-number">8.3.4</span> Estimating abundance</h3>
+<p>In order to estimate transript abundance I will use <a href="https://ccb.jhu.edu/software/stringtie/">StringTie</a>, which can also be used to assemble transcripts after reads have been mapped to a reference genome. In this context, we’ll be telling StringTie to only calculate the transcript abundance for the gene models we’re interested in and to ignore reads that map elsewhere.</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">for</span> <span class="kw">file</span> in <span class="ot">$(</span><span class="kw">ls</span> *.bam<span class="ot">)</span><span class="kw">;</span> <span class="kw">do</span> 
+  <span class="kw">stringtie</span> retrotransposable_elements.gff -p 2 -b <span class="st">&quot;</span><span class="ot">${file%%</span>.*<span class="ot">}</span><span class="st">_tables&quot;</span> -A <span class="st">&quot;</span><span class="ot">${file%%</span>.*<span class="ot">}</span><span class="st">.abund&quot;</span> -e -x
+<span class="kw">done</span></code></pre></div>
+<p>This generates a file that looks like the following:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">readr::<span class="kw">read_tsv</span>(<span class="st">&quot;data/lesson8/stringtie_estimates/ERR572496_1.abund&quot;</span>,<span class="dt">n_max=</span><span class="dv">10</span>) %&gt;%<span class="st"> </span>
+<span class="st">  </span><span class="kw">select</span>(<span class="st">`</span><span class="dt">Gene ID</span><span class="st">`</span>, Coverage, FPKM, TPM) %&gt;%
+<span class="st">  </span>DT::<span class="kw">datatable</span>()</code></pre></div>
+<div id="htmlwidget-5401" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-5401">{"x":{"data":[["1","2","3","4","5","6","7","8","9","10"],["Cvel_2","Cvel_3","Cvel_5","Cvel_4","Cvel_6","Cvel_7","Cvel_8","Cvel_9","Cvel_13","Cvel_14"],[0.051153,0.59221,2.117401,1.449172,0,0.985144,5.840583,3.600149,1.801377,14.598131],[0.323235,3.742162,13.379811,9.157287,0,6.225104,36.906517,22.749266,11.382863,92.245277],[0.998118,11.555436,41.315567,28.276819,0,19.222521,113.963776,70.247536,35.149181,284.844513]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> \u003c/th>\n      <th>Gene ID\u003c/th>\n      <th>Coverage\u003c/th>\n      <th>FPKM\u003c/th>\n      <th>TPM\u003c/th>\n    \u003c/tr>\n  \u003c/thead>\n\u003c/table>","options":{"columnDefs":[{"className":"dt-right","targets":[2,3,4]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false},"callback":null,"filter":"none","selection":"multiple"},"evals":[],"jsHooks":[]}</script>
+<p>There is more information in each abundance file such as the gene name and the genomic coordinates of each gene. In addition, we generated one of these files for each sequencing library.</p>
+<p>We can briefly take a look at what the most highly expressed transcripts are across samples and how many transcripts are not detected at all (TPM of zero).</p>
+<p>First let’s take a look at highly abundant transcripts across samples. We’ll order it by TPMs from sample ERR572496.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">options</span>(<span class="dt">digits =</span> <span class="dv">3</span>)
+
+readr::<span class="kw">read_tsv</span>(<span class="st">&quot;data/lesson8/stringtie_estimates/ERR572496_1.abund&quot;</span>) %&gt;%<span class="st"> </span><span class="kw">select</span>(<span class="st">`</span><span class="dt">Gene ID</span><span class="st">`</span>, TPM) %&gt;%<span class="st"> </span><span class="kw">mutate</span>(<span class="dt">sample=</span><span class="st">&quot;ERR572496&quot;</span>) -&gt;<span class="st"> </span>ERR572496
+readr::<span class="kw">read_tsv</span>(<span class="st">&quot;data/lesson8/stringtie_estimates/ERR572505_1.abund&quot;</span>) %&gt;%<span class="st"> </span><span class="kw">select</span>(<span class="st">`</span><span class="dt">Gene ID</span><span class="st">`</span>, TPM) %&gt;%<span class="st"> </span><span class="kw">mutate</span>(<span class="dt">sample=</span><span class="st">&quot;ERR572505&quot;</span>) -&gt;<span class="st"> </span>ERR572505
+readr::<span class="kw">read_tsv</span>(<span class="st">&quot;data/lesson8/stringtie_estimates/ERR572506_1.abund&quot;</span>) %&gt;%<span class="st"> </span><span class="kw">select</span>(<span class="st">`</span><span class="dt">Gene ID</span><span class="st">`</span>, TPM) %&gt;%<span class="st"> </span><span class="kw">mutate</span>(<span class="dt">sample=</span><span class="st">&quot;ERR572506&quot;</span>) -&gt;<span class="st"> </span>ERR572506
+readr::<span class="kw">read_tsv</span>(<span class="st">&quot;data/lesson8/stringtie_estimates/ERR572507_1.abund&quot;</span>) %&gt;%<span class="st"> </span><span class="kw">select</span>(<span class="st">`</span><span class="dt">Gene ID</span><span class="st">`</span>, TPM) %&gt;%<span class="st"> </span><span class="kw">mutate</span>(<span class="dt">sample=</span><span class="st">&quot;ERR572507&quot;</span>) -&gt;<span class="st"> </span>ERR572507
+abund &lt;-<span class="st"> </span><span class="kw">bind_rows</span>(ERR572496,ERR572505,ERR572506,ERR572507) %&gt;%<span class="st"> </span>tidyr::<span class="kw">spread</span>(sample, TPM)
+
+abund %&gt;%<span class="st"> </span><span class="kw">arrange</span>(<span class="kw">desc</span>(ERR572496)) %&gt;%<span class="st"> </span><span class="kw">head</span>(<span class="dv">10</span>) %&gt;%<span class="st"> </span>DT::<span class="kw">datatable</span>()</code></pre></div>
+<div id="htmlwidget-5474" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-5474">{"x":{"data":[["1","2","3","4","5","6","7","8","9","10"],["Cvel_10809","Cvel_17262","Cvel_25202","Cvel_13395","Cvel_23344","Cvel_2630","Cvel_26551","Cvel_13426","Cvel_1371","Cvel_4471"],[95247.679688,16403.970703,13491.703125,13467.748047,10413.977539,10355.496094,10238.654297,9742.954102,9055.421875,9034.142578],[88311.875,8.019396,17472.589844,11002.029297,9890.193359,8242.316406,8374.90625,7805.983887,9936.980469,7372.414551],[64931.320312,13223.168945,14107.410156,7800.831543,8473.957031,6509.666504,4233.475586,6199.133789,8833.086914,6428.947754],[76748.335938,5.87463,12697.619141,7679.884766,9410.384766,7734.967285,5760.200195,7012.442383,7823.17627,6588.693848]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> \u003c/th>\n      <th>Gene ID\u003c/th>\n      <th>ERR572496\u003c/th>\n      <th>ERR572505\u003c/th>\n      <th>ERR572506\u003c/th>\n      <th>ERR572507\u003c/th>\n    \u003c/tr>\n  \u003c/thead>\n\u003c/table>","options":{"columnDefs":[{"className":"dt-right","targets":[2,3,4,5]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false},"callback":null,"filter":"none","selection":"multiple"},"evals":[],"jsHooks":[]}</script>
+<p>Interestingly enough, we can already see that there are huge differences in transcript abundance for Cvel_17262. This difference in TPM doesn’t represent the absolute transcript copy number, but rather the proportion of of this transcript relative to the total transcript pool. However, this indcates that values across biological replicates are not consistent! So let’s look at scatter plots of the TPMs between biological replicates.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">suppressPackageStartupMessages</span>(<span class="kw">library</span>(cowplot))
+
+<span class="co"># calculate correlation</span>
+c1 &lt;-<span class="st"> </span><span class="kw">cor</span>(<span class="kw">log10</span>(abund$ERR572496<span class="dv">+1</span>), <span class="kw">log10</span>(abund$ERR572507<span class="dv">+1</span>))
+
+abund %&gt;%<span class="st"> </span>
+<span class="st">  </span><span class="kw">select</span>(ERR572496,ERR572507) %&gt;%<span class="st"> </span>
+<span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x=</span>ERR572496,<span class="dt">y=</span>ERR572507)) +<span class="st"> </span>
+<span class="st">  </span><span class="kw">geom_point</span>() +<span class="st"> </span>
+<span class="st">  </span><span class="kw">geom_abline</span>(<span class="dt">colour=</span><span class="st">&quot;red&quot;</span>) +
+<span class="st">  </span><span class="kw">scale_x_log10</span>(
+    <span class="dt">breaks =</span> scales::<span class="kw">trans_breaks</span>(<span class="st">&quot;log10&quot;</span>, function(x) <span class="dv">10</span>^x),
+    <span class="dt">labels =</span> scales::<span class="kw">trans_format</span>(<span class="st">&quot;log10&quot;</span>, scales::<span class="kw">math_format</span>(<span class="dv">10</span>^.x))) +
+<span class="st">  </span><span class="kw">scale_y_log10</span>(
+    <span class="dt">breaks =</span> scales::<span class="kw">trans_breaks</span>(<span class="st">&quot;log10&quot;</span>, function(x) <span class="dv">10</span>^x),
+    <span class="dt">labels =</span> scales::<span class="kw">trans_format</span>(<span class="st">&quot;log10&quot;</span>, scales::<span class="kw">math_format</span>(<span class="dv">10</span>^.x))) +
+<span class="st">  </span><span class="kw">annotate</span>(<span class="st">&quot;text&quot;</span>,<span class="dt">x=</span><span class="fl">0.01</span>,<span class="dt">y=</span><span class="dv">10000</span>,<span class="dt">label=</span><span class="kw">paste</span>(<span class="st">&quot;Pearson: &quot;</span>,c1)) +
+<span class="st">  </span><span class="kw">panel_border</span>(<span class="dt">size=</span><span class="dv">1</span>,<span class="dt">colour=</span><span class="st">&quot;black&quot;</span>) +
+<span class="st">  </span><span class="kw">theme</span>(<span class="dt">axis.line.y =</span> <span class="kw">element_line</span>(<span class="dt">size=</span><span class="fl">0.25</span>))</code></pre></div>
+<div class="figure">
+<img src="_main_files/figure-html/replicates-1.png" alt="Scatter plot of biological replicates for both conditions" width="672" />
+<p class="caption">
+Scatter plot of biological replicates for both conditions
+</p>
+</div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">c2 &lt;-<span class="st"> </span><span class="kw">cor</span>(<span class="kw">log10</span>(abund$ERR572505<span class="dv">+1</span>), <span class="kw">log10</span>(abund$ERR572506<span class="dv">+1</span>))
+
+abund %&gt;%<span class="st"> </span>
+<span class="st">  </span><span class="kw">select</span>(ERR572505,ERR572506) %&gt;%
+<span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x=</span>ERR572505,<span class="dt">y=</span>ERR572506)) +<span class="st"> </span>
+<span class="st">  </span><span class="kw">geom_point</span>() +<span class="st"> </span>
+<span class="st">  </span><span class="kw">geom_abline</span>(<span class="dt">colour=</span><span class="st">&quot;red&quot;</span>) +
+<span class="st">    </span><span class="kw">scale_x_log10</span>(
+    <span class="dt">breaks =</span> scales::<span class="kw">trans_breaks</span>(<span class="st">&quot;log10&quot;</span>, function(x) <span class="dv">10</span>^x),
+    <span class="dt">labels =</span> scales::<span class="kw">trans_format</span>(<span class="st">&quot;log10&quot;</span>, scales::<span class="kw">math_format</span>(<span class="dv">10</span>^.x))) +
+<span class="st">  </span><span class="kw">scale_y_log10</span>(
+    <span class="dt">breaks =</span> scales::<span class="kw">trans_breaks</span>(<span class="st">&quot;log10&quot;</span>, function(x) <span class="dv">10</span>^x),
+    <span class="dt">labels =</span> scales::<span class="kw">trans_format</span>(<span class="st">&quot;log10&quot;</span>, scales::<span class="kw">math_format</span>(<span class="dv">10</span>^.x))) +
+<span class="st">  </span><span class="kw">annotate</span>(<span class="st">&quot;text&quot;</span>,<span class="dt">x=</span><span class="fl">0.01</span>,<span class="dt">y=</span><span class="dv">10000</span>,<span class="dt">label=</span><span class="kw">paste</span>(<span class="st">&quot;Pearson: &quot;</span>,c2)) +
+<span class="st">  </span><span class="kw">panel_border</span>(<span class="dt">size=</span><span class="dv">1</span>,<span class="dt">colour=</span><span class="st">&quot;black&quot;</span>) +
+<span class="st">  </span><span class="kw">theme</span>(<span class="dt">axis.line.y =</span> <span class="kw">element_line</span>(<span class="dt">size=</span><span class="fl">0.25</span>))</code></pre></div>
+<div class="figure">
+<img src="_main_files/figure-html/replicates-2.png" alt="Scatter plot of biological replicates for both conditions" width="672" />
+<p class="caption">
+Scatter plot of biological replicates for both conditions
+</p>
+</div>
+<p>From these plots we can see that, while for the most part, replicates are well correlated with one another, there are several examples of transcripts with highly variable abundance estimations between replicates.</p>
+</div>
+<div id="calculating-differentiall-expressed-transcripts" class="section level3">
+<h3><span class="header-section-number">8.3.5</span> Calculating differentiall expressed transcripts</h3>
+<p>Finally, we can use the <a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4792117/">ballgown</a> package to identify differentially abundant transcripts between conditions. First we need to read the data into ballgown:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">bg =<span class="st"> </span><span class="kw">ballgown</span>(<span class="dt">dataDir=</span><span class="st">&quot;data/lesson8/&quot;</span>,<span class="dt">samplePattern=</span><span class="st">&quot;tables&quot;</span>,<span class="dt">meas=</span><span class="st">&quot;all&quot;</span>)
+<span class="kw">save</span>(bg, <span class="dt">file=</span><span class="st">&quot;data/lesson8/ballgown/bg.rda&quot;</span>)</code></pre></div>
+<p>Next we provide the design matrix:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">suppressPackageStartupMessages</span>(<span class="kw">library</span>(ballgown))
+<span class="kw">load</span>(<span class="dt">file=</span><span class="st">&quot;data/lesson8/ballgown/bg.rda&quot;</span>)
+<span class="kw">pData</span>(bg) &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">id=</span><span class="kw">sampleNames</span>(bg), <span class="dt">group=</span><span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">0</span>))
+knitr::<span class="kw">kable</span>(<span class="kw">pData</span>(bg))</code></pre></div>
+<table>
+<thead>
+<tr class="header">
+<th align="left">id</th>
+<th align="right">group</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">ERR572496_1_tables</td>
+<td align="right">0</td>
+</tr>
+<tr class="even">
+<td align="left">ERR572505_1_tables</td>
+<td align="right">1</td>
+</tr>
+<tr class="odd">
+<td align="left">ERR572506_1_tables</td>
+<td align="right">1</td>
+</tr>
+<tr class="even">
+<td align="left">ERR572507_1_tables</td>
+<td align="right">0</td>
+</tr>
+</tbody>
+</table>
+<p>Finally, we call differentially abundant transcripts:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># run statistical test</span>
+results &lt;-<span class="st"> </span><span class="kw">stattest</span>(bg, <span class="dt">feature=</span><span class="st">&quot;transcript&quot;</span>, <span class="dt">meas=</span><span class="st">&quot;FPKM&quot;</span>, <span class="dt">covariate=</span><span class="st">&quot;group&quot;</span>)
+
+<span class="co"># add original gene IDs</span>
+t2g &lt;-<span class="st"> </span><span class="kw">indexes</span>(bg)$t2g
+t2g$t_id &lt;-<span class="st"> </span><span class="kw">as.character</span>(t2g$t_id)
+results$id &lt;-<span class="st"> </span><span class="kw">as.character</span>(results$id)
+results &lt;-<span class="st"> </span><span class="kw">inner_join</span>(results, t2g, <span class="dt">by =</span> <span class="kw">c</span>(<span class="st">&quot;id&quot;</span> =<span class="st"> &quot;t_id&quot;</span>))
+
+<span class="co"># show top results</span>
+results %&gt;%<span class="st"> </span><span class="kw">select</span>(g_id,pval,qval) %&gt;%<span class="st"> </span><span class="kw">arrange</span>(qval) %&gt;%<span class="st"> </span><span class="kw">head</span>(<span class="dv">15</span>) %&gt;%<span class="st"> </span>knitr::<span class="kw">kable</span>()</code></pre></div>
+<table>
+<thead>
+<tr class="header">
+<th align="left">g_id</th>
+<th align="right">pval</th>
+<th align="right">qval</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Cvel_3036.1</td>
+<td align="right">2.44e-05</td>
+<td align="right">0.047730</td>
+</tr>
+<tr class="even">
+<td align="left">Cvel_16048</td>
+<td align="right">2.30e-05</td>
+<td align="right">0.047730</td>
+</tr>
+<tr class="odd">
+<td align="left">Cvel_3186.2</td>
+<td align="right">2.44e-05</td>
+<td align="right">0.047730</td>
+</tr>
+<tr class="even">
+<td align="left">Cvel_16381</td>
+<td align="right">1.59e-05</td>
+<td align="right">0.047730</td>
+</tr>
+<tr class="odd">
+<td align="left">Cvel_16807</td>
+<td align="right">5.40e-06</td>
+<td align="right">0.047730</td>
+</tr>
+<tr class="even">
+<td align="left">Cvel_18040</td>
+<td align="right">2.40e-05</td>
+<td align="right">0.047730</td>
+</tr>
+<tr class="odd">
+<td align="left">Cvel_6014</td>
+<td align="right">2.39e-05</td>
+<td align="right">0.047730</td>
+</tr>
+<tr class="even">
+<td align="left">Cvel_25664</td>
+<td align="right">1.71e-05</td>
+<td align="right">0.047730</td>
+</tr>
+<tr class="odd">
+<td align="left">Cvel_26448</td>
+<td align="right">2.50e-05</td>
+<td align="right">0.047730</td>
+</tr>
+<tr class="even">
+<td align="left">Cvel_26628</td>
+<td align="right">1.18e-05</td>
+<td align="right">0.047730</td>
+</tr>
+<tr class="odd">
+<td align="left">Cvel_6546</td>
+<td align="right">1.10e-05</td>
+<td align="right">0.047730</td>
+</tr>
+<tr class="even">
+<td align="left">Cvel_29771</td>
+<td align="right">2.45e-05</td>
+<td align="right">0.047730</td>
+</tr>
+<tr class="odd">
+<td align="left">Cvel_2425</td>
+<td align="right">2.26e-05</td>
+<td align="right">0.047730</td>
+</tr>
+<tr class="even">
+<td align="left">Cvel_4280</td>
+<td align="right">4.80e-05</td>
+<td align="right">0.060726</td>
+</tr>
+<tr class="odd">
+<td align="left">Cvel_21671</td>
+<td align="right">4.35e-05</td>
+<td align="right">0.060726</td>
+</tr>
+</tbody>
+</table>
+<p>Based on the calculated q-values, we can see here that not many transcripts are significantly different between our two samples if we use a q-value cutoff of 0.05.</p>
+</div>
+<div id="conclusions" class="section level3">
+<h3><span class="header-section-number">8.3.6</span> Conclusions</h3>
+<p>If we investigate which transcripts are barely differentially abundant, we can see an RNA-binding protein, a HCl exchange transporter 3, and a NACHT, LRR and PYD domains-containing protein are in the list. The rest are hypoehtical proteins. Even those listed are of putative function since they haven’t been biochemically and biologically characterized.</p>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="lesson7.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="lesson9.html" class="navigation navigation-next " aria-label="Next page""><i class="fa fa-angle-right"></i></a>
+
+<script src="assets/gitbook-2.6.7/js/app.min.js"></script>
+<script src="assets/gitbook-2.6.7/js/lunr.js"></script>
+<script src="assets/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="assets/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="assets/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="assets/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="assets/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"facebook": true,
+"twitter": true,
+"google": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/thephilross/bmmb551/edit/master/08-transcribed-regions.Rmd",
+"text": "Edit"
+},
+"download": ["_main.pdf"],
+"toc": {
+"collapse": "section",
+"depth": 2
+}
+});
+});
+</script>
+
+</body>
+
+</html>

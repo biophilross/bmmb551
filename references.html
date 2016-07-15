@@ -7,25 +7,25 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Genomics (BMMB 551)</title>
   <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
-  <meta name="description" content="Homework assignments for the class BMMB 551 as taught by Dr. Ross Hardison at Pennsylvania State University in the Spring of 2016.">
+  <meta name="description" content="Assignments for an introduction to genomics course at Penn State University">
   <meta name="generator" content="bookdown 0.0.72 and GitBook 2.6.7">
 
   <meta property="og:title" content="Genomics (BMMB 551)" />
   <meta property="og:type" content="book" />
   
   
-  <meta property="og:description" content="Homework assignments for the class BMMB 551 as taught by Dr. Ross Hardison at Pennsylvania State University in the Spring of 2016." />
+  <meta property="og:description" content="Assignments for an introduction to genomics course at Penn State University" />
   <meta name="github-repo" content="thephilross/bmmb551" />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Genomics (BMMB 551)" />
   
-  <meta name="twitter:description" content="Homework assignments for the class BMMB 551 as taught by Dr. Ross Hardison at Pennsylvania State University in the Spring of 2016." />
+  <meta name="twitter:description" content="Assignments for an introduction to genomics course at Penn State University" />
   
 
 <meta name="author" content="Philipp Ross">
 
-<meta name="date" content="2016-07-04">
+<meta name="date" content="2016-07-15">
 
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -33,22 +33,27 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="lesson7.html">
+<link rel="prev" href="project.html">
 
 
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
-<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
-
-
-
+<script src="assets/jquery-2.2.3/jquery.min.js"></script>
+<link href="assets/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="assets/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="assets/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="assets/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="assets/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
 
 
 
 
+
+
+
+<script src="assets/htmlwidgets-0.6/htmlwidgets.js"></script>
+<script src="assets/datatables-binding-0.1/datatables.js"></script>
+<script src="assets/datatables-1.10.7/jquery.dataTables.min.js"></script>
+<link href="assets/datatables-default-1.10.7/dataTables.extra.css" rel="stylesheet" />
+<link href="assets/datatables-default-1.10.7/jquery.dataTables.min.css" rel="stylesheet" />
 
 
 <style type="text/css">
@@ -89,7 +94,7 @@ code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* Com
 code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 </style>
 
-<link rel="stylesheet" href="style.css" type="text/css" />
+<link rel="stylesheet" href="mystyle.css" type="text/css" />
 </head>
 
 <body>
@@ -104,12 +109,13 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="./">Genomics (BMMB 551)</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>What is this?</a></li>
-<li class="chapter" data-level="1" data-path="module1.html"><a href="module1.html"><i class="fa fa-check"></i><b>1</b> Molecular genetics</a><ul>
-<li class="chapter" data-level="1.1" data-path="module1.html"><a href="module1.html#learning-objectives"><i class="fa fa-check"></i><b>1.1</b> Learning Objectives</a></li>
-<li class="chapter" data-level="1.2" data-path="module1.html"><a href="module1.html#assignment"><i class="fa fa-check"></i><b>1.2</b> Assignment</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome</a></li>
+<li class="part"><span><b>Module 1</b></span></li>
+<li class="chapter" data-level="1" data-path="lesson1.html"><a href="lesson1.html"><i class="fa fa-check"></i><b>1</b> Molecular genetics</a><ul>
+<li class="chapter" data-level="1.1" data-path="lesson1.html"><a href="lesson1.html#learning-objectives"><i class="fa fa-check"></i><b>1.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="1.2" data-path="lesson1.html"><a href="lesson1.html#assignment"><i class="fa fa-check"></i><b>1.2</b> Assignment</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="lesson2.html"><a href="lesson2.html"><i class="fa fa-check"></i><b>2</b> Intro to Genomics</a><ul>
+<li class="chapter" data-level="2" data-path="lesson2.html"><a href="lesson2.html"><i class="fa fa-check"></i><b>2</b> Genomics</a><ul>
 <li class="chapter" data-level="2.1" data-path="lesson2.html"><a href="lesson2.html#learning-objectives-1"><i class="fa fa-check"></i><b>2.1</b> Learning Objectives</a></li>
 <li class="chapter" data-level="2.2" data-path="lesson2.html"><a href="lesson2.html#assignment-1"><i class="fa fa-check"></i><b>2.2</b> Assignment</a></li>
 </ul></li>
@@ -124,18 +130,50 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 <li class="chapter" data-level="4.3" data-path="lesson4.html"><a href="lesson4.html#additional-resources"><i class="fa fa-check"></i><b>4.3</b> Additional Resources</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="lesson5.html"><a href="lesson5.html"><i class="fa fa-check"></i><b>5</b> Genome Databases and Browsers</a><ul>
+<li class="chapter" data-level="5" data-path="lesson5.html"><a href="lesson5.html"><i class="fa fa-check"></i><b>5</b> Genome databases and browsers</a><ul>
 <li class="chapter" data-level="5.1" data-path="lesson5.html"><a href="lesson5.html#learning-objectives-4"><i class="fa fa-check"></i><b>5.1</b> Learning Objectives</a></li>
 <li class="chapter" data-level="5.2" data-path="lesson5.html"><a href="lesson5.html#assignment-4"><i class="fa fa-check"></i><b>5.2</b> Assignment</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="lesson6.html"><a href="lesson6.html"><i class="fa fa-check"></i><b>6</b> Genomics Platforms</a><ul>
+<li class="chapter" data-level="6" data-path="lesson6.html"><a href="lesson6.html"><i class="fa fa-check"></i><b>6</b> Genomics platforms</a><ul>
 <li class="chapter" data-level="6.1" data-path="lesson6.html"><a href="lesson6.html#learning-objectives-5"><i class="fa fa-check"></i><b>6.1</b> Learning Objectives</a></li>
 <li class="chapter" data-level="6.2" data-path="lesson6.html"><a href="lesson6.html#assignment-5"><i class="fa fa-check"></i><b>6.2</b> Assignment</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="lesson7.html"><a href="lesson7.html"><i class="fa fa-check"></i><b>7</b> Protein Coding Genes</a><ul>
+<li class="part"><span><b>Module 2</b></span></li>
+<li class="chapter" data-level="7" data-path="lesson7.html"><a href="lesson7.html"><i class="fa fa-check"></i><b>7</b> Protein-coding genes</a><ul>
 <li class="chapter" data-level="7.1" data-path="lesson7.html"><a href="lesson7.html#learning-objectives-6"><i class="fa fa-check"></i><b>7.1</b> Learning Objectives</a></li>
 <li class="chapter" data-level="7.2" data-path="lesson7.html"><a href="lesson7.html#assignment-6"><i class="fa fa-check"></i><b>7.2</b> Assignment</a></li>
 </ul></li>
+<li class="chapter" data-level="8" data-path="lesson8.html"><a href="lesson8.html"><i class="fa fa-check"></i><b>8</b> Transcribed regions in genomes</a><ul>
+<li class="chapter" data-level="8.1" data-path="lesson8.html"><a href="lesson8.html#learning-objectives-7"><i class="fa fa-check"></i><b>8.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="8.2" data-path="lesson8.html"><a href="lesson8.html#notes"><i class="fa fa-check"></i><b>8.2</b> Notes</a></li>
+<li class="chapter" data-level="8.3" data-path="lesson8.html"><a href="lesson8.html#assignment-7"><i class="fa fa-check"></i><b>8.3</b> Assignment</a><ul>
+<li class="chapter" data-level="8.3.1" data-path="lesson8.html"><a href="lesson8.html#design"><i class="fa fa-check"></i><b>8.3.1</b> Design</a></li>
+<li class="chapter" data-level="8.3.2" data-path="lesson8.html"><a href="lesson8.html#downloading-the-data"><i class="fa fa-check"></i><b>8.3.2</b> Downloading the data</a></li>
+<li class="chapter" data-level="8.3.3" data-path="lesson8.html"><a href="lesson8.html#aligning-the-reads"><i class="fa fa-check"></i><b>8.3.3</b> Aligning the reads</a></li>
+<li class="chapter" data-level="8.3.4" data-path="lesson8.html"><a href="lesson8.html#estimating-abundance"><i class="fa fa-check"></i><b>8.3.4</b> Estimating abundance</a></li>
+<li class="chapter" data-level="8.3.5" data-path="lesson8.html"><a href="lesson8.html#calculating-differentiall-expressed-transcripts"><i class="fa fa-check"></i><b>8.3.5</b> Calculating differentiall expressed transcripts</a></li>
+<li class="chapter" data-level="8.3.6" data-path="lesson8.html"><a href="lesson8.html#conclusions"><i class="fa fa-check"></i><b>8.3.6</b> Conclusions</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="lesson9.html"><a href="lesson9.html"><i class="fa fa-check"></i><b>9</b> Comparative genomices</a><ul>
+<li class="chapter" data-level="9.1" data-path="lesson9.html"><a href="lesson9.html#learning-objectives-8"><i class="fa fa-check"></i><b>9.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="9.2" data-path="lesson9.html"><a href="lesson9.html#notes-1"><i class="fa fa-check"></i><b>9.2</b> Notes</a></li>
+<li class="chapter" data-level="9.3" data-path="lesson9.html"><a href="lesson9.html#assignment-8"><i class="fa fa-check"></i><b>9.3</b> Assignment</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="lesson10.html"><a href="lesson10.html"><i class="fa fa-check"></i><b>10</b> Gene regulatory modules</a><ul>
+<li class="chapter" data-level="10.1" data-path="lesson10.html"><a href="lesson10.html#learning-objectives-9"><i class="fa fa-check"></i><b>10.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="10.2" data-path="lesson10.html"><a href="lesson10.html#assignment-9"><i class="fa fa-check"></i><b>10.2</b> Assignment</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="lesson11.html"><a href="lesson11.html"><i class="fa fa-check"></i><b>11</b> Non-genic functional sequences</a><ul>
+<li class="chapter" data-level="11.1" data-path="lesson11.html"><a href="lesson11.html#learning-objectives-10"><i class="fa fa-check"></i><b>11.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="11.2" data-path="lesson11.html"><a href="lesson11.html#assignment-10"><i class="fa fa-check"></i><b>11.2</b> Assignment</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="lesson12.html"><a href="lesson12.html"><i class="fa fa-check"></i><b>12</b> Finding function by phenotype</a><ul>
+<li class="chapter" data-level="12.1" data-path="lesson12.html"><a href="lesson12.html#learning-objectives-11"><i class="fa fa-check"></i><b>12.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="12.2" data-path="lesson12.html"><a href="lesson12.html#assignment-11"><i class="fa fa-check"></i><b>12.2</b> Assignment</a></li>
+</ul></li>
+<li class="part"><span><b>Project</b></span></li>
+<li class="chapter" data-level="13" data-path="project.html"><a href="project.html"><i class="fa fa-check"></i><b>13</b> Evolution of Parasitism</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -159,6 +197,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
             <section class="normal" id="section-">
 <div id="references" class="section level1 unnumbered">
 <h1>References</h1>
+<p><em>REFERENCES TO ADD</em></p>
+<p>HISAT2 Stringtie Ballgown</p>
 
 <div id="refs" class="references">
 <div>
@@ -174,16 +214,16 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           </div>
         </div>
       </div>
-<a href="lesson7.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="project.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
 
-<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
-<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="assets/gitbook-2.6.7/js/app.min.js"></script>
+<script src="assets/gitbook-2.6.7/js/lunr.js"></script>
+<script src="assets/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="assets/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="assets/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="assets/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="assets/gitbook-2.6.7/js/jquery.highlight.js"></script>
 <script>
 require(["gitbook"], function(gitbook) {
 gitbook.start({
@@ -202,12 +242,13 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/14-references.Rmd",
-"text": null
+"link": "https://github.com/thephilross/bmmb551/edit/master/14-references.Rmd",
+"text": "Edit"
 },
-"download": null,
+"download": ["_main.pdf"],
 "toc": {
-"collapse": "subsection"
+"collapse": "section",
+"depth": 2
 }
 });
 });

@@ -1,3 +1,5 @@
+# (PART) Module 2 {-}
+
 # Protein-coding genes {#lesson7}
 
 ## Learning Objectives

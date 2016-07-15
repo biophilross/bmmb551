@@ -1,4 +1,6 @@
-# Project {-}
+# (PART) Project {-}
+
+# Evolution of Parasitism {#project}
 
 **Genomic landscape during the transition from a free-living lifestyle to obligate intracellular parasitism**
 

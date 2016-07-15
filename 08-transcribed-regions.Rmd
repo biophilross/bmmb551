@@ -13,7 +13,7 @@
 
 ### Design
 
-As mentioned during my assignment on [protein coding genes][#lesson7], I will be working with *Chromera velia*, a recently characterized and sequenced, photosynthetic, unicellular eukaryote. In [Woo et al. 2015](https://elifesciences.org/content/4/e06974), they generate a plethora of RNA-seq data; multiple replicates for 36 different conditions. Their reasoning for this was to correlate changes in transcript abundance under different enviornmental conditions with the developmentally regulated transcript abundance seen in *Plasmodium falciparum* to identify genes that are perhaps conserved in their gene regulation mechanisms. 
+As mentioned during my assignment on [protein coding genes](#lesson7), I will be working with *Chromera velia*, a recently characterized and sequenced, photosynthetic, unicellular eukaryote. In [Woo et al. 2015](https://elifesciences.org/content/4/e06974), they generate a plethora of RNA-seq data; multiple replicates for 36 different conditions. Their reasoning for this was to correlate changes in transcript abundance under different enviornmental conditions with the developmentally regulated transcript abundance seen in *Plasmodium falciparum* to identify genes that are perhaps conserved in their gene regulation mechanisms. 
 
 My goal is to use a subset of these RNA-seq data sets to detect whether we can see transcriptional activity at any of the identified transposable elements within *Chromera velia*. I will then compare the amount of transcription between two different conditions, using two biological replicates to identify transposable elements that are not only active, but may be regulated somehow.
 

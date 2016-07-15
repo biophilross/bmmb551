@@ -1,2 +1,9 @@
-book_filename: "BMMB551"
+book_filename: "_main"
 chapter_name: ""
+before_chapter_script: "before.R"
+after_chapter_script: "after.R"
+edit:
+  link: https://github.com/thephilross/bmmb551/edit/master/%s
+  text: "Edit"
+output_dir: "_book"
+clean: ""

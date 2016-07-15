@@ -1,6 +1,8 @@
-proj.user
+.Rproj.user
 .Rhistory
 .RData
-_publish.R
-
+*_cache
+*_files
+_book
+*.html
 _data

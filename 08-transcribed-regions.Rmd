@@ -28,7 +28,7 @@ When I refer to accession numbers, they correspond to the following samples:
 
 ```{r design-table}
 suppressPackageStartupMessages(library(dplyr))
-readr::read_tsv("data/lesson8/design.tsv") %>% knitr::kable()
+readr::read_tsv("_data/lesson8/design.tsv") %>% knitr::kable()
 ```
 
 ### Downloading the data
@@ -140,7 +140,7 @@ done
 This generates a file that looks like the following:
 
 ```{r abundance-tables}
-readr::read_tsv("data/lesson8/stringtie_estimates/ERR572496_1.abund",n_max=10) %>% 
+readr::read_tsv("_data/lesson8/stringtie_estimates/ERR572496_1.abund",n_max=10) %>% 
   select(`Gene ID`, Coverage, FPKM, TPM) %>%
   DT::datatable()
 ```
@@ -154,10 +154,10 @@ First let's take a look at highly abundant transcripts across samples. We'll ord
 ```{r highly-abundant, cache=TRUE}
 options(digits = 3)
 
-readr::read_tsv("data/lesson8/stringtie_estimates/ERR572496_1.abund") %>% select(`Gene ID`, TPM) %>% mutate(sample="ERR572496") -> ERR572496
-readr::read_tsv("data/lesson8/stringtie_estimates/ERR572505_1.abund") %>% select(`Gene ID`, TPM) %>% mutate(sample="ERR572505") -> ERR572505
-readr::read_tsv("data/lesson8/stringtie_estimates/ERR572506_1.abund") %>% select(`Gene ID`, TPM) %>% mutate(sample="ERR572506") -> ERR572506
-readr::read_tsv("data/lesson8/stringtie_estimates/ERR572507_1.abund") %>% select(`Gene ID`, TPM) %>% mutate(sample="ERR572507") -> ERR572507
+readr::read_tsv("_data/lesson8/stringtie_estimates/ERR572496_1.abund") %>% select(`Gene ID`, TPM) %>% mutate(sample="ERR572496") -> ERR572496
+readr::read_tsv("_data/lesson8/stringtie_estimates/ERR572505_1.abund") %>% select(`Gene ID`, TPM) %>% mutate(sample="ERR572505") -> ERR572505
+readr::read_tsv("_data/lesson8/stringtie_estimates/ERR572506_1.abund") %>% select(`Gene ID`, TPM) %>% mutate(sample="ERR572506") -> ERR572506
+readr::read_tsv("_data/lesson8/stringtie_estimates/ERR572507_1.abund") %>% select(`Gene ID`, TPM) %>% mutate(sample="ERR572507") -> ERR572507
 abund <- bind_rows(ERR572496,ERR572505,ERR572506,ERR572507) %>% tidyr::spread(sample, TPM)
 
 abund %>% arrange(desc(ERR572496)) %>% head(10) %>% DT::datatable()
@@ -212,14 +212,14 @@ Finally, we can use the [ballgown](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4
 
 ```{r read-bg,eval=F}
 bg = ballgown(dataDir="data/lesson8/",samplePattern="tables",meas="all")
-save(bg, file="data/lesson8/ballgown/bg.rda")
+save(bg, file="_data/lesson8/ballgown/bg.rda")
 ```
 
 Next we provide the design matrix:
 
 ```{r design-matrix}
 suppressPackageStartupMessages(library(ballgown))
-load(file="data/lesson8/ballgown/bg.rda")
+load(file="_data/lesson8/ballgown/bg.rda")
 pData(bg) <- data.frame(id=sampleNames(bg), group=c(0,1,1,0))
 knitr::kable(pData(bg))
 ```

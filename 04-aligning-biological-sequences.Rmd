@@ -18,7 +18,7 @@ Although the assignment asks you to perform the tasks using tools found in Galax
 First let's import the data into R.
 
 ```{r, importData}
-seqs <- readAAStringSet(filepath = "data/lesson4/all.fasta")
+seqs <- readAAStringSet(filepath = "_data/lesson4/all.fasta")
 ```
 
 **1.1 What are the lengths of the four protein sequences?**

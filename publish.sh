@@ -1,10 +1,12 @@
 #!/usr/bin/env bash
 
+set -eu
+
 # copy entire output to directory above
 cp -r ./_book ../
 
 # move data directory back one
-mv -r ./_data ../
+mv ./_data ../
 
 # change branches
 git checkout gh-pages

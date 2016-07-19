@@ -2,9 +2,83 @@
 
 ## Learning Objectives
 
-* Describe how to use genomic-wide epigenetic data to find DNA sequences involved in gene regulation.
+* Describe how to use genomic-wide epigenetic data to find DNA sequences involved in gene regulation
 * Identify features associated with gene regulation (altered chromatin, histone modification, occupancy by RNA polymerase and transcription factors)
-* Compare various sequence census methods.
-* Interpret information from high-throughput methods that measure features with gene regulation comprehensively with high resolution across genomes.
+* Compare various sequence census methods
+* Interpret information from high-throughput methods that measure features with gene regulation comprehensively with high resolution across genomes
+
+## Notes
 
 ## Assignment
+
+### Background
+
+The detection of regulatory elements in *Plasmodium* genomes has long been of intense interest. In *P. falciparum* the severe AT content of the genome has made it almost impossible to predict *de novo* common regulatory elements. ChIP-seq technology, a common technique for detecting transcription factor binding sites is just now making it's way into regular use in *Plasmodium*. However, even this popular method is held back by the dearth of identified transcription factors predicted in *Plasmodium* genomes. The ApiAP2 family of transcription factors are the only *Plasmodium* specific transcription factors found to date and represent the largest expanded family of transcription factors within any apicomplexan parsite. *In vitro* efforts have been undertaken to uncover potential binding sites for these proteins, but they have yet to be confirmed *in vivo*. Studies thus far, in *P. berghei*, indicate that the predicted sequence-specific DNA binding motifs correlate well with *in vivo* findings.
+
+It's been shown that Cvel_872, a gene encoding a striated fiber assemblin (SFA) in *Chromera velia*, show strong regulatory conservation with *P. falciparum* invasion associated genes. The DNA-binding motif for the transcription factor predicted to be involved in regulation of invasion genes has been elucidated as has the homolog for Cvel_872 in various *Plasmodium* species.
+
+### Design
+
+If the *Plasmodium* equivalent of an SFA gene in *C. velia* carries is co-expressed with several invasion associated genes, then it's reasonable to believe that the binding motifs upstream of the *Plasmodium* gene in different species should be conserved. Since there is an overall lack of comparable ChIP-seq data sets and RNA-seq data sets between different species, I decided to test this hypothesis using phylogenetic footprinting.
+
+### Methods
+
+The genomic sequences for the following genes, including 1000 base pairs up and downstream, were extracted:
+
+* PF3D7_0703600 (human)
+* PBANKA_0801300 (mouse)
+* PCHAS_0801600 (mouse)
+* PCYB_011100 (macaque)
+* PKNH_0101800 (macaque & human)
+* PRCDC_0701800 (chimpanzee)
+* PVX_087720 (human)
+* PY17X_0804000 (mouse)
+
+Vertebrate host species known to be infected by the above parasites with which each gene is associated with are in parentheses.
+
+The sequences were extracted from [PlasmoDB](http://plasmodb.org/plasmo/) on July 11th, 2016 from the latest version (28).
+
+### Results
+
+#### Footprint discovery
+
+In order to detect conserved regulatory elements within upstream regions of the SFA homlog in *Plasmodium* parasites, I used a multiple alignment as performed by the msa Bioconductor package in R (CITATION). 
+
+```{r msa-promoter-seqs}
+sshhh("msa")
+seqs <- readDNAStringSet("_data/lesson10/plasmodium_promoter_only_regulatory_modules_1000bp.fasta")
+aln <- msa(seqs, type = "dna", method = "Muscle")
+print(aln, showNames=TRUE, show="complete")
+```
+
+We can then also view the consensus sequence:
+
+```{r consensus}
+consensus <- DNAString(consensusString(consensusMatrix(aln),ambiguityMap="N",threshold=0.5))
+```
+
+Finally, we can look to see whether in our consensus we can see the motif found by protein binding microarray and ChIP-seq predictions is present in our consensus.
+
+```{r matching}
+matchPattern("TGCA", consensus)
+```
+
+#### De novo motif enrichment
+
+Using MEME (CITATION) I was not able to find a motif enriched with the sequences that matched the "TGCA" motif known to be enriched upstream of invasion associated genes in *P. falciparum*. This motif was not found to be statistically significant, although this was likely due to using only 10 sequences as input.
+
+```{r meme-logo, echo=F, fig.cap="Most enriched motif found by MEME", fig.align="center"}
+knitr::include_graphics("img/lesson10/logo1.png")
+```
+
+### Discussion
+
+Phylogenetic footprinting by multiple sequence alignment has several limitations such as enriching short-length regulatory motifs over the background signal and providing the correct parameters to your multiple alignment due to a different in relatedness between species. While there are tools available to take into account phylogenetic relationships between the sequences chosen, these are not yet available for *Plasmodium*.
+
+In conclusion, I find that the motif known to be enriched upstream of invasion related genes can also be found within the multiple sequence alignment of the promoters of multiple *Plasmodium* parasites. We can also see that this motif in indeed present in the promoters of individual sequences as well:
+
+```{r motif-check}
+lapply(seqs, function (seq) {matchPattern("GTGCA", seq)})
+```
+
+However, it's sure to say whether this result is significant based on the four-letter motif used to search the sequence and the failure of using MEME to recapitulate this finding.

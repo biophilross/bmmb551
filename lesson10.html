@@ -163,7 +163,14 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 <li class="chapter" data-level="10" data-path="lesson10.html"><a href="lesson10.html"><i class="fa fa-check"></i><b>10</b> Gene regulatory modules</a><ul>
 <li class="chapter" data-level="10.1" data-path="lesson10.html"><a href="lesson10.html#learning-objectives-9"><i class="fa fa-check"></i><b>10.1</b> Learning Objectives</a></li>
-<li class="chapter" data-level="10.2" data-path="lesson10.html"><a href="lesson10.html#assignment-9"><i class="fa fa-check"></i><b>10.2</b> Assignment</a></li>
+<li class="chapter" data-level="10.2" data-path="lesson10.html"><a href="lesson10.html#notes-2"><i class="fa fa-check"></i><b>10.2</b> Notes</a></li>
+<li class="chapter" data-level="10.3" data-path="lesson10.html"><a href="lesson10.html#assignment-9"><i class="fa fa-check"></i><b>10.3</b> Assignment</a><ul>
+<li class="chapter" data-level="10.3.1" data-path="lesson10.html"><a href="lesson10.html#background-1"><i class="fa fa-check"></i><b>10.3.1</b> Background</a></li>
+<li class="chapter" data-level="10.3.2" data-path="lesson10.html"><a href="lesson10.html#design-2"><i class="fa fa-check"></i><b>10.3.2</b> Design</a></li>
+<li class="chapter" data-level="10.3.3" data-path="lesson10.html"><a href="lesson10.html#methods-1"><i class="fa fa-check"></i><b>10.3.3</b> Methods</a></li>
+<li class="chapter" data-level="10.3.4" data-path="lesson10.html"><a href="lesson10.html#results-1"><i class="fa fa-check"></i><b>10.3.4</b> Results</a></li>
+<li class="chapter" data-level="10.3.5" data-path="lesson10.html"><a href="lesson10.html#discussion-1"><i class="fa fa-check"></i><b>10.3.5</b> Discussion</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="11" data-path="lesson11.html"><a href="lesson11.html"><i class="fa fa-check"></i><b>11</b> Non-genic functional sequences</a><ul>
 <li class="chapter" data-level="11.1" data-path="lesson11.html"><a href="lesson11.html#learning-objectives-10"><i class="fa fa-check"></i><b>11.1</b> Learning Objectives</a></li>
@@ -201,15 +208,541 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <div id="learning-objectives-9" class="section level2">
 <h2><span class="header-section-number">10.1</span> Learning Objectives</h2>
 <ul>
-<li>Describe how to use genomic-wide epigenetic data to find DNA sequences involved in gene regulation.</li>
+<li>Describe how to use genomic-wide epigenetic data to find DNA sequences involved in gene regulation</li>
 <li>Identify features associated with gene regulation (altered chromatin, histone modification, occupancy by RNA polymerase and transcription factors)</li>
-<li>Compare various sequence census methods.</li>
-<li>Interpret information from high-throughput methods that measure features with gene regulation comprehensively with high resolution across genomes.</li>
+<li>Compare various sequence census methods</li>
+<li>Interpret information from high-throughput methods that measure features with gene regulation comprehensively with high resolution across genomes</li>
 </ul>
 </div>
+<div id="notes-2" class="section level2">
+<h2><span class="header-section-number">10.2</span> Notes</h2>
+</div>
 <div id="assignment-9" class="section level2">
-<h2><span class="header-section-number">10.2</span> Assignment</h2>
+<h2><span class="header-section-number">10.3</span> Assignment</h2>
+<div id="background-1" class="section level3">
+<h3><span class="header-section-number">10.3.1</span> Background</h3>
+<p>The detection of regulatory elements in <em>Plasmodium</em> genomes has long been of intense interest. In <em>P. falciparum</em> the severe AT content of the genome has made it almost impossible to predict <em>de novo</em> common regulatory elements. ChIP-seq technology, a common technique for detecting transcription factor binding sites is just now making it’s way into regular use in <em>Plasmodium</em>. However, even this popular method is held back by the dearth of identified transcription factors predicted in <em>Plasmodium</em> genomes. The ApiAP2 family of transcription factors are the only <em>Plasmodium</em> specific transcription factors found to date and represent the largest expanded family of transcription factors within any apicomplexan parsite. <em>In vitro</em> efforts have been undertaken to uncover potential binding sites for these proteins, but they have yet to be confirmed <em>in vivo</em>. Studies thus far, in <em>P. berghei</em>, indicate that the predicted sequence-specific DNA binding motifs correlate well with <em>in vivo</em> findings.</p>
+<p>It’s been shown that Cvel_872, a gene encoding a striated fiber assemblin (SFA) in <em>Chromera velia</em>, show strong regulatory conservation with <em>P. falciparum</em> invasion associated genes. The DNA-binding motif for the transcription factor predicted to be involved in regulation of invasion genes has been elucidated as has the homolog for Cvel_872 in various <em>Plasmodium</em> species.</p>
+</div>
+<div id="design-2" class="section level3">
+<h3><span class="header-section-number">10.3.2</span> Design</h3>
+<p>If the <em>Plasmodium</em> equivalent of an SFA gene in <em>C. velia</em> carries is co-expressed with several invasion associated genes, then it’s reasonable to believe that the binding motifs upstream of the <em>Plasmodium</em> gene in different species should be conserved. Since there is an overall lack of comparable ChIP-seq data sets and RNA-seq data sets between different species, I decided to test this hypothesis using phylogenetic footprinting.</p>
+</div>
+<div id="methods-1" class="section level3">
+<h3><span class="header-section-number">10.3.3</span> Methods</h3>
+<p>The genomic sequences for the following genes, including 1000 base pairs up and downstream, were extracted:</p>
+<ul>
+<li>PF3D7_0703600 (human)</li>
+<li>PBANKA_0801300 (mouse)</li>
+<li>PCHAS_0801600 (mouse)</li>
+<li>PCYB_011100 (macaque)</li>
+<li>PKNH_0101800 (macaque &amp; human)</li>
+<li>PRCDC_0701800 (chimpanzee)</li>
+<li>PVX_087720 (human)</li>
+<li>PY17X_0804000 (mouse)</li>
+</ul>
+<p>Vertebrate host species known to be infected by the above parasites with which each gene is associated with are in parentheses.</p>
+<p>The sequences were extracted from <a href="http://plasmodb.org/plasmo/">PlasmoDB</a> on July 11th, 2016 from the latest version (28).</p>
+</div>
+<div id="results-1" class="section level3">
+<h3><span class="header-section-number">10.3.4</span> Results</h3>
+<div id="footprint-discovery" class="section level4">
+<h4><span class="header-section-number">10.3.4.1</span> Footprint discovery</h4>
+<p>In order to detect conserved regulatory elements within upstream regions of the SFA homlog in <em>Plasmodium</em> parasites, I used a multiple alignment as performed by the msa Bioconductor package in R (CITATION).</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sshhh</span>(<span class="st">&quot;msa&quot;</span>)
+seqs &lt;-<span class="st"> </span><span class="kw">readDNAStringSet</span>(<span class="st">&quot;_data/lesson10/plasmodium_promoter_only_regulatory_modules_1000bp.fasta&quot;</span>)
+aln &lt;-<span class="st"> </span><span class="kw">msa</span>(seqs, <span class="dt">type =</span> <span class="st">&quot;dna&quot;</span>, <span class="dt">method =</span> <span class="st">&quot;Muscle&quot;</span>)
+<span class="kw">print</span>(aln, <span class="dt">showNames=</span><span class="ot">TRUE</span>, <span class="dt">show=</span><span class="st">&quot;complete&quot;</span>)</code></pre></div>
+<pre><code>## 
+## MsaDNAMultipleAlignment with 10 rows and 1426 columns
+##      aln (1..48)                                      names
+##  [1] ------------------------------------------------ PKNH_0101800
+##  [2] -----------------TTTATATAGCAACTTTTTTTTTTTTTTTTTT PCYB_011100
+##  [3] ---------------------------------------TTTTCTTTT PVX_087720
+##  [4] -----------------CATATAAATTATTAATATTACACTTTTATGT PRCDC_0701800
+##  [5] ------------------------------------CCACTTTTATGT PF3D7_0703600
+##  [6] ----------TGTTGAACATATAAATTATTAATATTCCACTTTTATGT PFIT_0702500
+##  [7] TTTAATTTTTTTATTTATCAAAATTAAAATTTTTATTATTCTTTCTTT PCHAS_0801600
+##  [8] --------------------------------------TTATTCTATA PBANKA_0801300
+##  [9] --------------------ATTAAAATTTTTTATTTTTTTTTCTTTT PY17X_0804000
+## [10] --------------------ATTAAAATTTTTTATTTTTTTTTCTTTT PYYM_0803900
+##  Con --------------------AT??A????T??T?TT??TTTTTTTTTT Consensus 
+## 
+##      aln (49..96)                                     names
+##  [1] ------------------------------------------------ PKNH_0101800
+##  [2] CTTCACCCTCT---------ATTTTTTACGACGAACAGTTAACAATCC PCYB_011100
+##  [3] CATCACCCCCT-----ATTTATTTTTTACAACGAACAGTTAACTACCC PVX_087720
+##  [4] GTTTACATTTA-GTGCATCGGTAGTAT---ATATTTTGTATATTAAAC PRCDC_0701800
+##  [5] GTTTATATTTA-GTGCATCGGTAGTAT---ATATTTTGTATATTAAAC PF3D7_0703600
+##  [6] GTTTATATTTA-GTGCATCGGTAGTAT---ATATTTTGTATATTAAAC PFIT_0702500
+##  [7] ATTTATTTTTATATACATTAATATAATTAAAAAAAC-ATATGTTAAG- PCHAS_0801600
+##  [8] TTTTATTTTTATATACATTAATATAATTAAAAAAAATATATATTAAG- PBANKA_0801300
+##  [9] ATTTATTTTTACATACATTAGTGTAATTAAAAAAAATATGTGTTAAG- PY17X_0804000
+## [10] ATTTATTTTTACATACATTAGTGTAATTAAAAAAAATATGTGTTAAG- PYYM_0803900
+##  Con ?TTTAT?TTTA-?T?CATT?GTATTAT??AA?AAA?TGTATATTAA?? Consensus 
+## 
+##      aln (97..144)                                    names
+##  [1] ---------------AAATTAATTTTTTTTCCTCTTTTT--------T PKNH_0101800
+##  [2] CATTAAAGTTA---CAAATTAAGTTTTTTTCCCTTTTAT--------- PCYB_011100
+##  [3] CATTAAAGTTA---CAAATTAAATTTTTTTCCCTTTTAT--------- PVX_087720
+##  [4] TATAAATATTAGAACTACC--AACTTGTTAATAATATAT----TATAT PRCDC_0701800
+##  [5] TATAAATATTAGAACTACC--AACTTGTTAATAATATAT------TAT PF3D7_0703600
+##  [6] TATAAATATTAGAACTACC--AACTTGTTAATAATATATTATATATAT PFIT_0702500
+##  [7] -ATTAAAATTAAATTAACTTAAACTTTTATTCGATATATCGTATAAAT PCHAS_0801600
+##  [8] -ATTAAAATTAAATTAACTTGAACTTTTATTCGATATATCATATAAAT PBANKA_0801300
+##  [9] -ATTAAAATTAAATTAACTTGAACTTTTATTCGATATAT-----AAAT PY17X_0804000
+## [10] -ATTAAAATTAAATTAACTTGAACTTTTATTCGATATAT-----AAAT PYYM_0803900
+##  Con -ATTAAAATTA?A?CAACTT?AACTTTTTT?C?ATATAT-----A?AT Consensus 
+## 
+##      aln (145..192)                                   names
+##  [1] TTTTTTGTACGCATA--------------ATGTAAGAATAAAAAAG-- PKNH_0101800
+##  [2] ---TTTGTACGCATA--------------ATGTGAGGATAAAAAAG-- PCYB_011100
+##  [3] ---TTTGTACGCATA--------------ATGTGAGGATAAAAAAG-- PVX_087720
+##  [4] ATATATATATATATA-----------TATATATAATATTTTTAAACT- PRCDC_0701800
+##  [5] ATATATATATATATA-----------TATATATAATATTTTTAAACT- PF3D7_0703600
+##  [6] ATATATATATATATA-----------TATATATAATATTTTTAAACT- PFIT_0702500
+##  [7] TCTTGCATATCCATATATCATTTTCCTATATGCGATACTTAAAAGTTA PCHAS_0801600
+##  [8] GTTTGCATATTCATATATCATTTTCCTATATGCGATACTTGAAAGTT- PBANKA_0801300
+##  [9] GTTTGCATATCCATATATCATTTTCCTATATGCAATACTTGAAAGTTA PY17X_0804000
+## [10] GTTTGCATATCCATATATCATTTTCCTATATGCAATACTTGAAAGTTA PYYM_0803900
+##  Con ?TTT?TATAT?CATA-----------TATATGTAATA?TT?AAAA?T- Consensus 
+## 
+##      aln (193..240)                                   names
+##  [1] ---------------ACAA-----GAAAGTTTGGGTA------CCTGC PKNH_0101800
+##  [2] ---------------ACAA-----GAAAGTTTGGATA------CCAGC PCYB_011100
+##  [3] ---------------ACAA-----GAAAGTTTGGATA------CCTGG PVX_087720
+##  [4] --GTATTTTTATAA-ACACTTATTAAAATTTTGAATATACA---AAAG PRCDC_0701800
+##  [5] --GTACTTTTATAA-ACACTTATTAAAATTTTGGATATACA---AAAG PF3D7_0703600
+##  [6] --GTACTTTTATAA-ACACTTATTAAAATTTTGGATATACA---AAAG PFIT_0702500
+##  [7] GAGTATTTTTACAACGCAT-----ACAAATTTTAATAACCATCCCTAC PCHAS_0801600
+##  [8] -AGTATTTTTTCATCGCAC-----AAAATTTTTAACAACCATTCCTAT PBANKA_0801300
+##  [9] GAGTATTTCTCCATCGCAC-----AAAATTTTTAATAACCATCCCTAT PY17X_0804000
+## [10] GAGTATTTCTCCATCGCAC-----AAAATTTTTAATAACCATCCCTAT PYYM_0803900
+##  Con --GTATTTTT??A?-ACAC-----AAAATTTTG?ATA??CA--CCTA? Consensus 
+## 
+##      aln (241..288)                                   names
+##  [1] TGAACTCAGTGCTTAGGTTGG--TACTCTGTCAGACGGGTAAGGGAGA PKNH_0101800
+##  [2] TAAACTCGGTACTTAGGTTGG--TACTCTGTTACACGGGTGAGGG--A PCYB_011100
+##  [3] TGAATTCGGTGCTTAGGTTGGTATACTCTGTCAGGCGGGTGAGGG--A PVX_087720
+##  [4] TTCATACAATATATAAAATA---TTCTTATTTTGATGGAT-------A PRCDC_0701800
+##  [5] TTAATACAATATATAAAATA---TTCTTATTTTGATGGAT-------A PF3D7_0703600
+##  [6] TTAATACAATATATAAAATA---TTCTTATTTTGATGGAT-------A PFIT_0702500
+##  [7] TACTAACAGTATACACACAA---TGTTTATGGTAACGGATTTATACAC PCHAS_0801600
+##  [8] TACAAGCAGTAT----AATGCATTGCTTATGGTAACTGATGTATACAC PBANKA_0801300
+##  [9] TACAAACAGTATACACACAT---TGCTTATGGTAACGGGTTTATACAA PY17X_0804000
+## [10] TACAAACAGTATACACACAT---TGCTTATGGTAACGGGTTTATACAA PYYM_0803900
+##  Con TA?A?ACAGTATATA?A?T?---T?CTTATT?TGACGG?T?????--A Consensus 
+## 
+##      aln (289..336)                                   names
+##  [1] AGCGC-------------ACAACGTACGGCTAGCGCAGACACGCACA- PKNH_0101800
+##  [2] ATCGC-------------CGAACGAACGGCTAGCGCAGGCACACGCAA PCYB_011100
+##  [3] AGCGG-------------CAAATGAATGATTAGCGCAGGCACGCGTAA PVX_087720
+##  [4] ATTATTTTCTTTTCTTATATATTATTTATATGATTAACACACATATGT PRCDC_0701800
+##  [5] ATTATTTTCTTTTCTTATATAGTATTTATATGATTAACACACATATG- PF3D7_0703600
+##  [6] ATTATTTTCTTTTCTTATATAGTATTTATATGATTAACACACATATG- PFIT_0702500
+##  [7] AGTTTTATGTTTCCTTA-------------------ATATTCAAATAT PCHAS_0801600
+##  [8] AATTTTATGTTTCCTTA-ATATTAATATATATATATATATATATATA- PBANKA_0801300
+##  [9] ATTTTTATGCTTCCTTA-ATATT------CAAATATATATATATATA- PY17X_0804000
+## [10] ATTTTTATGCTTCCTTA-ATATT------CAAATATATATATATATA- PYYM_0803900
+##  Con ATT?TT?T?TTT?CTTA-ATA?T???????TAAT??A?ACACATATA- Consensus 
+## 
+##      aln (337..384)                                   names
+##  [1] -AGTATATATGTACATATGTAC-------------------------- PKNH_0101800
+##  [2] GTGTATATATGTACATATGTGC-------------------------- PCYB_011100
+##  [3] GTGTATATCTGTTCGTATGTAC-------------------------- PVX_087720
+##  [4] TTGTATGAATATTTGAATTCGATAATTATATATTTTAATA-------- PRCDC_0701800
+##  [5] -TGTATTAATATTTGAATTCGATAATTATATATTTTAATA-------- PF3D7_0703600
+##  [6] -TGTATTAATATTTGAATTCGATAATTATATATTTTAATA-------- PFIT_0702500
+##  [7] ATATATATATAATTGCATTTACTTAATAGAGGCCATACTAAGGTATAG PCHAS_0801600
+##  [8] -TATATATATAATTGCATTTACTTAATGGAGATCATGCTAAGGTATAG PBANKA_0801300
+##  [9] -TATATATATAATTGTATTTACTTAATGGATATCATGCTAAGGTATAG PY17X_0804000
+## [10] -TATATATATAATTGTATTTACTTAATGGATATCATGCTAAGGTATAG PYYM_0803900
+##  Con -TGTATATATATTTGTATTTACT?A?T??ATAT??T??TA-------- Consensus 
+## 
+##      aln (385..432)                                   names
+##  [1] ----------------AAATGAA-CCATGCAAAGTATGCACTCTTGCG PKNH_0101800
+##  [2] ----------------AAATGCAAGCATGCAAAGTATGCACACTTGCG PCYB_011100
+##  [3] ----------------AAATGGAGGCATGC-AATTATGCACGTTTGCG PVX_087720
+##  [4] -----TTAAATTTGGAAGATGAA---CTTTTATTTTTATAA-----CA PRCDC_0701800
+##  [5] -----TTAAATCTGGAAGATGAA---CTTTTATTTTTATAA-----CA PF3D7_0703600
+##  [6] -----TTAAATCTGGAAGATGAA---CTTTTATTTTTATAA-----CA PFIT_0702500
+##  [7] AAGGGCTAAATAT-AAAAATGAAATGATGCTATCCAATGAC-----CA PCHAS_0801600
+##  [8] AAGGCCTGAATAT-AAAAATGAAATGATGCTATCCAATGAC-----CA PBANKA_0801300
+##  [9] AAGG-CTGAATAT-AAAAATGAAATGATGGTATCCATTGAC-----CA PY17X_0804000
+## [10] AAGG-CTGAATAT-AAAAATGAAATGATGGTATCCATTGAC-----CA PYYM_0803900
+##  Con -----?T?AAT?T-?AAAATGAAA??ATGCTAT?TAT??AC-----CA Consensus 
+## 
+##      aln (433..480)                                   names
+##  [1] TTACTGGGCGCTAACACCCTTACACATCGCGGTTGTACTCCGTAAAGG PKNH_0101800
+##  [2] TTACTGGGCGCGCACACCCTCACACATCGCGGTTGTACTCCG-AAAAG PCYB_011100
+##  [3] CTACTGGGCGCGCACACCCTCACACATCGCGGTTGTACTTGA-AAAGG PVX_087720
+##  [4] TTTCTGGGGGTATAAATATACATACATTAAATATAT-------AAACC PRCDC_0701800
+##  [5] TTTCTGGGGGTATAAATATACATACATTAAATATAT-------AAACG PF3D7_0703600
+##  [6] TTTCTGGGGGTATAAATATACATACATTAAATATAT-------AAACG PFIT_0702500
+##  [7] TAAATGGCTGAATAAA-----------TAAAACTGT-------AAAGT PCHAS_0801600
+##  [8] TAACTGGTTGAATAAA-----------CAAAACTGT-------GAAAT PBANKA_0801300
+##  [9] TAAATGGTTGAACAAA---------------ACTGT-------GAAAT PY17X_0804000
+## [10] TAAATGGTTGAACAAA---------------ACTGT-------GAAAT PYYM_0803900
+##  Con TTACTGGG?G?ATAAA????CA?ACAT?AAA??TGT-------AAA?G Consensus 
+## 
+##      aln (481..528)                                   names
+##  [1] CTGTACCCGATGCTAAAAAAATGAAAAAATA-----------GAGAAA PKNH_0101800
+##  [2] CCGCACCCCCTGCTAAAAAAAAAAGATA--------------AAGAAA PCYB_011100
+##  [3] CCGCACCTGCTA--AAAAAAAAAAGATA--------------AAGAAA PVX_087720
+##  [4] TTATTAAATAAAGTATAATCACTGAATAATAAA---------AAGAAA PRCDC_0701800
+##  [5] TTAT----TAAAATGTAATCACTGAATAATAAACAGAAAAATAAGAAA PF3D7_0703600
+##  [6] TTAT----TAAAATGTAATCACTGAATAATAAACAGAAAAATAAGAAA PFIT_0702500
+##  [7] TAAT----GAAATTGGGGGAATTATACTGTACACA-------CAGGAA PCHAS_0801600
+##  [8] TAAT----GAAATTGGAAAAATTATACTGTACAC--------ACGGAA PBANKA_0801300
+##  [9] TAAT----GAAATTGTGAAAATTATACTATACACA-------CAGGAA PY17X_0804000
+## [10] TAAT----GAAATTGTGAAAATTATACTATACACA-------CAGGAA PYYM_0803900
+##  Con T?AT----GAAA?TGTAAAAATTA?ATAATA?AC?-------AAGAAA Consensus 
+## 
+##      aln (529..576)                                   names
+##  [1] AACATGTA---------TGAGTGAAGTGAA------------------ PKNH_0101800
+##  [2] AACGTGAC---------CGAGTGAAGTGAA------------------ PCYB_011100
+##  [3] AACGCGGC---------CGAGTGGAGCGAA------------------ PVX_087720
+##  [4] AATAAGGA---------------AAATACATAAATATATAT------- PRCDC_0701800
+##  [5] AATAAGAA------AAATAAGAAAAATACATAAATAT----------- PF3D7_0703600
+##  [6] AATAAGAA---------------AAATACATAAATAT----------- PFIT_0702500
+##  [7] TGTAAGCATCCCTAATTT--TTTATATGCATATTTATGC--------- PCHAS_0801600
+##  [8] TATAA-AATCCCTAATTTTATTGATATGCATATTTATGCGTATTATAT PBANKA_0801300
+##  [9] TATAA-CATCCCTAATTTTATTTA-ATGCATATTTATGCGTATT---- PY17X_0804000
+## [10] TATAA-CATCCCTAATTTTATTTA-ATGCATATTTATGCGTATT---- PYYM_0803900
+##  Con AATAAG?A------?--T?A?T?AAATGCATA??TAT----------- Consensus 
+## 
+##      aln (577..624)                                   names
+##  [1] --------ATATA------------------------ACACA-GTACG PKNH_0101800
+##  [2] --------ATATA------------------------ACACA-GTAAA PCYB_011100
+##  [3] --------ATATA------------------------GCACT-GTAAA PVX_087720
+##  [4] --------ATATATATAT-------------------ATATATATAAC PRCDC_0701800
+##  [5] --------ATATATATAT-------------------ATATATATAAC PF3D7_0703600
+##  [6] --------ATATATATAT-------------------ATATATATAAC PFIT_0702500
+##  [7] --------ATATATTTATGAGTATCAATTAAACATATATATATATAAG PCHAS_0801600
+##  [8] ATTTATGAATATATTTATGAGTATCAATTAAAA----ATATGTATAAG PBANKA_0801300
+##  [9] --------ATATATTTATGAGTATCAATTAAAA----ATATGTATAAG PY17X_0804000
+## [10] --------ATATATTTATGAGTATCAATTAAAA----ATATGTATAAG PYYM_0803900
+##  Con --------ATATAT?TAT-------------------ATATATATAAG Consensus 
+## 
+##      aln (625..672)                                   names
+##  [1] GCATG---GTATGG----GTAATGCGAA-----ATATAATT------- PKNH_0101800
+##  [2] TCATG---GTATGG----GTAACGCAAA-----ATGTAATT------- PCYB_011100
+##  [3] TCACC---GTATGG---GTGAACGCAAA-----ATATAATT------- PVX_087720
+##  [4] ATATGCA-GTATCATTTTTCCGAAAAAAAAAAATTATAATTATC---- PRCDC_0701800
+##  [5] ATATGCA-GTATCATTTTTCCAAAAAAAAAAAATTATAATTATC---- PF3D7_0703600
+##  [6] ATATGCA-GTATCATTTTTCCAAAAAAAAAAAATTATAATTATC---- PFIT_0702500
+##  [7] GTATACGTATATGGCGTATTAACACAAATGTGCATGTAATTATTAGGT PCHAS_0801600
+##  [8] GTATACATATATGACACATTAACACAAATGTGCATGTAATCATTGAGT PBANKA_0801300
+##  [9] GTATACATATATGGCGTATTAACACAAATGTGCATGTAATTATTGGGT PY17X_0804000
+## [10] GTATACATATATGGCGTATTAACACAAATGTGCATGTAATTATTGGGT PYYM_0803900
+##  Con GTATGCA-GTATGG??T?TTAACACAAA?????AT?TAATTAT?---- Consensus 
+## 
+##      aln (673..720)                                   names
+##  [1] --------TCCCTCTTTTTGCATCCT-------CTTTTCGAAAATGTG PKNH_0101800
+##  [2] --------TAC--CCTTTTACACTCT-------CTCTTCCAAAATGTG PCYB_011100
+##  [3] --------CCC--CCTTTTGCGCGTT-------CTTTTCCAAAATGTA PVX_087720
+##  [4] --------TTTATTTTTTTTTTTTTT-------TTTTCTTTTAATGTA PRCDC_0701800
+##  [5] --------TTC--ATTTTTTTTTTTT-------TTTTT----AATGTA PF3D7_0703600
+##  [6] --------TTC--ATTTTTTTTTTTT-------TTTTT----AATGTA PFIT_0702500
+##  [7] GGAAATA-TTC--CCTTTTCCAATTTTCCTCTCCCCTCCAAAAAATTA PCHAS_0801600
+##  [8] GGAAATAATTC--CCTTTTTCAATTTTCCTCTCCTCTCCAAAAAAATA PBANKA_0801300
+##  [9] GGAAATAATTT--CCTTTTCCAATTTTCCTCTCCTCTCCAAAAAATTA PY17X_0804000
+## [10] GGAAATAATTT--CCTTTTCCAATTTTCCTCTCCTCTCCAAAAAATTA PYYM_0803900
+##  Con --------TTC--CCTTTT?CA?TTT-------CT?T?C?AAAATGTA Consensus 
+## 
+##      aln (721..768)                                   names
+##  [1] AA--------------------------GCCTAAAAGCAAAA-GGGAA PKNH_0101800
+##  [2] AA--------------------------GCCTAAAGGCAAAATGGAAA PCYB_011100
+##  [3] AA--------------------------GCCTAAAGGCAAAATGGAAA PVX_087720
+##  [4] ATAAAAGAACACTGCATAAACATATATTTAATAAAAAAAAAAAAAAAA PRCDC_0701800
+##  [5] ATAAAAGAACACTGCATAAACATATATTTAATAAAAAAAAAA---AAA PF3D7_0703600
+##  [6] ATAAAAGAACACTGCATAAACATATATTTAATAAAAAAAAAA---AAA PFIT_0702500
+##  [7] ATAAAATGA-------------------TAATAAAAGAAAACAACGAA PCHAS_0801600
+##  [8] ATAAAATAA-------------------TAATAAAAGAAAACTACGAA PBANKA_0801300
+##  [9] ATAAAATAA-------------------TAATAAAAGAAAACTACGAA PY17X_0804000
+## [10] ATAAAATAA-------------------TAATAAAAGAAAACTACGAA PYYM_0803900
+##  Con ATAAAA?AA-------------------TAATAAAAGAAAAATA??AA Consensus 
+## 
+##      aln (769..816)                                   names
+##  [1] TT------------------------TTTTCATGCCACAATTTTCCCG PKNH_0101800
+##  [2] TT------------------------TTTTCATGCCCCAATTTTCCCG PCYB_011100
+##  [3] TT------------------------TTTTCATGCCCCAATTTTCCCG PVX_087720
+##  [4] TT------TCACGTTTTATATATATATATATATATATATATT------ PRCDC_0701800
+##  [5] TTTCATTTTATATATATATATATATATATATATATATATATATATATA PF3D7_0703600
+##  [6] TTTCATTT--TATATATATATATATATATATATATATATATT------ PFIT_0702500
+##  [7] TG----------AATACAAATATATATTATAATATATTAATT------ PCHAS_0801600
+##  [8] TT----------AATGCAAATATATATTATAATATATTAATT------ PBANKA_0801300
+##  [9] TT----------AATGCAAATATATATATA-ATATATTAATT------ PY17X_0804000
+## [10] TT----------AATGCAAATATATATATA-ATATATTAATT------ PYYM_0803900
+##  Con TT----------?AT??A?ATATATAT?T??ATATAT?AATT------ Consensus 
+## 
+##      aln (817..864)                                   names
+##  [1] TCCCCAAGGAAAGCATTCTATTTTCCCCCTTTGAATAATTCCCGTAGG PKNH_0101800
+##  [2] TCCCCAAGGAAGGCATTTTGTTTTCCCCCTTTGAATAATTCCCCCAGG PCYB_011100
+##  [3] CCCCCAAGGAAGGCATTTTATTTTCCCCCTTTGAATAATTCCCCCAGG PVX_087720
+##  [4] ----CACAATGATAGTTTTGTTAAGAATATATAAATA--------TAT PRCDC_0701800
+##  [5] TATTCACAATGATAGTTTTGTTAAGAATATATAAATA--------TAT PF3D7_0703600
+##  [6] ----CACAATGATAGTTTTGTTAAGAATATATAAATA--------TAT PFIT_0702500
+##  [7] ----TAAAAAATATATTCTACTCTGTATGCATTAATA---------AA PCHAS_0801600
+##  [8] ----AAAAAAATATATTCTACTTTCTATGCATTGATA--------AAA PBANKA_0801300
+##  [9] ----AAAAAAATATATTCTACTTTGTATGCATTGATA--------AAA PY17X_0804000
+## [10] ----AAAAAAATATATTCTACTTTGTATGCATTGATA--------AAA PYYM_0803900
+##  Con ----CAAAAAA???ATT?TATTTTG?AT?TAT?AATA--------AA? Consensus 
+## 
+##      aln (865..912)                                   names
+##  [1] TGTTGAAAAGCA-ATTTTTTTCTTTTTCTTTTTTTTTTTTTTTTTTTT PKNH_0101800
+##  [2] TGTTGAAAAGCG-A------------------TTTTTTTTTTTTTTTT PCYB_011100
+##  [3] TGTTGAAAAGCG-A---------------CTTTTTTGTATTTTCTTTT PVX_087720
+##  [4] TATATGTATACATA---------------------------------T PRCDC_0701800
+##  [5] TATATGTATACACA---------------------------------T PF3D7_0703600
+##  [6] TATATGTATACACA---------------------------------T PFIT_0702500
+##  [7] TAGTAAAATATA-A---------------------------------T PCHAS_0801600
+##  [8] TAGTAAAATATA-A---------------------------------T PBANKA_0801300
+##  [9] TAGTAAAATATA-A---------------------------------T PY17X_0804000
+## [10] TAGTAAAATATA-A---------------------------------T PYYM_0803900
+##  Con TATT?AAATACA-A---------------------------------T Consensus 
+## 
+##      aln (913..960)                                   names
+##  [1] TTTGCGCCACTATTGCCAGCTGCTACTTTTTTTTCTTT--TCGCTTGT PKNH_0101800
+##  [2] TTTGCGTCCCCTTTGACAGCTGCTTTTTTTTTTTTTTTTCTCGCCTGT PCYB_011100
+##  [3] TTTGCATCACCTTTGCCAGCTGC----TGTTTTTTCTC--CCGCCTGT PVX_087720
+##  [4] TTTTCA---------------------CATTTTTTT------------ PRCDC_0701800
+##  [5] TTTTCA---------------------CATTTTTTT------------ PF3D7_0703600
+##  [6] TTTTCA---------------------CATTTTTTT------------ PFIT_0702500
+##  [7] TTTGCATCA------------------TATTGTTTT------------ PCHAS_0801600
+##  [8] TTTGCATCA------------------TATTGTTTT------------ PBANKA_0801300
+##  [9] TTTGCATCA------------------TATTGTTTT------------ PY17X_0804000
+## [10] TTTGCATCA------------------TATTGTTTT------------ PYYM_0803900
+##  Con TTTGCATCA------------------TATTTTTTT------------ Consensus 
+## 
+##      aln (961..1008)                                  names
+##  [1] GTTTCTTCCTTCCAGCTCTGTACGCATAATCTTTTTAAAGTAACTAT- PKNH_0101800
+##  [2] GTTTCTTCCTTCCACCTTGGCACGCATAATTTTTTTAACGTAACTTT- PCYB_011100
+##  [3] GTTTCACCCTTCCACCTTCGCACTCATAATTTTTTTAACGTAACTTT- PVX_087720
+##  [4] ---------TTTTATTTTTATCTTGCACAGCGTTTCAGCACAACCTTT PRCDC_0701800
+##  [5] ---------TTTTATTTTTATCTTGCACAGCGTTTCAGCACAACCTTT PF3D7_0703600
+##  [6] ---------TTTTATTTTTATCTTGCACAGCGTTTCAGCACAACCTTT PFIT_0702500
+##  [7] ---------TTACACTTT---------AAAAAATTTGGTGTAACTTT- PCHAS_0801600
+##  [8] ---------TTACACTTT---------AAAAAATTTGGTGTAACTTT- PBANKA_0801300
+##  [9] ---------TTACACTTT---------AAAAAATTTGGTGTAACTTT- PY17X_0804000
+## [10] ---------TTACACTTT---------AAAAAATTTGGTGTAACTTT- PYYM_0803900
+##  Con ---------TT?CACTTT?????????AA???TTTTAGCGTAACTTT- Consensus 
+## 
+##      aln (1009..1056)                                 names
+##  [1] --CGAAGGGGT-ATTTTTAAGGAGAATAACGCTTTCACTCGTTGGGCT PKNH_0101800
+##  [2] --CGAAGGGGC-ACTTTTAAAGAGAGTCACGCTTTTACTCGTTCGACT PCYB_011100
+##  [3] --CGAAGGGGC-ACTTTTAAGGAGAGTCACGCTTTTACTCGCTCGACT PVX_087720
+##  [4] ACCATAAACATCACCTTTAAAAAAAAAAAAAATAATAT---------- PRCDC_0701800
+##  [5] ATCATAAACATCACCTTTAAAAAAAATA-------------------T PF3D7_0703600
+##  [6] ATCATAAACATCACCTTTAAAAAT------------------------ PFIT_0702500
+##  [7] --CAATGGTTTAATTATTAAAAAGT----------------------- PCHAS_0801600
+##  [8] --CAAAGGTTTAATTATTAAAAAGT----------------------- PBANKA_0801300
+##  [9] --CAAAGGTTTAATTACTAAAAAGT----------------------- PY17X_0804000
+## [10] --CAAAGGTTTAATTACTAAAAAGT----------------------- PYYM_0803900
+##  Con --CAAAGG??T?A?TTTTAAAAAGA----------------------- Consensus 
+## 
+##      aln (1057..1104)                                 names
+##  [1] GTGTGGAAATAATTGTGTATCCCCGGAATAGAGAAAAAAAAAAAAATG PKNH_0101800
+##  [2] GCTTGGAAATAATTGTGTATCCCCCGAATCAAT--------------- PCYB_011100
+##  [3] GCGTGGGAATGATTGTGTATCCCCCGAATAAAG--------------- PVX_087720
+##  [4] ------ATATATATATATAT---------------------------- PRCDC_0701800
+##  [5] ATATATATATATATATATAT---------------------------- PF3D7_0703600
+##  [6] ------ATATATATATATAT---------------------------- PFIT_0702500
+##  [7] ------AAATGCT----------------------------------- PCHAS_0801600
+##  [8] ------AAATGCT----------------------------------- PBANKA_0801300
+##  [9] ------AAATGCT----------------------------------- PY17X_0804000
+## [10] ------AAATGCT----------------------------------- PYYM_0803900
+##  Con ------AAAT??TT?T?TAT---------------------------- Consensus 
+## 
+##      aln (1105..1152)                                 names
+##  [1] GAAAAATTGAATGATTAAATGATTGAATGATTGGCCAAATGAACAGCT PKNH_0101800
+##  [2] ---------------TGAACAATTGAATGATTAGCCAAATGAACAGCT PCYB_011100
+##  [3] ---------------TGAGCAATTGAATGATTGGCCAAATGAACAGCT PVX_087720
+##  [4] ---------------ATAATATTTCTAACATTTTATCCAGAAATAATA PRCDC_0701800
+##  [5] ---------------ATAATATTTCTAACATTTTATCCAGAAATAATA PF3D7_0703600
+##  [6] ---------------ATAATATTTCTAACATTTTATCCAGAAATAATA PFIT_0702500
+##  [7] ---------------TTAA-AATTTTCTGATTTT-------AATAATT PCHAS_0801600
+##  [8] ---------------TTAATTTTTTTCTGATTTT-------AATAGTT PBANKA_0801300
+##  [9] ---------------TTAATTTTTTTCTGATTTT-------AATAATT PY17X_0804000
+## [10] ---------------TTAATTTTTTTCTGATTTT-------AATAATT PYYM_0803900
+##  Con ---------------TTAATATTT?TATGATTTT????A??AATAATT Consensus 
+## 
+##      aln (1153..1200)                                 names
+##  [1] --CACAAACTTAGCTAAAAAAAAGAAAT---------------AATAT PKNH_0101800
+##  [2] --CACCAACTTAACAAAAAAAAAAAAAAAAAA-----------AAAAT PCYB_011100
+##  [3] --CACCAACTTAACAAAAAAGAAATAAAAAAAAAGAAACAAACAAAAT PVX_087720
+##  [4] ATTGTTAAACTTACAAAAA------------------------AATAT PRCDC_0701800
+##  [5] ATTGTTAAACTTACAAAAA------------------------AATAT PF3D7_0703600
+##  [6] ATTGTTAAACTTACAAAAA------------------------AATAT PFIT_0702500
+##  [7] A-TATAAAATTAATAAAA-------------------------AAAGT PCHAS_0801600
+##  [8] A-TATAAAATTAATAAAA-------------------------AAAGT PBANKA_0801300
+##  [9] A-TACAAAATTAATAAAAA------------------------AAAGT PY17X_0804000
+## [10] A-TACAAAATTAATAAAAA------------------------AAAGT PYYM_0803900
+##  Con A-TA?AAAATTAACAAAAA------------------------AAAAT Consensus 
+## 
+##      aln (1201..1248)                                 names
+##  [1] TG------TCCTAATTTGACAAAAAAAAAAAAAAGATAAAATAAAAAT PKNH_0101800
+##  [2] TG------TCCGAATTTGACAAAAAAAAT----------------AAT PCYB_011100
+##  [3] TG------TCCTAATTTGACGAAA---------------------AAT PVX_087720
+##  [4] TTAAAATATCATTATTT------------------------------- PRCDC_0701800
+##  [5] TTAAAATATCATTATTT------------------------------- PF3D7_0703600
+##  [6] TTAAAATATCATTATTT------------------------------- PFIT_0702500
+##  [7] TT------TCATAATTT------------------------------- PCHAS_0801600
+##  [8] TT------TTACAATTT------------------------------- PBANKA_0801300
+##  [9] TT------TTATAATTT------------------------------- PY17X_0804000
+## [10] TT------TTATAATTT------------------------------- PYYM_0803900
+##  Con TT------TCATAATTT------------------------------- Consensus 
+## 
+##      aln (1249..1296)                                 names
+##  [1] AAACAAACTGAGCGAGTATTTTCACCCCCCCCGCGTAGCATAATCGCA PKNH_0101800
+##  [2] AAGCAAACTGAGTGAGTATTTTCA-CCCCCACGCCCAGCACAATCGCA PCYB_011100
+##  [3] AAGCAAACTGAGCGAGTATTTTCA-CCCCCACACGCAGCACAATCGCA PVX_087720
+##  [4] -------TTATATG----------------------TGCATAATATAA PRCDC_0701800
+##  [5] -------TTATATG----------------------TGCATAATATAA PF3D7_0703600
+##  [6] -------TTATATG----------------------TGCATAATATAA PFIT_0702500
+##  [7] -------TTGAAT--------------------------ACAATATTG PCHAS_0801600
+##  [8] -------TTGAAT--------------------------ACAGTATTG PBANKA_0801300
+##  [9] -------TTGAAT--------------------------ACAATATTG PY17X_0804000
+## [10] -------TTGAAT--------------------------ACAATATTG PYYM_0803900
+##  Con -------TTGAATG----------------------?GCACAATAT?A Consensus 
+## 
+##      aln (1297..1344)                                 names
+##  [1] CATTTT-GTCCGAATGTCTAT-------ATATACACACATTTATTTGC PKNH_0101800
+##  [2] TATTTT-GTCTGAATGTCTAT-------ATGTATACACATTTATATGC PCYB_011100
+##  [3] CATTTT-GTCTGAATGTCTAT-------ATGTACACACATTTATATTC PVX_087720
+##  [4] TATAT--------ATATATAT-------ATATATATATGTTTGTCTAA PRCDC_0701800
+##  [5] TATATATATATATATATATAT-------ATATATATATGTTTGTCTAA PF3D7_0703600
+##  [6] TATATATATATATATATATAT-------ATATATATATGTTTGTCTAA PFIT_0702500
+##  [7] TATTTTAATCAAATTGTCTAT--------TATATATAAGG-----AAG PCHAS_0801600
+##  [8] TATTTTAATCAAATTGTCTAT------TATATATATAAGG------AA PBANKA_0801300
+##  [9] TATTTTAATCAAATTGTCTATTATATATATATATATAAGG-----AAT PY17X_0804000
+## [10] TATTTTAATCAAATTGTCTATTATATATATATATATAAGG-----AAT PYYM_0803900
+##  Con TATTTT?ATC?AAATGTCTAT-------ATATATATA?GTTT?T?TA? Consensus 
+## 
+##      aln (1345..1392)                                 names
+##  [1] AAA---AAAGAGGGTAGTCAATCCAGGTTCTCTAT-TATGCAACATAA PKNH_0101800
+##  [2] AAA---AAAGAGGGCAGTTAATCCATGTTCTCCAT-TATGCCACGTAA PCYB_011100
+##  [3] AAA---AAAGGGGGCAGTTAATTCATGTTCTCCAT-TATGCCACGTAA PVX_087720
+##  [4] AAATACCAA-------AAAAAATAAAATATTTTTCATATATAATGTAA PRCDC_0701800
+##  [5] AAATACCAA------AAAAAATTAAATTTTTTTTCATATATAATGTAA PF3D7_0703600
+##  [6] AAATACCAA------AAAAAATTAAATTTTTTTTCATATATAATGTAA PFIT_0702500
+##  [7] AAATATAAA-------ATAAATTCAAGTATTCCTT-CACATAATGTAT PCHAS_0801600
+##  [8] TAATATAAAATAAATGATAAATTCAAATATTCCTT-CACATAATGTAT PBANKA_0801300
+##  [9] AAATATAAAATAAATAATAAATTCAAGTATTCCTC-CACATAATGTAT PY17X_0804000
+## [10] AAATATAAAATAAATAATAAATTCAAGTATTCCTC-CACATAATGTAT PYYM_0803900
+##  Con AAATA?AAA??????AATAAATTCAAGT?TTCCT?-TATATAATGTAA Consensus 
+## 
+##      aln (1393..1426)                   names
+##  [1] T-----TCCCCCCATGTATGAAATACTT-TAAAA PKNH_0101800
+##  [2] T-----TTCCCCCATGTA---------------- PCYB_011100
+##  [3] T-----TTCCCCCTCGTATGAAATGCTT-TAAAA PVX_087720
+##  [4] TTTCCTTTCATTCATATTTATTAAGATTATAAAA PRCDC_0701800
+##  [5] TTTCCTTTCATTCATATTTATTAAGATTATAAAA PF3D7_0703600
+##  [6] TTTCCTTTCATTCATATTTATTAAGATTATAAAA PFIT_0702500
+##  [7] TTATTGTTTGTTCTAATATAAAGTTGTT-TAAAA PCHAS_0801600
+##  [8] TTATTGTTCGTTCTAATATTAAGTGATT-TAAAA PBANKA_0801300
+##  [9] TTATTGTTCGTTATATTATAAAGCGATT-TAAAA PY17X_0804000
+## [10] TTATTGTTCGTTATATTATAAAGCGATT-TAAAA PYYM_0803900
+##  Con TT????TTC?TTC?TATATAAAA?GATT-TAAAA Consensus</code></pre>
+<p>We can then also view the consensus sequence:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">consensus &lt;-<span class="st"> </span><span class="kw">DNAString</span>(<span class="kw">consensusString</span>(<span class="kw">consensusMatrix</span>(aln),<span class="dt">ambiguityMap=</span><span class="st">&quot;N&quot;</span>,<span class="dt">threshold=</span><span class="fl">0.5</span>))</code></pre></div>
+<p>Finally, we can look to see whether in our consensus we can see the motif found by protein binding microarray and ChIP-seq predictions is present in our consensus.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">matchPattern</span>(<span class="st">&quot;TGCA&quot;</span>, consensus)</code></pre></div>
+<pre><code>##   Views on a 1426-letter DNAString subject
+## subject: --------------------ATNNANNNNTNN...NNNTTCNTTCNTATATAAAANGATT-TAAAA
+## views:
+##     start end width
+## [1]   555 558     4 [TGCA]
+## [2]   628 631     4 [TGCA]
+## [3]   915 918     4 [TGCA]</code></pre>
+</div>
+<div id="de-novo-motif-enrichment" class="section level4">
+<h4><span class="header-section-number">10.3.4.2</span> De novo motif enrichment</h4>
+<p>Using MEME (CITATION) I was not able to find a motif enriched with the sequences that matched the “TGCA” motif known to be enriched upstream of invasion associated genes in <em>P. falciparum</em>. This motif was not found to be statistically significant, although this was likely due to using only 10 sequences as input.</p>
+<div class="figure" style="text-align: center"><span id="fig:meme-logo"></span>
+<img src="img/lesson10/logo1.png" alt="Most enriched motif found by MEME"  />
+<p class="caption">
+Figure 10.1: Most enriched motif found by MEME
+</p>
+</div>
+</div>
+</div>
+<div id="discussion-1" class="section level3">
+<h3><span class="header-section-number">10.3.5</span> Discussion</h3>
+<p>Phylogenetic footprinting by multiple sequence alignment has several limitations such as enriching short-length regulatory motifs over the background signal and providing the correct parameters to your multiple alignment due to a different in relatedness between species. While there are tools available to take into account phylogenetic relationships between the sequences chosen, these are not yet available for <em>Plasmodium</em>.</p>
+<p>In conclusion, I find that the motif known to be enriched upstream of invasion related genes can also be found within the multiple sequence alignment of the promoters of multiple <em>Plasmodium</em> parasites. We can also see that this motif in indeed present in the promoters of individual sequences as well:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">lapply</span>(seqs, function (seq) {<span class="kw">matchPattern</span>(<span class="st">&quot;GTGCA&quot;</span>, seq)})</code></pre></div>
+<pre><code>## $PBANKA_0801300
+##   Views on a 1001-letter DNAString subject
+## subject: TTATTCTATATTTTATTTTTATATACATTAAT...ATTGTTCGTTCTAATATTAAGTGATTTAAAA
+## views:
+##     start end width
+## [1]   559 563     5 [GTGCA]
+## 
+## $PCHAS_0801600
+##   Views on a 1001-letter DNAString subject
+## subject: TTTAATTTTTTTATTTATCAAAATTAAAATTT...ATTGTTTGTTCTAATATAAAGTTGTTTAAAA
+## views:
+##     start end width
+## [1]   570 574     5 [GTGCA]
+## 
+## $PCYB_011100
+##   Views on a 1001-letter DNAString subject
+## subject: TTTATATAGCAACTTTTTTTTTTTTTTTTTTC...CTCCATTATGCCACGTAATTTCCCCCATGTA
+## views:
+##     start end width
+## [1]   255 259     5 [GTGCA]
+## 
+## $PF3D7_0703600
+##   Views on a 1001-letter DNAString subject
+## subject: CCACTTTTATGTGTTTATATTTAGTGCATCGG...CCTTTCATTCATATTTATTAAGATTATAAAA
+## views:
+##     start end width
+## [1]    24  28     5 [GTGCA]
+## [2]   872 876     5 [GTGCA]
+## 
+## $PFIT_0702500
+##   Views on a 1001-letter DNAString subject
+## subject: TGTTGAACATATAAATTATTAATATTCCACTT...CCTTTCATTCATATTTATTAAGATTATAAAA
+## views:
+##     start end width
+## [1]    50  54     5 [GTGCA]
+## [2]   872 876     5 [GTGCA]
+## 
+## $PKNH_0101800
+##   Views on a 1001-letter DNAString subject
+## subject: AAATTAATTTTTTTTCCTCTTTTTTTTTTTTG...TAATTCCCCCCATGTATGAAATACTTTAAAA
+## views: NONE
+## 
+## $PRCDC_0701800
+##   Views on a 1001-letter DNAString subject
+## subject: CATATAAATTATTAATATTACACTTTTATGTG...CCTTTCATTCATATTTATTAAGATTATAAAA
+## views:
+##     start end width
+## [1]    43  47     5 [GTGCA]
+## [2]   881 885     5 [GTGCA]
+## 
+## $PVX_087720
+##   Views on a 1001-letter DNAString subject
+## subject: TTTTCTTTTCATCACCCCCTATTTATTTTTTA...TAATTTCCCCCTCGTATGAAATGCTTTAAAA
+## views: NONE
+## 
+## $PY17X_0804000
+##   Views on a 1001-letter DNAString subject
+## subject: ATTAAAATTTTTTATTTTTTTTTCTTTTATTT...ATTGTTCGTTATATTATAAAGCGATTTAAAA
+## views:
+##     start end width
+## [1]   552 556     5 [GTGCA]
+## 
+## $PYYM_0803900
+##   Views on a 1001-letter DNAString subject
+## subject: ATTAAAATTTTTTATTTTTTTTTCTTTTATTT...ATTGTTCGTTATATTATAAAGCGATTTAAAA
+## views:
+##     start end width
+## [1]   552 556     5 [GTGCA]</code></pre>
+<p>However, it’s sure to say whether this result is significant based on the four-letter motif used to search the sequence and the failure of using MEME to recapitulate this finding.</p>
 
+</div>
 </div>
 </div>
             </section>

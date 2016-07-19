@@ -25,7 +25,7 @@
 
 <meta name="author" content="Philipp Ross">
 
-<meta name="date" content="2016-07-15">
+<meta name="date" content="2016-07-19">
 
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -49,11 +49,6 @@
 
 
 
-<script src="assets/htmlwidgets-0.6/htmlwidgets.js"></script>
-<script src="assets/datatables-binding-0.1/datatables.js"></script>
-<script src="assets/datatables-1.10.7/jquery.dataTables.min.js"></script>
-<link href="assets/datatables-default-1.10.7/dataTables.extra.css" rel="stylesheet" />
-<link href="assets/datatables-default-1.10.7/jquery.dataTables.min.css" rel="stylesheet" />
 
 
 <style type="text/css">
@@ -158,7 +153,13 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="9" data-path="lesson9.html"><a href="lesson9.html"><i class="fa fa-check"></i><b>9</b> Comparative genomices</a><ul>
 <li class="chapter" data-level="9.1" data-path="lesson9.html"><a href="lesson9.html#learning-objectives-8"><i class="fa fa-check"></i><b>9.1</b> Learning Objectives</a></li>
 <li class="chapter" data-level="9.2" data-path="lesson9.html"><a href="lesson9.html#notes-1"><i class="fa fa-check"></i><b>9.2</b> Notes</a></li>
-<li class="chapter" data-level="9.3" data-path="lesson9.html"><a href="lesson9.html#assignment-8"><i class="fa fa-check"></i><b>9.3</b> Assignment</a></li>
+<li class="chapter" data-level="9.3" data-path="lesson9.html"><a href="lesson9.html#assignment-8"><i class="fa fa-check"></i><b>9.3</b> Assignment</a><ul>
+<li class="chapter" data-level="9.3.1" data-path="lesson9.html"><a href="lesson9.html#background"><i class="fa fa-check"></i><b>9.3.1</b> Background</a></li>
+<li class="chapter" data-level="9.3.2" data-path="lesson9.html"><a href="lesson9.html#design-1"><i class="fa fa-check"></i><b>9.3.2</b> Design</a></li>
+<li class="chapter" data-level="9.3.3" data-path="lesson9.html"><a href="lesson9.html#methods"><i class="fa fa-check"></i><b>9.3.3</b> Methods</a></li>
+<li class="chapter" data-level="9.3.4" data-path="lesson9.html"><a href="lesson9.html#results"><i class="fa fa-check"></i><b>9.3.4</b> Results</a></li>
+<li class="chapter" data-level="9.3.5" data-path="lesson9.html"><a href="lesson9.html#discussion"><i class="fa fa-check"></i><b>9.3.5</b> Discussion</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="lesson10.html"><a href="lesson10.html"><i class="fa fa-check"></i><b>10</b> Gene regulatory modules</a><ul>
 <li class="chapter" data-level="10.1" data-path="lesson10.html"><a href="lesson10.html#learning-objectives-9"><i class="fa fa-check"></i><b>10.1</b> Learning Objectives</a></li>
@@ -215,12 +216,383 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <div id="notes-1" class="section level2">
 <h2><span class="header-section-number">9.2</span> Notes</h2>
 <blockquote>
-<p>Functionally less important molecules or parts of a molecule evolve faster than more important ones. — Kimura and Ohta (1974) PNAS USA 71: 2848-2852</p>
+<p>“Functionally less important molecules or parts of a molecule evolve faster than more important ones.” — Kimura and Ohta (1974) PNAS USA 71: 2848-2852</p>
 </blockquote>
+<p><strong>Fundamental process in comparative genomics</strong></p>
+<ol style="list-style-type: decimal">
+<li>Get genome sequences from species or individuals separated by a distance appropriate to the question you are addressing</li>
+<li>Align those sequences</li>
+<li>Find informative similarities</li>
+</ol>
+<ul>
+<li>BLAST search or sequences databases</li>
+</ul>
+<ol start="4" style="list-style-type: decimal">
+<li>Compare the alignments to a neutral model or appropriate group</li>
+</ol>
+<ul>
+<li>Amount of similarity</li>
+<li>Likelihood of being under selection</li>
+<li>Patterns in alignments</li>
+</ul>
 </div>
 <div id="assignment-8" class="section level2">
 <h2><span class="header-section-number">9.3</span> Assignment</h2>
+<div id="background" class="section level3">
+<h3><span class="header-section-number">9.3.1</span> Background</h3>
+<p>In Woo et al. <span class="citation">(Yong H Woo <a href="#ref-chromerids">2015</a>)</span> they make note of a statistically significant relationship between a gene encoding striated fiber assemblin (SFA), Cvel_872, and several host-cell invasion protein encoding genes in <em>P. falciparum</em>. Their analysis showed correlated expression patterns between various orthologues gene groups, or orthogroups, looking at various apicomplexan species and the single-celled red algae, <em>Chromera velia</em>. The most significant overlap between orthogroups occured between <em>Chromera velia</em> and <em>P. falciparum</em>. SFA is a key protein for organizing the basal bodies of the flagellar apparatus in algae and the apical complexes in apicomplexans. Thus, they suggest that, in <em>Chromera velia</em>, some of the genes implicated in the invasion process of modern apicomplexans were functionally associated with those implicated in flagellar motility.</p>
+</div>
+<div id="design-1" class="section level3">
+<h3><span class="header-section-number">9.3.2</span> Design</h3>
+<p>I decided to analyze the evolutionary signatures present in the homologue of Cvel_872 in various <em>Plasmodium</em> species.</p>
+</div>
+<div id="methods" class="section level3">
+<h3><span class="header-section-number">9.3.3</span> Methods</h3>
+<p>The gene IDs for the those genes are as follows:</p>
+<ul>
+<li>PF3D7_0703600 (human)</li>
+<li>PBANKA_0801300 (mouse)</li>
+<li>PCHAS_0801600 (mouse)</li>
+<li>PCYB_011100 (macaque)</li>
+<li>PKNH_0101800 (macaque &amp; human)</li>
+<li>PRCDC_0701800 (chimpanzee)</li>
+<li>PVX_087720 (human)</li>
+<li>PY17X_0804000 (mouse)</li>
+</ul>
+<p>Vertebrate host species known to be infected by the above parasites with which each gene is associated with are in parentheses.</p>
+<p>The sequences were extracted from <a href="http://plasmodb.org/plasmo/">PlasmoDB</a> on July 11th, 2016 from the latest version (28). Following, data acquisition, rate of substitutions at synonymous and nonsynonymous sites were analyzed using the Ka/Ks Calculation tool found at <a href="http://services.cbu.uib.no/tools/kaks" class="uri">http://services.cbu.uib.no/tools/kaks</a>.</p>
+</div>
+<div id="results" class="section level3">
+<h3><span class="header-section-number">9.3.4</span> Results</h3>
+<div id="pairwise-alignments" class="section level4">
+<h4><span class="header-section-number">9.3.4.1</span> Pairwise alignments</h4>
+<p>Using the EMBOSS Needle alignment program, I calculated the following protein sequence alignments for the gene in <em>Chromera velia</em> and <em>Plasmodium falciparum</em>.</p>
+<pre><code>#=======================================
+#
+# Aligned_sequences: 2
+# 1: Pfalciparum
+# 2: Cvelia
+# Matrix: EBLOSUM62
+# Gap_penalty: 10.0
+# Extend_penalty: 0.5
+#
+# Length: 293
+# Identity:      68/293 (23.2%)
+# Similarity:   145/293 (49.5%)
+# Gaps:          37/293 (12.6%)
+# Score: 327.0
+# 
+#
+#=======================================
 
+Pfalciparum        1 ------------------------------MEELNKSGIYSKQFSLSQNK     20
+                                                   :..|.:.|    ..:|:...
+Cvelia             1 MSAPPSHSVSGPSGGLGVGGGMPMPSSSSSVSALAQQG----GGTLASPH     46
+
+Pfalciparum       21 HNSERLQRLEKRLSGLHFSIELQKNEKIDKLNEKINSLEEKLIEMHENSN     70
+                     |  :|:.:|.:|||||...:|::|:.:.:.|:.::.:::|:|....::|:
+Cvelia            47 H--DRIAKLSQRLSGLQVGLEVEKSSRFEALHGRLRAIDERLSTTQDSSS     94
+
+Pfalciparum       71 KTFEKLNEKLNDIRNDVTNYKNELEEFKNDHKKKLQLLEEKAEDFINKEK    120
+                     |.|..|.|:|...:.::...:...|:...|.::.:.:|:::....:..|:
+Cvelia            95 KRFSTLKEQLTAFQRELEEERGAREKLGEDRQRDVAVLDQRLSHTLESEQ    144
+
+Pfalciparum      121 EDWSRLKIKLVKDFQHKAALLKEEMVEEYGLIEEKEDSLRKYYDCEINNI    170
+                     :.....:.:|::.|:.|..:||:|:::|..|..|.|.:||:|.:.:|..:
+Cvelia           145 QARRDAESRLLRAFEEKTKVLKDEVLKEGRLRVENESALRRYIEADIPKL    194
+
+Pfalciparum      171 KSIIQNEISERIKTEKIILSDVDDKINEIMKIIRNEKTTRETYSENLVSL    220
+                     ..:::.|.:.|...|..|:....::||.:.::::.||..||...|.|:.:
+Cvelia           195 YEMLKEECTSREAMESRIVKKATEEINRLTELVQQEKKAREETEEALLRM    244
+
+Pfalciparum      221 IEQYFSRIKKEIDMERLEREDTEETLVHLMEEALDKIGIPLA-    262
+                     :|....::|.||..||.:||.|||||:.|:|:...|:..... 
+Cvelia           245 LEDIVQKMKSEISQERSDREATEETLLRLLEDTCSKLNAVAQL    287</code></pre>
+<p>I then aligned the protein sequences for the same gene in <em>Plasmodium vivax</em> to the same sequence as above in <em>Plasmodium falciparum</em>.</p>
+<pre><code>#=======================================
+#
+# Aligned_sequences: 2
+# 1: Pfalciparum
+# 2: Pvivax
+# Matrix: EBLOSUM62
+# Gap_penalty: 10.0
+# Extend_penalty: 0.5
+#
+# Length: 262
+# Identity:     218/262 (83.2%)
+# Similarity:   248/262 (94.7%)
+# Gaps:           0/262 ( 0.0%)
+# Score: 1133.0
+# 
+#
+#=======================================
+
+Pfalciparum        1 MEELNKSGIYSKQFSLSQNKHNSERLQRLEKRLSGLHFSIELQKNEKIDK     50
+                     ||:|.||||||||||||||||:||||||||||||||||||||||||||||
+Pvivax             1 MEDLAKSGIYSKQFSLSQNKHSSERLQRLEKRLSGLHFSIELQKNEKIDK     50
+
+Pfalciparum       51 LNEKINSLEEKLIEMHENSNKTFEKLNEKLNDIRNDVTNYKNELEEFKND    100
+                     ||||||.|||||:||:||||:|||||||||||||.||.|||.||||||||
+Pvivax            51 LNEKINLLEEKLVEMNENSNRTFEKLNEKLNDIRVDVNNYKTELEEFKND    100
+
+Pfalciparum      101 HKKKLQLLEEKAEDFINKEKEDWSRLKIKLVKDFQHKAALLKEEMVEEYG    150
+                     |:|||::|::|||:||:||||:|::|||||:||||:|.:||||||.||||
+Pvivax           101 HRKKLEILQKKAEEFIDKEKEEWNKLKIKLIKDFQNKTSLLKEEMTEEYG    150
+
+Pfalciparum      151 LIEEKEDSLRKYYDCEINNIKSIIQNEISERIKTEKIILSDVDDKINEIM    200
+                     |::|||:|||::||.||.|:||::||||:||||||||||.|||||:|||:
+Pvivax           151 LLQEKEESLRRFYDNEIANLKSVVQNEINERIKTEKIILRDVDDKVNEII    200
+
+Pfalciparum      201 KIIRNEKTTRETYSENLVSLIEQYFSRIKKEIDMERLEREDTEETLVHLM    250
+                     |||:|||.|||.|||||||||||||||||||||.||||||||||||||||
+Pvivax           201 KIIKNEKITRENYSENLVSLIEQYFSRIKKEIDNERLEREDTEETLVHLM    250
+
+Pfalciparum      251 EEALDKIGIPLA    262
+                     ||||||||||.|
+Pvivax           251 EEALDKIGIPFA    262</code></pre>
+</div>
+<div id="multiple-sequence-alignment" class="section level4">
+<h4><span class="header-section-number">9.3.4.2</span> Multiple sequence alignment</h4>
+<p>We can use the Bioconductor package, <a href="https://bioconductor.org/packages/release/bioc/html/msa.html">msa</a> to visualize it for us here. We can see that we have very few loci that are variable, even at the DNA level, for this gene.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sshhh</span>(<span class="st">&quot;msa&quot;</span>)
+seqs &lt;-<span class="st"> </span><span class="kw">readDNAStringSet</span>(<span class="st">&quot;_data/lesson9/OG5_136181_CDS.fasta&quot;</span>)
+aln &lt;-<span class="st"> </span><span class="kw">msa</span>(seqs)</code></pre></div>
+<pre><code>## use default substitution matrix</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">print</span>(aln, <span class="dt">showNames=</span><span class="ot">TRUE</span>, <span class="dt">show=</span><span class="st">&quot;complete&quot;</span>)</code></pre></div>
+<pre><code>## 
+## MsaDNAMultipleAlignment with 8 rows and 816 columns
+##     aln (1..49)                                       names
+## [1] ---------------ATGGAAGATATGAACAAAAGTGGAATTTATAACA PBANKA_0801300
+## [2] ---------------ATGGAAGATCTTAACAAAAGTGGAATTTATAACA PY17X_0804000
+## [3] ---------------ATGGAAGATCTGAACAAAAGTGAAGTTTATAACA PCHAS_0801600
+## [4] ATGAAATACTTTAAAATGGAAGATTTAGCCAAAAGCGGAATCTACAGCA PCYB_011100 
+## [5] ---------------ATGGAAGATTTAGCCAAAAGCGGAATCTACAGCA PVX_087720
+## [6] ---------------ATGGAAGATTTAGCCAAAAGCGGAATCTACAGCA PKNH_0101800
+## [7] ---------------ATGGAAGAATTGAATAAAAGTGGCATTTACAGTA PF3D7_0703600
+## [8] ---------------ATGGAAGAATTGAATAAAAGTGGCATTTACAGTA PRCDC_0701800
+## Con ---------------ATGGAAGATTTGAACAAAAGTGGAATTTACAGCA Consensus 
+## 
+##     aln (50..98)                                      names
+## [1] AGCAATTTTCTTTAAGCCAAAGCAAACACAGTAGCGAAAGGTTGCAAAG PBANKA_0801300
+## [2] AGCAATTTTCTTTAAGCCAAAGCAAACACAGCAGCGAAAGGTTGCAAAG PY17X_0804000
+## [3] AGCAATTTTCTTTAAGCCAAAACAAACACAGCAGCGAAAGGTTGCAACG PCHAS_0801600
+## [4] AACAGTTCTCCCTCAGCCAAAACAAGCACAACAGCGAAAGGTTGCAGAG PCYB_011100 
+## [5] AACAGTTCTCCCTCAGCCAAAACAAGCACAGCAGCGAAAGGTTGCAGAG PVX_087720
+## [6] AACAGTTCTCCCTCAGCCAAAGCAAGCACAGCAGCGAAAGGTTGCAGAG PKNH_0101800
+## [7] AACAATTTTCTCTCAGTCAAAATAAACACAATAGTGAGAGACTACAAAG PF3D7_0703600
+## [8] AACAATTTTCTCTCAGTCAAAATAAGCACAATAGTGAGAGACTACAAAG PRCDC_0701800
+## Con AACAATTTTCTCTCAGCCAAAACAA?CACAGCAGCGAAAGGTTGCAAAG Consensus 
+## 
+##     aln (99..147)                                     names
+## [1] ACTTGAAAAACGATTGAGCGGTCTACATTTCAATATTGAATTACAAAAA PBANKA_0801300
+## [2] ACTTGAAAAACGATTGAGCGGTCTACATTTCAATATTGAATTACAAAAA PY17X_0804000
+## [3] ACTTGAAAAACGATTAAGCGGTCTACATTTCAATATTGAATTACAAAAA PCHAS_0801600
+## [4] ACTTGAAAAGAGACTCAGCGGGCTACACTTCAGCATCGAATTGCAGAAA PCYB_011100 
+## [5] ACTTGAAAAGAGACTGAGCGGGCTACACTTCAGCATCGAATTGCAGAAA PVX_087720
+## [6] ACTTGAAAAAAGACTAAGCGGGCTACACTTTAGCATCGAATTGCAGAAA PKNH_0101800
+## [7] ATTAGAGAAAAGATTAAGTGGCTTACATTTCAGTATCGAGTTACAAAAA PF3D7_0703600
+## [8] ATTAGAGAAAAGATTAAGCGGCTTACATTTCAGTATCGAGTTACAAAAA PRCDC_0701800
+## Con ACTTGAAAAAAGATTAAGCGG?CTACATTTCAGTATCGAATTACAAAAA Consensus 
+## 
+##     aln (148..196)                                    names
+## [1] AATGAAAAAGTTGAGAAATTAACTGAAAGGGTCAATTCCTTAGAAGAGA PBANKA_0801300
+## [2] AATGAAAAAGTTGAGAAATTAACTGAAAAAGTCAATTCCTTAGAAGAGA PY17X_0804000
+## [3] AATGAAAAAGTTGAGAAATTAACTGAAAAGGTCAATTCCTTAGAAGAGA PCHAS_0801600
+## [4] AATGAAAAGATTGACAAACTAAACGAGAAGATCAACCTGCTGGAGGAAA PCYB_011100 
+## [5] AATGAAAAGATTGACAAACTAAACGAGAAGATCAACCTGCTGGAGGAGA PVX_087720
+## [6] AATGAAAAGATTGAGAAACTAAACGAGAAAATCAACCTCCTGGAGGAGA PKNH_0101800
+## [7] AATGAAAAAATAGATAAATTGAATGAAAAAATAAACTCACTGGAGGAAA PF3D7_0703600
+## [8] AATGAAAAAATAGATAAATTGAATGAAAAAATAAACACACTGGAAGAAA PRCDC_0701800
+## Con AATGAAAAAATTGAGAAATTAAATGAAAA?ATCAACTCCCTGGA?GAGA Consensus 
+## 
+##     aln (197..245)                                    names
+## [1] AACTAGTCCAAATTAATGAAAACTCAAATAAAATTTTTGAAGAATTGAA PBANKA_0801300
+## [2] AACTAGTCCAAATTAATGAAAACTCAAATAAAATTTTTGAAGAATTGAA PY17X_0804000
+## [3] AACTAGTCCAAATTAATGAAAACTCAAATAAAATTTTTGAAGAATTGAA PCHAS_0801600
+## [4] AACTGGTAGAAATGAACGAAAACTCAAATAGGACCTTCGAAAAATTAAA PCYB_011100 
+## [5] AACTGGTAGAAATGAACGAAAACTCAAATAGGACCTTCGAAAAATTAAA PVX_087720
+## [6] AACTGATAGAAATGAACGAAAACTCAAATAGGACCTTCGAAAAATTAAA PKNH_0101800
+## [7] AGCTTATAGAAATGCATGAAAATTCAAATAAAACATTTGAAAAATTAAA PF3D7_0703600
+## [8] AGCTAATAGAAATGCATGAAAATTCTAATAAAACATTTGAAAAATTAAA PRCDC_0701800
+## Con AACTAGTAGAAATGAATGAAAACTCAAATAAAAC?TTTGAAAAATTAAA Consensus 
+## 
+##     aln (246..294)                                    names
+## [1] TGAAAAGATAAATGATATAAAAACGGATTTTACTAATTATAAATCCGAA PBANKA_0801300
+## [2] TGAAAAGATAAATGATATAAAAACGGATTTCACTAATTATAAATCCGAA PY17X_0804000
+## [3] TGAAAAGATAAATGATATAAAAACAGATTTTACTAATTATAAATCCGAG PCHAS_0801600
+## [4] TGAAAAGCTGAACGACATCAAAGTGGACGTCAATAATTACAAGACTGAA PCYB_011100 
+## [5] TGAAAAGCTGAACGACATCAGAGTGGACGTCAATAATTACAAAACTGAA PVX_087720
+## [6] TGAAAAGCTGAACGACATCAAAGTGGACGTTAATAATTACAAGACTGAA PKNH_0101800
+## [7] CGAAAAGCTAAATGATATACGTAACGATGTAACAAATTATAAAAACGAA PF3D7_0703600
+## [8] CGAAAAGCTAAATGATATACGTAACGATGTAACTAATTATAAAAATGAA PRCDC_0701800
+## Con TGAAAAGCTAAATGATATAAAAA?GGATGT?ACTAATTATAAAAC?GAA Consensus 
+## 
+##     aln (295..343)                                    names
+## [1] TTTGAGGAATTTAAAAACTATCATCAAAAAAAATTGTATAACCTTGAAC PBANKA_0801300
+## [2] TTTGAGGAATTTAAAAACTATCATCAAAAAAAATTGTATAACCTTGAAA PY17X_0804000
+## [3] TTTGAGGAATTTAAAAACTATCATCAAAAAAAATTGTATAACCTTGAAC PCHAS_0801600
+## [4] TTGGAAGAGTTCAAAAATGACCACAGGAAAAAATTAGAAATACTCCAGA PCYB_011100 
+## [5] TTGGAAGAGTTCAAAAATGACCACAGGAAAAAATTAGAAATCCTCCAGA PVX_087720
+## [6] TTGGAAGAGTTCAAAAATGACCACAAGAAAAAACTAGAAATCCTTCAGA PKNH_0101800
+## [7] CTAGAAGAATTTAAAAATGATCATAAAAAAAAATTGCAATTATTAGAAG PF3D7_0703600
+## [8] CTAGAAGAATTTAAAAATGATCATAAAAAAAAATTAAAATTACTAGAAG PRCDC_0701800
+## Con TT?GAAGAATTTAAAAATGATCATAAAAAAAAATT??AAATCCTTGAAA Consensus 
+## 
+##     aln (344..392)                                    names
+## [1] AAAAAACTGAAGATTTTATAAACGCCGAAAAGGAAGAATGGCATAACCT PBANKA_0801300
+## [2] AAAAAACTGAAGATTTTATAAACACCGAAAAGGAAGAGTGGAATAACCT PY17X_0804000
+## [3] AAAAAACTGAAGATTTTATAAACACCGAAAAGGAAGAGTGGAATAAACT PCHAS_0801600
+## [4] AGAAGGCTGAAGAATTCATAGACAAAGAAAAGGAAGAATGGAACAAACT PCYB_011100 
+## [5] AGAAGGCTGAAGAATTCATAGACAAAGAAAAGGAAGAATGGAACAAACT PVX_087720
+## [6] AGAAGGCTGAAGAATTCATAGACAAAGAAAAGGAAGAATGGAACAAACT PKNH_0101800
+## [7] AAAAAGCTGAAGATTTCATAAATAAGGAAAAAGAAGATTGGAGTAGGCT PF3D7_0703600
+## [8] AAAAAGCTGAAGATTTCATAAATAAGGAAAAAGAAGACTGGAGCAGGCT PRCDC_0701800
+## Con AAAAAGCTGAAGATTTCATAAACAA?GAAAAGGAAGAATGGAA?AAACT Consensus 
+## 
+##     aln (393..441)                                    names
+## [1] CAAAATGAAACTAATAAAAGACTTTCAAAATGAATCTAGCTTATTAAAG PBANKA_0801300
+## [2] CAAAATGAAACTAATAAAAGACTTTCAAAACGAATCTAGCTTATTAAAG PY17X_0804000
+## [3] CAAAATGAAACTAATAAAAGACTTTCAAAATGAATCTAGCTTATTAAAG PCHAS_0801600
+## [4] CAAAATAAAATTAATAAAAGACTTTCAAAATAAGACTACCTTACTGAAG PCYB_011100 
+## [5] CAAAATAAAATTAATAAAAGATTTTCAAAATAAGACTAGCTTACTGAAG PVX_087720
+## [6] CAAAATAAAATTAATAAAAGATTTTCAAAATAAGACTAGCTTACTGAAG PKNH_0101800
+## [7] CAAAATTAAGTTGGTAAAGGATTTTCAGCATAAAGCAGCCCTTCTAAAA PF3D7_0703600
+## [8] CAAAATTAAGTTGGTAAAGGATTTTCAGCATAAAGCAGCCCTTCTAAAA PRCDC_0701800
+## Con CAAAAT?AAATTAATAAAAGA?TTTCAAAATAAA?CTAGCTTACTAAAG Consensus 
+## 
+##     aln (442..490)                                    names
+## [1] ------------GAAGAAATAACTGAAGAATATGGCATTTTTGAAGAAA PBANKA_0801300
+## [2] ------------GAAGAAATAACTGAAGAATATGGTATTTTTGAAGAAA PY17X_0804000
+## [3] ------------GAAGAAATAACTGAAGAGTATGGTATCTTTGAAGAAA PCHAS_0801600
+## [4] TACTACATCACGGAAGAAATGACCGAGGAGTACGGACTGTTGCAAGAAA PCYB_011100 
+## [5] ------------GAAGAAATGACCGAGGAGTACGGACTGTTGCAAGAAA PVX_087720
+## [6] ------------GAAGAAATGACCGAGGAGTATGGATTATTGCAAGAAA PKNH_0101800
+## [7] ------------GAAGAAATGGTTGAAGAATATGGACTTATTGAAGAAA PF3D7_0703600
+## [8] ------------GAAGAAATGGTTGAAGAATATGGACTTATTGAAGAAA PRCDC_0701800
+## Con ------------GAAGAAATGACTGAAGA?TATGGACTTTTTGAAGAAA Consensus 
+## 
+##     aln (491..539)                                    names
+## [1] AGGAAGCATCATTAAGAAAATATTATGATAATGAAATTGCCAATCTTAA PBANKA_0801300
+## [2] AGGAAGCATCATTAAGAAAATATTATGATAATGAAATTGCCAATCTTAA PY17X_0804000
+## [3] AGGAAGCATCGTTAAGAAAATATTATGATAACGAAATTGCCAATCTTAA PCHAS_0801600
+## [4] AGGAAGAATCGCTCAGAAGATTTTACGACAATGAAATTGCGAACCTCAA PCYB_011100 
+## [5] AGGAAGAATCGCTCAGAAGATTTTACGACAATGAAATTGCGAACCTCAA PVX_087720
+## [6] AGGAAGAATCACTCAGAAGATTTTACGACAATGAAATTGCCAACATCAA PKNH_0101800
+## [7] AGGAAGATTCACTAAGGAAATATTACGACTGTGAAATTAACAATATAAA PF3D7_0703600
+## [8] AGGAAGATTCACTAAGAAAATATTACGACTGTGAAATTAACAATATAAA PRCDC_0701800
+## Con AGGAAGAATCACTAAGAAAATATTACGACAATGAAATTGCCAATCT?AA Consensus 
+## 
+##     aln (540..588)                                    names
+## [1] ATTCATGGTCCAAAATGAAATAAACGAAAGAATTAAAACTGAAAAAGAA PBANKA_0801300
+## [2] ATCCATAGTTCAAAATGAAATAAACGAAAGAATTAAAACTGAAAAAGAA PY17X_0804000
+## [3] ATCCATAGTCCAAAACGAAATAAACGAAAGAATTAAAACTGAAAAAGAA PCHAS_0801600
+## [4] ATCGGTTGTTCAAAATGAAATAAACGAGAGAATCAAAACAGAAAAGATT PCYB_011100 
+## [5] ATCGGTTGTTCAAAATGAAATAAACGAGAGAATCAAAACAGAAAAGATT PVX_087720
+## [6] ATCGGTTGTCCAAAATGAAATAAACGAGAGAATAAAAACAGAAAAGATT PKNH_0101800
+## [7] ATCTATTATACAAAATGAAATAAGTGAAAGGATAAAAACAGAAAAAATA PF3D7_0703600
+## [8] ATCTATTATACAAAATGAAATCAGTGAGAGGATAAAAACAGAAAAAATA PRCDC_0701800
+## Con ATC?ATTGT?CAAAATGAAATAAACGA?AGAAT?AAAACAGAAAAAATA Consensus 
+## 
+##     aln (589..637)                                    names
+## [1] ATTTTGAGAGACGTAGATGAAAAAATCAACGAAATTATCAAAATAATCA PBANKA_0801300
+## [2] ATTTTGAAAGACGTAGATGAAAAAATCAACGAAATTATCAAAATAATCA PY17X_0804000
+## [3] ATGTTGAGAGACGTAGATGAAAAAATCAACGAAATTATCAAAATAATCA PCHAS_0801600
+## [4] ATCCTACGGGACGTCGATGATAAAGTGAACGAAATTATTAAAATAATTA PCYB_011100 
+## [5] ATCCTACGGGACGTCGATGACAAAGTGAACGAAATTATTAAAATAATTA PVX_087720
+## [6] ATCCTACGGGACGTAGATGATAAAGTCAACGAAATTATTAAAATAATTA PKNH_0101800
+## [7] ATATTATCTGATGTAGATGATAAAATAAACGAAATTATGAAAATAATTA PF3D7_0703600
+## [8] ATATTATCTGATGTAGATGATAAAATAAACGAAATTATGAAAATAATTA PRCDC_0701800
+## Con AT?TTA?G?GACGTAGATGATAAAATCAACGAAATTAT?AAAATAATTA Consensus 
+## 
+##     aln (638..686)                                    names
+## [1] AAAACGAAAAAATAACTAGAAAAAATTACTCAGAAAATTTAGTTTCCCT PBANKA_0801300
+## [2] AAAATGAAAAAATAACTAGAAAAAATTACTCAGAAAATTTAGTTTCCCT PY17X_0804000
+## [3] AAAACGAAAAAATAACTAGAAAAAATTACTCAGAAAATTTAGTTTCCCT PCHAS_0801600
+## [4] AAAATGAGAAAATCACCAGGGAAAACTACTCGGAAAATCTGGTGTCCCT PCYB_011100 
+## [5] AAAATGAGAAAATCACCAGGGAAAACTACTCGGAAAATCTGGTGTCCCT PVX_087720
+## [6] AAAATGAGAAAATCACTAGGGAAAACTACTCGGAAAATCTCGTGTCCCT PKNH_0101800
+## [7] GAAATGAAAAAACGACAAGGGAAACATATTCAGAAAATTTAGTGTCCCT PF3D7_0703600
+## [8] GAAATGAAAAAACGACAAGAGAAGACACTGAAGAAACATTAGTACATCT PRCDC_0701800
+## Con AAAATGAAAAAAT?ACTAG?GAAAACTACTCAGAAAATTTAGTGTCCCT Consensus 
+## 
+##     aln (687..735)                                    names
+## [1] TATCGAACAATATTTTTCAAAAATAAAAATGGAAATAGATAAAGAACGA PBANKA_0801300
+## [2] TATCGAACAATATTTTTCAAAAATAAAAATGGAAATAGATAAAGAACGA PY17X_0804000
+## [3] CATCGAACAATATTTTTCAAAAATAAAAATGGAAATAGATAAAGAACGG PCHAS_0801600
+## [4] CATCGAGCAGTACTTTTCGCGAATAAAAAAGGAAATTGATAATGAACGG PCYB_011100 
+## [5] CATCGAGCAGTACTTTTCGCGAATAAAAAAGGAAATTGATAATGAACGA PVX_087720
+## [6] CATGGAGCAGTACTTTTCGCGAATAAAAAAGGAAATTGATAATGAACGA PKNH_0101800
+## [7] CATAGAACAATATTTTTCAAGAATAAAAAAAGAAATAGACATGGAACGA PF3D7_0703600
+## [8] TATGGAAGAAGCCTT------AGATAAAATAGGAATACCCCTTGCATGA PRCDC_0701800
+## Con CATCGAACAATA?TTTTCAAGAATAAAAA?GGAAATAGATAATGAACGA Consensus 
+## 
+##     aln (736..784)                                    names
+## [1] CTAGAAAGAGAAGACACAGAAGAGACACTTGTTCACCTAATGGAAGAAA PBANKA_0801300
+## [2] CTAGAAAGAGAAGACACAGAAGAGACACTTGTTCACCTAATGGAAGAAA PY17X_0804000
+## [3] CTAGAAAGAGAAGACACAGAAGAGACACTTGTTCACCTAATGGAGGAAA PCHAS_0801600
+## [4] CTCGAACGGGAAGACACGGAAGAAACGCTGGTTCATTTGATGGAAGAAG PCYB_011100 
+## [5] CTCGAACGGGAAGACACGGAAGAGACGCTGGTTCATTTGATGGAGGAAG PVX_087720
+## [6] CTCGAAAGGGAAGACACGGAAGAAACGCTGGTTCATTTAATGGAGGAAG PKNH_0101800
+## [7] CTTGAAAGAGAAGACACTGAAGAAACATTAGTACATCTTATGGAAGAAG PF3D7_0703600
+## [8] ------------------------------------------------- PRCDC_0701800
+## Con CT?GAAAGAGAAGACAC?GAAGAGACACT?GTTCATCTAATGGAAGAAG Consensus 
+## 
+##     aln (785..816)                   names
+## [1] CTTTGGATAAAATAGGAATGCCATATGCATAA PBANKA_0801300
+## [2] CTTTAGATAAAATAGGAATGCCATATGCATAA PY17X_0804000
+## [3] CTTTGGATAAAATAGGAATGCCATATGCATAA PCHAS_0801600
+## [4] CTCTCGATAAAATTGGAATTCCATTCGCA--- PCYB_011100 
+## [5] CTCTCGATAAAATTGGAATACCATTCGCATGA PVX_087720
+## [6] CTCTGGATAAAATTGGAATTCCATTCGCATGA PKNH_0101800
+## [7] CCTTAGATAAAATTGGAATACCCCTTGCATGA PF3D7_0703600
+## [8] -------------------------------- PRCDC_0701800
+## Con CTTT?GATAAAATTGGAAT?CCATTTGCAT?A Consensus</code></pre>
+</div>
+<div id="phylogenetic-tree" class="section level4">
+<h4><span class="header-section-number">9.3.4.3</span> Phylogenetic tree</h4>
+<p>The phylogenetic tree is consistent with the phylogeny estimated in Woo et al. and with what’s known about <em>Plasmodium</em> evolution <span class="citation">(Liu et al. <a href="#ref-Liu_2010">2010</a> <span class="citation">Liu et al. (<a href="#ref-Liu_2014">2014</a>)</span>)</span>.</p>
+<div class="figure" style="text-align: center"><span id="fig:kaks-tree"></span>
+<img src="img/lesson9/kaks_tree.png" alt="Annotated phylogenetic tree"  />
+<p class="caption">
+Figure 9.1: Annotated phylogenetic tree
+</p>
+</div>
+</div>
+<div id="ka-ks-values" class="section level4">
+<h4><span class="header-section-number">9.3.4.4</span> Ka / Ks values</h4>
+<p>The first thing to consider when evaluating the Ka / Ks ratios are whether the alignment was made between genes that are 1:1 homologs of one another. While there are multiple SFA genes within some <em>Plasmodium</em> spcecies, such as <em>falcparum</em>, they underwent an expansion prior to the the evolution of the proto-<em>Plasmodium</em> ancestor. Thus, these genes represent 1:1 homologs when comparing only <em>Plasmodium</em> species.</p>
+<p>The second thing we need to consider is the evolutionary distance between the species being compared. While the exact evolutionary emergence of different <em>Plasmodium</em> species is still up for debate, we know that the Prioplasmida and <em>Plasmodium</em> families diverged ~ 300 mya <span class="citation">(SILVA et al. <a href="#ref-SILVA_2010">2010</a>)</span>. We also know that the <em>Plasmodium</em> lineages that infect mammals emerged ~34 mya <span class="citation">(Pacheco et al. <a href="#ref-Pacheco_2013">2013</a>)</span>. However, the times of evolutionary divergence between the species used in this analysis varies. <em>P. falciparum</em> for example, is most recently estimated to have emerged only 10,000 years ago whereas <em>P. vivax</em> is estimated to be over 1 mya.</p>
+<div class="figure" style="text-align: center"><span id="fig:kaks-table"></span>
+<img src="img/lesson9/kaks_table.png" alt="Calculated Ka / Ks ratios for an SFA-derived gene in Plasmodium parasites"  />
+<p class="caption">
+Figure 9.2: Calculated Ka / Ks ratios for an SFA-derived gene in Plasmodium parasites
+</p>
+</div>
+</div>
+</div>
+<div id="discussion" class="section level3">
+<h3><span class="header-section-number">9.3.5</span> Discussion</h3>
+<p>Based on the results above, I conlcude that the homologs of Cvel_872, or SFA, are being acted upon by purifying selection. Although the multiple sequence alignment shown above is expected when comparing homologs within the same genus, <em>Plasmodium</em> species are only ~85% alignable. Thus, sequences that are substantially alignable between even species, often indicates functional importance. The last common apixomplexan ancestor is estimated to have existed ~350-824 mya, so the alignment similiarity between <em>P. falciparum</em> and <em>C. velia</em> supports this claim as well.</p>
+
+</div>
+</div>
+</div>
+<h3>References</h3>
+<div id="refs" class="references">
+<div id="ref-chromerids">
+<p>Yong H Woo, Thomas D Otto, Hifzur Ansari. 2015. “Chromerid Genomes Reveal the Evolutionary Path from Photosynthetic Algae to Obligate Intracellular Parasites.” <em>ELife</em>, July. <a href="http://dx.doi.org/10.7554/eLife.06974" class="uri">http://dx.doi.org/10.7554/eLife.06974</a>.</p>
+</div>
+<div id="ref-Liu_2010">
+<p>Liu, Weimin, Yingying Li, Gerald H. Learn, Rebecca S. Rudicell, Joel D. Robertson, Brandon F. Keele, Jean-Bosco N. Ndjango, et al. 2010. “Origin of the Human Malaria Parasite Plasmodium Falciparum in Gorillas.” <em>Nature</em> 467 (7314). Nature Publishing Group: 420–25. doi:<a href="https://doi.org/10.1038/nature09442">10.1038/nature09442</a>.</p>
+</div>
+<div id="ref-Liu_2014">
+<p>Liu, Weimin, Yingying Li, Katharina S. Shaw, Gerald H. Learn, Lindsey J. Plenderleith, Jordan A. Malenke, Sesh A. Sundararaman, et al. 2014. “African Origin of the Malaria Parasite Plasmodium Vivax.” <em>Nature Communications</em> 5 (February). Nature Publishing Group. doi:<a href="https://doi.org/10.1038/ncomms4346">10.1038/ncomms4346</a>.</p>
+</div>
+<div id="ref-SILVA_2010">
+<p>SILVA, JOANA C., AMY EGAN, ROBERT FRIEDMAN, JAMES B. MUNRO, JANE M. CARLTON, and AUSTIN L. HUGHES. 2010. “Genome Sequences Reveal Divergence Times of Malaria Parasite Lineages.” <em>Parasitology</em> 138 (13). Cambridge University Press (CUP): 1737–49. doi:<a href="https://doi.org/10.1017/s0031182010001575">10.1017/s0031182010001575</a>.</p>
+</div>
+<div id="ref-Pacheco_2013">
+<p>Pacheco, M, Michael Cranfield, Kenneth Cameron, and Ananias A Escalante. 2013. “Malarial Parasite Diversity in Chimpanzees: The Value of Comparative Approaches to Ascertain the Evolution of Plasmodium Falciparum Antigens.” <em>Malar J</em> 12 (1). Springer Nature: 328. doi:<a href="https://doi.org/10.1186/1475-2875-12-328">10.1186/1475-2875-12-328</a>.</p>
 </div>
 </div>
             </section>

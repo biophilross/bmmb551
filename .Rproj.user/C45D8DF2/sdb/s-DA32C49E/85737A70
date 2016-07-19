@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "library(knitcitations)\noptions(\"citation_format\" = \"pandoc\")\n\ncitep(\"10.1038/nature09442\")             # Liu_2010\ncitep(\"10.1038/ncomms4346\")              # Liu_2014\ncitep(\"10.1186/1475-2875-12-328\")        # Pacheco_2013\ncitep(\"10.1017/S0031182010001575\")       # SILVA_2010\n\nwrite.bibtex(file = \"knitcitations.bib\")",
+    "created" : 1468901366878.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2195830345",
+    "id" : "85737A70",
+    "lastKnownWriteTime" : 1468949808,
+    "last_content_update" : 1468949808126,
+    "path" : "~/bmmb551_book/knitcitations.R",
+    "project_path" : "knitcitations.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

@@ -25,7 +25,7 @@
 
 <meta name="author" content="Philipp Ross">
 
-<meta name="date" content="2016-07-15">
+<meta name="date" content="2016-07-19">
 
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -49,11 +49,6 @@
 
 
 
-<script src="assets/htmlwidgets-0.6/htmlwidgets.js"></script>
-<script src="assets/datatables-binding-0.1/datatables.js"></script>
-<script src="assets/datatables-1.10.7/jquery.dataTables.min.js"></script>
-<link href="assets/datatables-default-1.10.7/dataTables.extra.css" rel="stylesheet" />
-<link href="assets/datatables-default-1.10.7/jquery.dataTables.min.css" rel="stylesheet" />
 
 
 <style type="text/css">
@@ -158,7 +153,13 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="9" data-path="lesson9.html"><a href="lesson9.html"><i class="fa fa-check"></i><b>9</b> Comparative genomices</a><ul>
 <li class="chapter" data-level="9.1" data-path="lesson9.html"><a href="lesson9.html#learning-objectives-8"><i class="fa fa-check"></i><b>9.1</b> Learning Objectives</a></li>
 <li class="chapter" data-level="9.2" data-path="lesson9.html"><a href="lesson9.html#notes-1"><i class="fa fa-check"></i><b>9.2</b> Notes</a></li>
-<li class="chapter" data-level="9.3" data-path="lesson9.html"><a href="lesson9.html#assignment-8"><i class="fa fa-check"></i><b>9.3</b> Assignment</a></li>
+<li class="chapter" data-level="9.3" data-path="lesson9.html"><a href="lesson9.html#assignment-8"><i class="fa fa-check"></i><b>9.3</b> Assignment</a><ul>
+<li class="chapter" data-level="9.3.1" data-path="lesson9.html"><a href="lesson9.html#background"><i class="fa fa-check"></i><b>9.3.1</b> Background</a></li>
+<li class="chapter" data-level="9.3.2" data-path="lesson9.html"><a href="lesson9.html#design-1"><i class="fa fa-check"></i><b>9.3.2</b> Design</a></li>
+<li class="chapter" data-level="9.3.3" data-path="lesson9.html"><a href="lesson9.html#methods"><i class="fa fa-check"></i><b>9.3.3</b> Methods</a></li>
+<li class="chapter" data-level="9.3.4" data-path="lesson9.html"><a href="lesson9.html#results"><i class="fa fa-check"></i><b>9.3.4</b> Results</a></li>
+<li class="chapter" data-level="9.3.5" data-path="lesson9.html"><a href="lesson9.html#discussion"><i class="fa fa-check"></i><b>9.3.5</b> Discussion</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="lesson10.html"><a href="lesson10.html"><i class="fa fa-check"></i><b>10</b> Gene regulatory modules</a><ul>
 <li class="chapter" data-level="10.1" data-path="lesson10.html"><a href="lesson10.html#learning-objectives-9"><i class="fa fa-check"></i><b>10.1</b> Learning Objectives</a></li>
@@ -210,7 +211,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <h2><span class="header-section-number">4.2</span> Assignment</h2>
 <p>Although the assignment asks you to perform the tasks using tools found in Galaxy, the same algorithms are implimented in the R programming language. I will be using strictly R and packages curated by the <a href="http://bioconductor.org/">Bioconductor</a> community. Considering that Galaxy acts as a wrapper for tools commonly used in R and the command line, I do not expect the results to be different.</p>
 <p>First let’s import the data into R.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">seqs &lt;-<span class="st"> </span><span class="kw">readAAStringSet</span>(<span class="dt">filepath =</span> <span class="st">&quot;data/lesson4/all.fasta&quot;</span>)</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">seqs &lt;-<span class="st"> </span><span class="kw">readAAStringSet</span>(<span class="dt">filepath =</span> <span class="st">&quot;_data/lesson4/all.fasta&quot;</span>)</code></pre></div>
 <p><strong>1.1 What are the lengths of the four protein sequences?</strong></p>
 <p>To manipulate sequences in R, we can use the <a href="https://bioconductor.org/packages/release/bioc/html/Biostrings.html" title="Biostrings">Biostrings</a> package. To find out the lengths we can use the <strong>width()</strong> function.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">for (i in <span class="dv">1</span>:<span class="kw">length</span>(seqs)) {<span class="kw">cat</span>(<span class="st">&quot;Length: &quot;</span>,<span class="kw">width</span>(seqs[i]),<span class="st">&quot; Name: &quot;</span>, <span class="kw">names</span>(seqs[i]),<span class="st">&quot;</span><span class="ch">\n</span><span class="st">&quot;</span>)}</code></pre></div>
@@ -241,7 +242,7 @@ galn &lt;-<span class="st"> </span><span class="kw">pairwiseAlignment</span>(hum
 <span class="kw">writePairwiseAlignments</span>(galn, <span class="dt">Matrix =</span> mat, <span class="dt">block.width =</span> <span class="dv">40</span>)</code></pre></div>
 <pre><code>## ########################################
 ## # Program: Biostrings (version 2.40.2), a Bioconductor package
-## # Rundate: Fri Jul 15 18:45:25 2016
+## # Rundate: Tue Jul 19 17:49:12 2016
 ## ########################################
 ## #=======================================
 ## #
@@ -315,7 +316,7 @@ galn &lt;-<span class="st"> </span><span class="kw">pairwiseAlignment</span>(hum
 <span class="kw">writePairwiseAlignments</span>(laln, <span class="dt">Matrix =</span> mat, <span class="dt">block.width =</span> <span class="dv">40</span>)</code></pre></div>
 <pre><code>## ########################################
 ## # Program: Biostrings (version 2.40.2), a Bioconductor package
-## # Rundate: Fri Jul 15 18:45:25 2016
+## # Rundate: Tue Jul 19 17:49:12 2016
 ## ########################################
 ## #=======================================
 ## #
@@ -381,8 +382,7 @@ galn &lt;-<span class="st"> </span><span class="kw">pairwiseAlignment</span>(hum
 <p>What we can see from the results above is that the alignments are almost exactly the same regardless of using global or local alignments for closely related orthologous sequences.</p>
 <p><strong>Using EMBOSS</strong></p>
 <p>Below are the results from using <a href="http://www.ebi.ac.uk/Tools/psa/emboss_needle/" title="EMBOSS Needle">EMBOSS Needle</a>.</p>
-<pre>
-#=======================================
+<pre><code>#=======================================
 #
 # Aligned_sequences: 2
 # 1: KLF1_MOUSE
@@ -434,11 +434,9 @@ KLF1_HUMAN       347 AFSRSDHLALHMKRHL    362
 
 
 #---------------------------------------
-#---------------------------------------
-</pre>
+#---------------------------------------</code></pre>
 <p>Below are the results of <a href="http://www.ebi.ac.uk/Tools/psa/emboss_water/" title="EMBOSS Water">EMBOSS Water</a>.</p>
-<pre>
-#=======================================
+<pre><code>#=======================================
 #
 # Aligned_sequences: 2
 # 1: KLF1_MOUSE
@@ -490,8 +488,7 @@ KLF1_HUMAN       347 AFSRSDHLALHMKRHL    362
 
 
 #---------------------------------------
-#---------------------------------------
-</pre>
+#---------------------------------------</code></pre>
 <p>It’s nice to see that our results match exactly with the implementation of the algorithms in Biostrings. However, there are two (related) differences in the outputs. Numerically, it’s the calculation of percent similarity. Visually, this is represented by the periods and colons in the EMBOSS output. These periods and colons represent <strong>conservative</strong> and <strong>semi-conservative</strong> mutations. That is, based on the alignment, these amino acids are assumed to be substitutions. When amino acids of relative chemical similarity align, they can be considered conservative or semi-conservative matches.</p>
 <p>I could not find where in the EMBOSS Needle or Water programs these relationships were defined, but I could find it by looking into the <a href="http://www.ebi.ac.uk/Tools/msa/clustalo/help/faq.html#23">Clustal Omega documentation</a>. Here it tells us that these relationships are defined (for ClustalO) by scores between amino acids in the Gonnet PAM 250 matrix. That is:</p>
 <blockquote>
@@ -518,7 +515,7 @@ galn &lt;-<span class="st"> </span><span class="kw">pairwiseAlignment</span>(hum
 <span class="kw">writePairwiseAlignments</span>(galn, <span class="dt">Matrix =</span> mat, <span class="dt">block.width =</span> <span class="dv">40</span>)</code></pre></div>
 <pre><code>## ########################################
 ## # Program: Biostrings (version 2.40.2), a Bioconductor package
-## # Rundate: Fri Jul 15 18:45:25 2016
+## # Rundate: Tue Jul 19 17:49:12 2016
 ## ########################################
 ## #=======================================
 ## #
@@ -591,7 +588,7 @@ galn &lt;-<span class="st"> </span><span class="kw">pairwiseAlignment</span>(hum
 <span class="kw">writePairwiseAlignments</span>(laln, <span class="dt">Matrix =</span> mat, <span class="dt">block.width =</span> <span class="dv">40</span>)</code></pre></div>
 <pre><code>## ########################################
 ## # Program: Biostrings (version 2.40.2), a Bioconductor package
-## # Rundate: Fri Jul 15 18:45:25 2016
+## # Rundate: Tue Jul 19 17:49:12 2016
 ## ########################################
 ## #=======================================
 ## #
@@ -640,7 +637,7 @@ galn &lt;-<span class="st"> </span><span class="kw">pairwiseAlignment</span>(hum
 <span class="kw">writePairwiseAlignments</span>(laln, <span class="dt">Matrix =</span> mat, <span class="dt">block.width =</span> <span class="dv">40</span>)</code></pre></div>
 <pre><code>## ########################################
 ## # Program: Biostrings (version 2.40.2), a Bioconductor package
-## # Rundate: Fri Jul 15 18:45:25 2016
+## # Rundate: Tue Jul 19 17:49:12 2016
 ## ########################################
 ## #=======================================
 ## #

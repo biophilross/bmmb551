@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "@Article{Liu_2010,\n  doi = {10.1038/nature09442},\n  url = {http://dx.doi.org/10.1038/nature09442},\n  year = {2010},\n  month = {sep},\n  publisher = {Nature Publishing Group},\n  volume = {467},\n  number = {7314},\n  pages = {420--425},\n  author = {Weimin Liu and Yingying Li and Gerald H. Learn and Rebecca S. Rudicell and Joel D. Robertson and Brandon F. Keele and Jean-Bosco N. Ndjango and Crickette M. Sanz and David B. Morgan and Sabrina Locatelli and Mary K. Gonder and Philip J. Kranzusch and Peter D. Walsh and Eric Delaporte and Eitel Mpoudi-Ngole and Alexander V. Georgiev and Martin N. Muller and George M. Shaw and Martine Peeters and Paul M. Sharp and Julian C. Rayner and Beatrice H. Hahn},\n  title = {Origin of the human malaria parasite Plasmodium falciparum in gorillas},\n  journal = {Nature},\n}\n\n@Article{Liu_2014,\n  doi = {10.1038/ncomms4346},\n  url = {http://dx.doi.org/10.1038/ncomms4346},\n  year = {2014},\n  month = {feb},\n  publisher = {Nature Publishing Group},\n  volume = {5},\n  author = {Weimin Liu and Yingying Li and Katharina S. Shaw and Gerald H. Learn and Lindsey J. Plenderleith and Jordan A. Malenke and Sesh A. Sundararaman and Miguel A. Ramirez and Patricia A. Crystal and Andrew G. Smith and Frederic Bibollet-Ruche and Ahidjo Ayouba and Sabrina Locatelli and Amandine Esteban and Fatima Mouacha and Emilande Guichet and Christelle Butel and Steve Ahuka-Mundeke and Bila-Isia Inogwabini and Jean-Bosco N. Ndjango and Sheri Speede and Crickette M. Sanz and David B. Morgan and Mary K. Gonder and Philip J. Kranzusch and Peter D. Walsh and Alexander V. Georgiev and Martin N. Muller and Alex K. Piel and Fiona A. Stewart and Michael L. Wilson and Anne E. Pusey and Liwang Cui and Zenglei Wang and Anna F{\\\"a}rnert and Colin J. Sutherland and Debbie Nolder and John A. Hart and Terese B. Hart and Paco Bertolani and Amethyst Gillis and Matthew LeBreton and Babila Tafon and John Kiyang and Cyrille F. Djoko and Bradley S. Schneider and Nathan D. Wolfe and Eitel Mpoudi-Ngole and Eric Delaporte and Richard Carter and Richard L. Culleton and George M. Shaw and Julian C. Rayner and Martine Peeters and Beatrice H. Hahn and Paul M. Sharp},\n  title = {African origin of the malaria parasite Plasmodium vivax},\n  journal = {Nature Communications},\n}\n\n@Article{Pacheco_2013,\n  doi = {10.1186/1475-2875-12-328},\n  url = {http://dx.doi.org/10.1186/1475-2875-12-328},\n  year = {2013},\n  publisher = {Springer Nature},\n  volume = {12},\n  number = {1},\n  pages = {328},\n  author = {M Pacheco and Michael Cranfield and Kenneth Cameron and Ananias A Escalante},\n  title = {Malarial parasite diversity in chimpanzees: the value of comparative approaches to ascertain the evolution of Plasmodium falciparum antigens},\n  journal = {Malar J},\n}\n\n@Article{SILVA_2010,\n  doi = {10.1017/s0031182010001575},\n  url = {http://dx.doi.org/10.1017/S0031182010001575},\n  year = {2010},\n  month = {dec},\n  publisher = {Cambridge University Press ({CUP})},\n  volume = {138},\n  number = {13},\n  pages = {1737--1749},\n  author = {JOANA C. SILVA and AMY EGAN and ROBERT FRIEDMAN and JAMES B. MUNRO and JANE M. CARLTON and AUSTIN L. HUGHES},\n  title = {Genome sequences reveal divergence times of malaria parasite lineages},\n  journal = {Parasitology},\n}\n",
+    "created" : 1468901275140.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1260322939",
+    "id" : "15E8095E",
+    "lastKnownWriteTime" : 1468949782,
+    "last_content_update" : 1468949782,
+    "path" : "~/bmmb551_book/knitcitations.bib",
+    "project_path" : "knitcitations.bib",
+    "properties" : {
+    },
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "text"
+}

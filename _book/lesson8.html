@@ -25,7 +25,7 @@
 
 <meta name="author" content="Philipp Ross">
 
-<meta name="date" content="2016-07-15">
+<meta name="date" content="2016-07-19">
 
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -49,11 +49,6 @@
 
 
 
-<script src="assets/htmlwidgets-0.6/htmlwidgets.js"></script>
-<script src="assets/datatables-binding-0.1/datatables.js"></script>
-<script src="assets/datatables-1.10.7/jquery.dataTables.min.js"></script>
-<link href="assets/datatables-default-1.10.7/dataTables.extra.css" rel="stylesheet" />
-<link href="assets/datatables-default-1.10.7/jquery.dataTables.min.css" rel="stylesheet" />
 
 
 <style type="text/css">
@@ -158,7 +153,12 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="9" data-path="lesson9.html"><a href="lesson9.html"><i class="fa fa-check"></i><b>9</b> Comparative genomices</a><ul>
 <li class="chapter" data-level="9.1" data-path="lesson9.html"><a href="lesson9.html#learning-objectives-8"><i class="fa fa-check"></i><b>9.1</b> Learning Objectives</a></li>
 <li class="chapter" data-level="9.2" data-path="lesson9.html"><a href="lesson9.html#notes-1"><i class="fa fa-check"></i><b>9.2</b> Notes</a></li>
-<li class="chapter" data-level="9.3" data-path="lesson9.html"><a href="lesson9.html#assignment-8"><i class="fa fa-check"></i><b>9.3</b> Assignment</a></li>
+<li class="chapter" data-level="9.3" data-path="lesson9.html"><a href="lesson9.html#assignment-8"><i class="fa fa-check"></i><b>9.3</b> Assignment</a><ul>
+<li class="chapter" data-level="9.3.1" data-path="lesson9.html"><a href="lesson9.html#background"><i class="fa fa-check"></i><b>9.3.1</b> Background</a></li>
+<li class="chapter" data-level="9.3.2" data-path="lesson9.html"><a href="lesson9.html#design-1"><i class="fa fa-check"></i><b>9.3.2</b> Design</a></li>
+<li class="chapter" data-level="9.3.3" data-path="lesson9.html"><a href="lesson9.html#methods"><i class="fa fa-check"></i><b>9.3.3</b> Methods</a></li>
+<li class="chapter" data-level="9.3.4" data-path="lesson9.html"><a href="lesson9.html#results"><i class="fa fa-check"></i><b>9.3.4</b> Results</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="lesson10.html"><a href="lesson10.html"><i class="fa fa-check"></i><b>10</b> Gene regulatory modules</a><ul>
 <li class="chapter" data-level="10.1" data-path="lesson10.html"><a href="lesson10.html#learning-objectives-9"><i class="fa fa-check"></i><b>10.1</b> Learning Objectives</a></li>
@@ -224,7 +224,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ol>
 <p>When I refer to accession numbers, they correspond to the following samples:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">suppressPackageStartupMessages</span>(<span class="kw">library</span>(dplyr))
-readr::<span class="kw">read_tsv</span>(<span class="st">&quot;data/lesson8/design.tsv&quot;</span>) %&gt;%<span class="st"> </span>knitr::<span class="kw">kable</span>()</code></pre></div>
+readr::<span class="kw">read_tsv</span>(<span class="st">&quot;_data/lesson8/design.tsv&quot;</span>) %&gt;%<span class="st"> </span>knitr::<span class="kw">kable</span>()</code></pre></div>
 <table>
 <thead>
 <tr class="header">
@@ -316,25 +316,21 @@ readr::<span class="kw">read_tsv</span>(<span class="st">&quot;data/lesson8/desi
   <span class="kw">stringtie</span> retrotransposable_elements.gff -p 2 -b <span class="st">&quot;</span><span class="ot">${file%%</span>.*<span class="ot">}</span><span class="st">_tables&quot;</span> -A <span class="st">&quot;</span><span class="ot">${file%%</span>.*<span class="ot">}</span><span class="st">.abund&quot;</span> -e -x
 <span class="kw">done</span></code></pre></div>
 <p>This generates a file that looks like the following:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">readr::<span class="kw">read_tsv</span>(<span class="st">&quot;data/lesson8/stringtie_estimates/ERR572496_1.abund&quot;</span>,<span class="dt">n_max=</span><span class="dv">10</span>) %&gt;%<span class="st"> </span>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">readr::<span class="kw">read_tsv</span>(<span class="st">&quot;_data/lesson8/stringtie_estimates/ERR572496_1.abund&quot;</span>,<span class="dt">n_max=</span><span class="dv">10</span>) %&gt;%<span class="st"> </span>
 <span class="st">  </span><span class="kw">select</span>(<span class="st">`</span><span class="dt">Gene ID</span><span class="st">`</span>, Coverage, FPKM, TPM) %&gt;%
 <span class="st">  </span>DT::<span class="kw">datatable</span>()</code></pre></div>
-<div id="htmlwidget-5401" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-5401">{"x":{"data":[["1","2","3","4","5","6","7","8","9","10"],["Cvel_2","Cvel_3","Cvel_5","Cvel_4","Cvel_6","Cvel_7","Cvel_8","Cvel_9","Cvel_13","Cvel_14"],[0.051153,0.59221,2.117401,1.449172,0,0.985144,5.840583,3.600149,1.801377,14.598131],[0.323235,3.742162,13.379811,9.157287,0,6.225104,36.906517,22.749266,11.382863,92.245277],[0.998118,11.555436,41.315567,28.276819,0,19.222521,113.963776,70.247536,35.149181,284.844513]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> \u003c/th>\n      <th>Gene ID\u003c/th>\n      <th>Coverage\u003c/th>\n      <th>FPKM\u003c/th>\n      <th>TPM\u003c/th>\n    \u003c/tr>\n  \u003c/thead>\n\u003c/table>","options":{"columnDefs":[{"className":"dt-right","targets":[2,3,4]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false},"callback":null,"filter":"none","selection":"multiple"},"evals":[],"jsHooks":[]}</script>
 <p>There is more information in each abundance file such as the gene name and the genomic coordinates of each gene. In addition, we generated one of these files for each sequencing library.</p>
 <p>We can briefly take a look at what the most highly expressed transcripts are across samples and how many transcripts are not detected at all (TPM of zero).</p>
 <p>First let’s take a look at highly abundant transcripts across samples. We’ll order it by TPMs from sample ERR572496.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">options</span>(<span class="dt">digits =</span> <span class="dv">3</span>)
 
-readr::<span class="kw">read_tsv</span>(<span class="st">&quot;data/lesson8/stringtie_estimates/ERR572496_1.abund&quot;</span>) %&gt;%<span class="st"> </span><span class="kw">select</span>(<span class="st">`</span><span class="dt">Gene ID</span><span class="st">`</span>, TPM) %&gt;%<span class="st"> </span><span class="kw">mutate</span>(<span class="dt">sample=</span><span class="st">&quot;ERR572496&quot;</span>) -&gt;<span class="st"> </span>ERR572496
-readr::<span class="kw">read_tsv</span>(<span class="st">&quot;data/lesson8/stringtie_estimates/ERR572505_1.abund&quot;</span>) %&gt;%<span class="st"> </span><span class="kw">select</span>(<span class="st">`</span><span class="dt">Gene ID</span><span class="st">`</span>, TPM) %&gt;%<span class="st"> </span><span class="kw">mutate</span>(<span class="dt">sample=</span><span class="st">&quot;ERR572505&quot;</span>) -&gt;<span class="st"> </span>ERR572505
-readr::<span class="kw">read_tsv</span>(<span class="st">&quot;data/lesson8/stringtie_estimates/ERR572506_1.abund&quot;</span>) %&gt;%<span class="st"> </span><span class="kw">select</span>(<span class="st">`</span><span class="dt">Gene ID</span><span class="st">`</span>, TPM) %&gt;%<span class="st"> </span><span class="kw">mutate</span>(<span class="dt">sample=</span><span class="st">&quot;ERR572506&quot;</span>) -&gt;<span class="st"> </span>ERR572506
-readr::<span class="kw">read_tsv</span>(<span class="st">&quot;data/lesson8/stringtie_estimates/ERR572507_1.abund&quot;</span>) %&gt;%<span class="st"> </span><span class="kw">select</span>(<span class="st">`</span><span class="dt">Gene ID</span><span class="st">`</span>, TPM) %&gt;%<span class="st"> </span><span class="kw">mutate</span>(<span class="dt">sample=</span><span class="st">&quot;ERR572507&quot;</span>) -&gt;<span class="st"> </span>ERR572507
+readr::<span class="kw">read_tsv</span>(<span class="st">&quot;_data/lesson8/stringtie_estimates/ERR572496_1.abund&quot;</span>) %&gt;%<span class="st"> </span><span class="kw">select</span>(<span class="st">`</span><span class="dt">Gene ID</span><span class="st">`</span>, TPM) %&gt;%<span class="st"> </span><span class="kw">mutate</span>(<span class="dt">sample=</span><span class="st">&quot;ERR572496&quot;</span>) -&gt;<span class="st"> </span>ERR572496
+readr::<span class="kw">read_tsv</span>(<span class="st">&quot;_data/lesson8/stringtie_estimates/ERR572505_1.abund&quot;</span>) %&gt;%<span class="st"> </span><span class="kw">select</span>(<span class="st">`</span><span class="dt">Gene ID</span><span class="st">`</span>, TPM) %&gt;%<span class="st"> </span><span class="kw">mutate</span>(<span class="dt">sample=</span><span class="st">&quot;ERR572505&quot;</span>) -&gt;<span class="st"> </span>ERR572505
+readr::<span class="kw">read_tsv</span>(<span class="st">&quot;_data/lesson8/stringtie_estimates/ERR572506_1.abund&quot;</span>) %&gt;%<span class="st"> </span><span class="kw">select</span>(<span class="st">`</span><span class="dt">Gene ID</span><span class="st">`</span>, TPM) %&gt;%<span class="st"> </span><span class="kw">mutate</span>(<span class="dt">sample=</span><span class="st">&quot;ERR572506&quot;</span>) -&gt;<span class="st"> </span>ERR572506
+readr::<span class="kw">read_tsv</span>(<span class="st">&quot;_data/lesson8/stringtie_estimates/ERR572507_1.abund&quot;</span>) %&gt;%<span class="st"> </span><span class="kw">select</span>(<span class="st">`</span><span class="dt">Gene ID</span><span class="st">`</span>, TPM) %&gt;%<span class="st"> </span><span class="kw">mutate</span>(<span class="dt">sample=</span><span class="st">&quot;ERR572507&quot;</span>) -&gt;<span class="st"> </span>ERR572507
 abund &lt;-<span class="st"> </span><span class="kw">bind_rows</span>(ERR572496,ERR572505,ERR572506,ERR572507) %&gt;%<span class="st"> </span>tidyr::<span class="kw">spread</span>(sample, TPM)
 
 abund %&gt;%<span class="st"> </span><span class="kw">arrange</span>(<span class="kw">desc</span>(ERR572496)) %&gt;%<span class="st"> </span><span class="kw">head</span>(<span class="dv">10</span>) %&gt;%<span class="st"> </span>DT::<span class="kw">datatable</span>()</code></pre></div>
-<div id="htmlwidget-5474" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-5474">{"x":{"data":[["1","2","3","4","5","6","7","8","9","10"],["Cvel_10809","Cvel_17262","Cvel_25202","Cvel_13395","Cvel_23344","Cvel_2630","Cvel_26551","Cvel_13426","Cvel_1371","Cvel_4471"],[95247.679688,16403.970703,13491.703125,13467.748047,10413.977539,10355.496094,10238.654297,9742.954102,9055.421875,9034.142578],[88311.875,8.019396,17472.589844,11002.029297,9890.193359,8242.316406,8374.90625,7805.983887,9936.980469,7372.414551],[64931.320312,13223.168945,14107.410156,7800.831543,8473.957031,6509.666504,4233.475586,6199.133789,8833.086914,6428.947754],[76748.335938,5.87463,12697.619141,7679.884766,9410.384766,7734.967285,5760.200195,7012.442383,7823.17627,6588.693848]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> \u003c/th>\n      <th>Gene ID\u003c/th>\n      <th>ERR572496\u003c/th>\n      <th>ERR572505\u003c/th>\n      <th>ERR572506\u003c/th>\n      <th>ERR572507\u003c/th>\n    \u003c/tr>\n  \u003c/thead>\n\u003c/table>","options":{"columnDefs":[{"className":"dt-right","targets":[2,3,4,5]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false},"callback":null,"filter":"none","selection":"multiple"},"evals":[],"jsHooks":[]}</script>
 <p>Interestingly enough, we can already see that there are huge differences in transcript abundance for Cvel_17262. This difference in TPM doesn’t represent the absolute transcript copy number, but rather the proportion of of this transcript relative to the total transcript pool. However, this indcates that values across biological replicates are not consistent! So let’s look at scatter plots of the TPMs between biological replicates.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">suppressPackageStartupMessages</span>(<span class="kw">library</span>(cowplot))
 
@@ -354,14 +350,9 @@ abund %&gt;%<span class="st"> </span>
     <span class="dt">labels =</span> scales::<span class="kw">trans_format</span>(<span class="st">&quot;log10&quot;</span>, scales::<span class="kw">math_format</span>(<span class="dv">10</span>^.x))) +
 <span class="st">  </span><span class="kw">annotate</span>(<span class="st">&quot;text&quot;</span>,<span class="dt">x=</span><span class="fl">0.01</span>,<span class="dt">y=</span><span class="dv">10000</span>,<span class="dt">label=</span><span class="kw">paste</span>(<span class="st">&quot;Pearson: &quot;</span>,c1)) +
 <span class="st">  </span><span class="kw">panel_border</span>(<span class="dt">size=</span><span class="dv">1</span>,<span class="dt">colour=</span><span class="st">&quot;black&quot;</span>) +
-<span class="st">  </span><span class="kw">theme</span>(<span class="dt">axis.line.y =</span> <span class="kw">element_line</span>(<span class="dt">size=</span><span class="fl">0.25</span>))</code></pre></div>
-<div class="figure">
-<img src="_main_files/figure-html/replicates-1.png" alt="Scatter plot of biological replicates for both conditions" width="672" />
-<p class="caption">
-Scatter plot of biological replicates for both conditions
-</p>
-</div>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">c2 &lt;-<span class="st"> </span><span class="kw">cor</span>(<span class="kw">log10</span>(abund$ERR572505<span class="dv">+1</span>), <span class="kw">log10</span>(abund$ERR572506<span class="dv">+1</span>))
+<span class="st">  </span><span class="kw">theme</span>(<span class="dt">axis.line.y =</span> <span class="kw">element_line</span>(<span class="dt">size=</span><span class="fl">0.25</span>))
+
+c2 &lt;-<span class="st"> </span><span class="kw">cor</span>(<span class="kw">log10</span>(abund$ERR572505<span class="dv">+1</span>), <span class="kw">log10</span>(abund$ERR572506<span class="dv">+1</span>))
 
 abund %&gt;%<span class="st"> </span>
 <span class="st">  </span><span class="kw">select</span>(ERR572505,ERR572506) %&gt;%
@@ -377,50 +368,18 @@ abund %&gt;%<span class="st"> </span>
 <span class="st">  </span><span class="kw">annotate</span>(<span class="st">&quot;text&quot;</span>,<span class="dt">x=</span><span class="fl">0.01</span>,<span class="dt">y=</span><span class="dv">10000</span>,<span class="dt">label=</span><span class="kw">paste</span>(<span class="st">&quot;Pearson: &quot;</span>,c2)) +
 <span class="st">  </span><span class="kw">panel_border</span>(<span class="dt">size=</span><span class="dv">1</span>,<span class="dt">colour=</span><span class="st">&quot;black&quot;</span>) +
 <span class="st">  </span><span class="kw">theme</span>(<span class="dt">axis.line.y =</span> <span class="kw">element_line</span>(<span class="dt">size=</span><span class="fl">0.25</span>))</code></pre></div>
-<div class="figure">
-<img src="_main_files/figure-html/replicates-2.png" alt="Scatter plot of biological replicates for both conditions" width="672" />
-<p class="caption">
-Scatter plot of biological replicates for both conditions
-</p>
-</div>
 <p>From these plots we can see that, while for the most part, replicates are well correlated with one another, there are several examples of transcripts with highly variable abundance estimations between replicates.</p>
 </div>
 <div id="calculating-differentiall-expressed-transcripts" class="section level3">
 <h3><span class="header-section-number">8.3.5</span> Calculating differentiall expressed transcripts</h3>
 <p>Finally, we can use the <a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4792117/">ballgown</a> package to identify differentially abundant transcripts between conditions. First we need to read the data into ballgown:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">bg =<span class="st"> </span><span class="kw">ballgown</span>(<span class="dt">dataDir=</span><span class="st">&quot;data/lesson8/&quot;</span>,<span class="dt">samplePattern=</span><span class="st">&quot;tables&quot;</span>,<span class="dt">meas=</span><span class="st">&quot;all&quot;</span>)
-<span class="kw">save</span>(bg, <span class="dt">file=</span><span class="st">&quot;data/lesson8/ballgown/bg.rda&quot;</span>)</code></pre></div>
+<span class="kw">save</span>(bg, <span class="dt">file=</span><span class="st">&quot;_data/lesson8/ballgown/bg.rda&quot;</span>)</code></pre></div>
 <p>Next we provide the design matrix:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">suppressPackageStartupMessages</span>(<span class="kw">library</span>(ballgown))
-<span class="kw">load</span>(<span class="dt">file=</span><span class="st">&quot;data/lesson8/ballgown/bg.rda&quot;</span>)
+<span class="kw">load</span>(<span class="dt">file=</span><span class="st">&quot;_data/lesson8/ballgown/bg.rda&quot;</span>)
 <span class="kw">pData</span>(bg) &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">id=</span><span class="kw">sampleNames</span>(bg), <span class="dt">group=</span><span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">0</span>))
 knitr::<span class="kw">kable</span>(<span class="kw">pData</span>(bg))</code></pre></div>
-<table>
-<thead>
-<tr class="header">
-<th align="left">id</th>
-<th align="right">group</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">ERR572496_1_tables</td>
-<td align="right">0</td>
-</tr>
-<tr class="even">
-<td align="left">ERR572505_1_tables</td>
-<td align="right">1</td>
-</tr>
-<tr class="odd">
-<td align="left">ERR572506_1_tables</td>
-<td align="right">1</td>
-</tr>
-<tr class="even">
-<td align="left">ERR572507_1_tables</td>
-<td align="right">0</td>
-</tr>
-</tbody>
-</table>
 <p>Finally, we call differentially abundant transcripts:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># run statistical test</span>
 results &lt;-<span class="st"> </span><span class="kw">stattest</span>(bg, <span class="dt">feature=</span><span class="st">&quot;transcript&quot;</span>, <span class="dt">meas=</span><span class="st">&quot;FPKM&quot;</span>, <span class="dt">covariate=</span><span class="st">&quot;group&quot;</span>)
@@ -433,92 +392,6 @@ results &lt;-<span class="st"> </span><span class="kw">inner_join</span>(results
 
 <span class="co"># show top results</span>
 results %&gt;%<span class="st"> </span><span class="kw">select</span>(g_id,pval,qval) %&gt;%<span class="st"> </span><span class="kw">arrange</span>(qval) %&gt;%<span class="st"> </span><span class="kw">head</span>(<span class="dv">15</span>) %&gt;%<span class="st"> </span>knitr::<span class="kw">kable</span>()</code></pre></div>
-<table>
-<thead>
-<tr class="header">
-<th align="left">g_id</th>
-<th align="right">pval</th>
-<th align="right">qval</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">Cvel_3036.1</td>
-<td align="right">2.44e-05</td>
-<td align="right">0.047730</td>
-</tr>
-<tr class="even">
-<td align="left">Cvel_16048</td>
-<td align="right">2.30e-05</td>
-<td align="right">0.047730</td>
-</tr>
-<tr class="odd">
-<td align="left">Cvel_3186.2</td>
-<td align="right">2.44e-05</td>
-<td align="right">0.047730</td>
-</tr>
-<tr class="even">
-<td align="left">Cvel_16381</td>
-<td align="right">1.59e-05</td>
-<td align="right">0.047730</td>
-</tr>
-<tr class="odd">
-<td align="left">Cvel_16807</td>
-<td align="right">5.40e-06</td>
-<td align="right">0.047730</td>
-</tr>
-<tr class="even">
-<td align="left">Cvel_18040</td>
-<td align="right">2.40e-05</td>
-<td align="right">0.047730</td>
-</tr>
-<tr class="odd">
-<td align="left">Cvel_6014</td>
-<td align="right">2.39e-05</td>
-<td align="right">0.047730</td>
-</tr>
-<tr class="even">
-<td align="left">Cvel_25664</td>
-<td align="right">1.71e-05</td>
-<td align="right">0.047730</td>
-</tr>
-<tr class="odd">
-<td align="left">Cvel_26448</td>
-<td align="right">2.50e-05</td>
-<td align="right">0.047730</td>
-</tr>
-<tr class="even">
-<td align="left">Cvel_26628</td>
-<td align="right">1.18e-05</td>
-<td align="right">0.047730</td>
-</tr>
-<tr class="odd">
-<td align="left">Cvel_6546</td>
-<td align="right">1.10e-05</td>
-<td align="right">0.047730</td>
-</tr>
-<tr class="even">
-<td align="left">Cvel_29771</td>
-<td align="right">2.45e-05</td>
-<td align="right">0.047730</td>
-</tr>
-<tr class="odd">
-<td align="left">Cvel_2425</td>
-<td align="right">2.26e-05</td>
-<td align="right">0.047730</td>
-</tr>
-<tr class="even">
-<td align="left">Cvel_4280</td>
-<td align="right">4.80e-05</td>
-<td align="right">0.060726</td>
-</tr>
-<tr class="odd">
-<td align="left">Cvel_21671</td>
-<td align="right">4.35e-05</td>
-<td align="right">0.060726</td>
-</tr>
-</tbody>
-</table>
 <p>Based on the calculated q-values, we can see here that not many transcripts are significantly different between our two samples if we use a q-value cutoff of 0.05.</p>
 </div>
 <div id="conclusions" class="section level3">

@@ -11,7 +11,7 @@ apple-touch-icon-size: 120
 favicon: ""
 site: bookdown::bookdown_sited
 documentclass: book
-bibliography: [references.bib]
+bibliography: [references.bib, knitcitations.bib]
 biblio-style: nature
 link-citations: yes
 knit: "bookdown::render_book"

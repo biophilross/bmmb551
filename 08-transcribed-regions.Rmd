@@ -139,7 +139,7 @@ done
 
 This generates a file that looks like the following:
 
-```{r abundance-tables}
+```{r abundance-tables,eval=F}
 readr::read_tsv("_data/lesson8/stringtie_estimates/ERR572496_1.abund",n_max=10) %>% 
   select(`Gene ID`, Coverage, FPKM, TPM) %>%
   DT::datatable()
@@ -151,7 +151,7 @@ We can briefly take a look at what the most highly expressed transcripts are acr
 
 First let's take a look at highly abundant transcripts across samples. We'll order it by TPMs from sample ERR572496.
 
-```{r highly-abundant, cache=TRUE}
+```{r highly-abundant,cache=TRUE,eval=F}
 options(digits = 3)
 
 readr::read_tsv("_data/lesson8/stringtie_estimates/ERR572496_1.abund") %>% select(`Gene ID`, TPM) %>% mutate(sample="ERR572496") -> ERR572496
@@ -165,7 +165,7 @@ abund %>% arrange(desc(ERR572496)) %>% head(10) %>% DT::datatable()
 
 Interestingly enough, we can already see that there are huge differences in transcript abundance for Cvel_17262. This difference in TPM doesn't represent the absolute transcript copy number, but rather the proportion of of this transcript relative to the total transcript pool. However, this indcates that values across biological replicates are not consistent! So let's look at scatter plots of the TPMs between biological replicates.
 
-```{r replicates, cache=TRUE, fig.aling="center", fig.cap="Scatter plot of biological replicates for both conditions"}
+```{r replicates,cache=TRUE,fig.aling="center",fig.cap="Scatter plot of biological replicates for both conditions",eval=F}
 suppressPackageStartupMessages(library(cowplot))
 
 # calculate correlation
@@ -217,7 +217,7 @@ save(bg, file="_data/lesson8/ballgown/bg.rda")
 
 Next we provide the design matrix:
 
-```{r design-matrix}
+```{r design-matrix,eval=F}
 suppressPackageStartupMessages(library(ballgown))
 load(file="_data/lesson8/ballgown/bg.rda")
 pData(bg) <- data.frame(id=sampleNames(bg), group=c(0,1,1,0))
@@ -226,7 +226,7 @@ knitr::kable(pData(bg))
 
 Finally, we call differentially abundant transcripts:
 
-```{r call-diff-exp}
+```{r call-diff-exp,eval=F}
 # run statistical test
 results <- stattest(bg, feature="transcript", meas="FPKM", covariate="group")
 

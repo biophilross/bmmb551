@@ -83,7 +83,7 @@ What we can see from the results above is that the alignments are almost exactly
 
 Below are the results from using [EMBOSS Needle][EMBOSS Needle].
 
-<pre>
+```
 #=======================================
 #
 # Aligned_sequences: 2
@@ -137,11 +137,11 @@ KLF1_HUMAN       347 AFSRSDHLALHMKRHL    362
 
 #---------------------------------------
 #---------------------------------------
-</pre>
+```
 
 Below are the results of [EMBOSS Water][EMBOSS Water].
 
-<pre>
+```
 #=======================================
 #
 # Aligned_sequences: 2
@@ -195,7 +195,7 @@ KLF1_HUMAN       347 AFSRSDHLALHMKRHL    362
 
 #---------------------------------------
 #---------------------------------------
-</pre>
+```
 
 It's nice to see that our results match exactly with the implementation of the algorithms in Biostrings. However, there are two (related) differences in the outputs. Numerically, it's the calculation of percent similarity. Visually, this is represented by the periods and colons in the EMBOSS output. These periods and colons represent **conservative** and **semi-conservative** mutations. That is, based on the alignment, these amino acids are assumed to be substitutions. When amino acids of relative chemical similarity align, they can be considered conservative or semi-conservative matches. 
 

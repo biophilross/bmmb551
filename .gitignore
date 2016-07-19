@@ -4,7 +4,6 @@
 *_cache
 *_files
 _book
-_bookdown_files
 *.html
 _data
 

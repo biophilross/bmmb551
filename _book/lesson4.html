@@ -158,6 +158,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="9.3.2" data-path="lesson9.html"><a href="lesson9.html#design-1"><i class="fa fa-check"></i><b>9.3.2</b> Design</a></li>
 <li class="chapter" data-level="9.3.3" data-path="lesson9.html"><a href="lesson9.html#methods"><i class="fa fa-check"></i><b>9.3.3</b> Methods</a></li>
 <li class="chapter" data-level="9.3.4" data-path="lesson9.html"><a href="lesson9.html#results"><i class="fa fa-check"></i><b>9.3.4</b> Results</a></li>
+<li class="chapter" data-level="9.3.5" data-path="lesson9.html"><a href="lesson9.html#discussion"><i class="fa fa-check"></i><b>9.3.5</b> Discussion</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="lesson10.html"><a href="lesson10.html"><i class="fa fa-check"></i><b>10</b> Gene regulatory modules</a><ul>
@@ -241,7 +242,7 @@ galn &lt;-<span class="st"> </span><span class="kw">pairwiseAlignment</span>(hum
 <span class="kw">writePairwiseAlignments</span>(galn, <span class="dt">Matrix =</span> mat, <span class="dt">block.width =</span> <span class="dv">40</span>)</code></pre></div>
 <pre><code>## ########################################
 ## # Program: Biostrings (version 2.40.2), a Bioconductor package
-## # Rundate: Tue Jul 19 04:17:47 2016
+## # Rundate: Tue Jul 19 17:49:12 2016
 ## ########################################
 ## #=======================================
 ## #
@@ -315,7 +316,7 @@ galn &lt;-<span class="st"> </span><span class="kw">pairwiseAlignment</span>(hum
 <span class="kw">writePairwiseAlignments</span>(laln, <span class="dt">Matrix =</span> mat, <span class="dt">block.width =</span> <span class="dv">40</span>)</code></pre></div>
 <pre><code>## ########################################
 ## # Program: Biostrings (version 2.40.2), a Bioconductor package
-## # Rundate: Tue Jul 19 04:17:47 2016
+## # Rundate: Tue Jul 19 17:49:12 2016
 ## ########################################
 ## #=======================================
 ## #
@@ -381,8 +382,7 @@ galn &lt;-<span class="st"> </span><span class="kw">pairwiseAlignment</span>(hum
 <p>What we can see from the results above is that the alignments are almost exactly the same regardless of using global or local alignments for closely related orthologous sequences.</p>
 <p><strong>Using EMBOSS</strong></p>
 <p>Below are the results from using <a href="http://www.ebi.ac.uk/Tools/psa/emboss_needle/" title="EMBOSS Needle">EMBOSS Needle</a>.</p>
-<pre>
-#=======================================
+<pre><code>#=======================================
 #
 # Aligned_sequences: 2
 # 1: KLF1_MOUSE
@@ -434,11 +434,9 @@ KLF1_HUMAN       347 AFSRSDHLALHMKRHL    362
 
 
 #---------------------------------------
-#---------------------------------------
-</pre>
+#---------------------------------------</code></pre>
 <p>Below are the results of <a href="http://www.ebi.ac.uk/Tools/psa/emboss_water/" title="EMBOSS Water">EMBOSS Water</a>.</p>
-<pre>
-#=======================================
+<pre><code>#=======================================
 #
 # Aligned_sequences: 2
 # 1: KLF1_MOUSE
@@ -490,8 +488,7 @@ KLF1_HUMAN       347 AFSRSDHLALHMKRHL    362
 
 
 #---------------------------------------
-#---------------------------------------
-</pre>
+#---------------------------------------</code></pre>
 <p>It’s nice to see that our results match exactly with the implementation of the algorithms in Biostrings. However, there are two (related) differences in the outputs. Numerically, it’s the calculation of percent similarity. Visually, this is represented by the periods and colons in the EMBOSS output. These periods and colons represent <strong>conservative</strong> and <strong>semi-conservative</strong> mutations. That is, based on the alignment, these amino acids are assumed to be substitutions. When amino acids of relative chemical similarity align, they can be considered conservative or semi-conservative matches.</p>
 <p>I could not find where in the EMBOSS Needle or Water programs these relationships were defined, but I could find it by looking into the <a href="http://www.ebi.ac.uk/Tools/msa/clustalo/help/faq.html#23">Clustal Omega documentation</a>. Here it tells us that these relationships are defined (for ClustalO) by scores between amino acids in the Gonnet PAM 250 matrix. That is:</p>
 <blockquote>
@@ -518,7 +515,7 @@ galn &lt;-<span class="st"> </span><span class="kw">pairwiseAlignment</span>(hum
 <span class="kw">writePairwiseAlignments</span>(galn, <span class="dt">Matrix =</span> mat, <span class="dt">block.width =</span> <span class="dv">40</span>)</code></pre></div>
 <pre><code>## ########################################
 ## # Program: Biostrings (version 2.40.2), a Bioconductor package
-## # Rundate: Tue Jul 19 04:17:47 2016
+## # Rundate: Tue Jul 19 17:49:12 2016
 ## ########################################
 ## #=======================================
 ## #
@@ -591,7 +588,7 @@ galn &lt;-<span class="st"> </span><span class="kw">pairwiseAlignment</span>(hum
 <span class="kw">writePairwiseAlignments</span>(laln, <span class="dt">Matrix =</span> mat, <span class="dt">block.width =</span> <span class="dv">40</span>)</code></pre></div>
 <pre><code>## ########################################
 ## # Program: Biostrings (version 2.40.2), a Bioconductor package
-## # Rundate: Tue Jul 19 04:17:47 2016
+## # Rundate: Tue Jul 19 17:49:12 2016
 ## ########################################
 ## #=======================================
 ## #
@@ -640,7 +637,7 @@ galn &lt;-<span class="st"> </span><span class="kw">pairwiseAlignment</span>(hum
 <span class="kw">writePairwiseAlignments</span>(laln, <span class="dt">Matrix =</span> mat, <span class="dt">block.width =</span> <span class="dv">40</span>)</code></pre></div>
 <pre><code>## ########################################
 ## # Program: Biostrings (version 2.40.2), a Bioconductor package
-## # Rundate: Tue Jul 19 04:17:47 2016
+## # Rundate: Tue Jul 19 17:49:12 2016
 ## ########################################
 ## #=======================================
 ## #
